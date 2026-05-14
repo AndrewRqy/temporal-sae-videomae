@@ -121,7 +121,10 @@ def validation(val_data, autocast_dtype, trainer, log_queue, norm_factor):
             act = act.to(dtype=autocast_dtype)
             act /= norm_factor
             with t.no_grad():
-                f = trainer.ae.encode(act, use_threshold=use_threshold)
+                try:
+                    f = trainer.ae.encode(act, use_threshold=use_threshold)
+                except TypeError:
+                    f = trainer.ae.encode(act)
                 act_hat = trainer.ae.decode(f)
                 e = act - act_hat
 
@@ -262,8 +265,7 @@ def trainSAE(
             )
 
         # logging validation
-        # if (use_wandb or verbose) and step % save_steps == 0:
-        if step % log_steps == 0:
+        if step % log_steps == 0 and log_queues:
             validation(val_data, autocast_dtype, trainers[0], log_queues[0], norm_factor)
 
         # saving

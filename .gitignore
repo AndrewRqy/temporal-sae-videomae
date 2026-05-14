@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Results and outputs
+results/*.pkl
+results/figures/
+
+# Datasets (too large for git)
+ball_dataset/
+SSv2/
+activations/
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
