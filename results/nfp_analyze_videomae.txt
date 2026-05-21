@@ -1,0 +1,62 @@
+Loading /net/scratch2/renqy/nfp_results/videomae_deadpen_0p03.pt
+Features: (3000, 8, 6144)  Tau: (3000, 8, 5)
+Computing feature-tau correlations...
+
+=== Feature-Tau Correlation Report ===
+
+  speed:
+    Mean |r| across all features & time steps : 0.0046
+    Frac features with max-over-time |r| > 0.1: 0.0273
+    Best |r| per time step: t0=0.317 t1=0.322 t2=0.324 t3=0.315 t4=0.338 t5=0.330 t6=0.324 t7=0.345
+    Top 5 features (max |r| over time):
+      feature  1320  max |r|=0.3450  at t=7  r=-0.3450
+      feature  3425  max |r|=0.3379  at t=4  r=-0.3379
+      feature  4500  max |r|=0.3253  at t=7  r=+0.3253
+      feature  1159  max |r|=0.3171  at t=0  r=+0.3171
+      feature  2532  max |r|=0.3069  at t=3  r=-0.3069
+
+  vel_x:
+    Mean |r| across all features & time steps : 0.0049
+    Frac features with max-over-time |r| > 0.1: 0.0290
+    Best |r| per time step: t0=0.467 t1=0.436 t2=0.457 t3=0.442 t4=0.422 t5=0.443 t6=0.457 t7=0.375
+    Top 5 features (max |r| over time):
+      feature  3257  max |r|=0.4667  at t=0  r=-0.4667
+      feature   610  max |r|=0.4569  at t=6  r=+0.4569
+      feature  1392  max |r|=0.4567  at t=2  r=+0.4567
+      feature  5748  max |r|=0.4476  at t=0  r=+0.4476
+      feature  2601  max |r|=0.4376  at t=3  r=-0.4376
+
+  vel_y:
+    Mean |r| across all features & time steps : 0.0047
+    Frac features with max-over-time |r| > 0.1: 0.0330
+    Best |r| per time step: t0=0.336 t1=0.300 t2=0.347 t3=0.390 t4=0.344 t5=0.423 t6=0.501 t7=0.529
+    Top 5 features (max |r| over time):
+      feature  4892  max |r|=0.5294  at t=7  r=+0.5294
+      feature  2265  max |r|=0.4187  at t=7  r=+0.4187
+      feature  2289  max |r|=0.3598  at t=3  r=+0.3598
+      feature  3173  max |r|=0.3412  at t=7  r=+0.3412
+      feature  3270  max |r|=0.3360  at t=0  r=-0.3360
+
+  accel_mag:
+    Mean |r| across all features & time steps : 0.0023
+    Frac features with max-over-time |r| > 0.1: 0.0075
+    Best |r| per time step: t0=0.095 t1=0.122 t2=0.118 t3=0.197 t4=0.111 t5=0.139 t6=0.104 t7=0.106
+    Top 5 features (max |r| over time):
+      feature   629  max |r|=0.1968  at t=3  r=+0.1968
+      feature   881  max |r|=0.1817  at t=3  r=+0.1817
+      feature  3510  max |r|=0.1756  at t=3  r=+0.1756
+      feature  5560  max |r|=0.1734  at t=3  r=+0.1734
+      feature  3178  max |r|=0.1492  at t=3  r=+0.1492
+
+  direction:
+    Mean |r| across all features & time steps : 0.0036
+    Frac features with max-over-time |r| > 0.1: 0.0220
+    Best |r| per time step: t0=0.278 t1=0.239 t2=0.280 t3=0.275 t4=0.247 t5=0.293 t6=0.340 t7=0.359
+    Top 5 features (max |r| over time):
+      feature  4892  max |r|=0.3592  at t=7  r=+0.3592
+      feature  2265  max |r|=0.3024  at t=7  r=+0.3024
+      feature  2289  max |r|=0.2803  at t=2  r=+0.2803
+      feature  4711  max |r|=0.2398  at t=0  r=+0.2398
+      feature  6067  max |r|=0.2293  at t=0  r=-0.2293
+
+Saved -> /net/scratch2/renqy/nfp_results/videomae_deadpen_0p03_analyzed.pt

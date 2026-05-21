@@ -1,0 +1,30 @@
+Loading VideoMAE: MCG-NJU/videomae-base-finetuned-ssv2
+Loading SAE: /net/scratch/renqy/sae_checkpoints_deadpen_0p03/train_standard_8_x8/trainer_0/ae.pt
+Dataset: 3000 videos
+Feature tensor: torch.Size([3000, 8, 6144])
+Computing cross-temporal correlations...
+
+=== NFP Cross-Temporal Correlation Report ===
+Features:     6144  (dict size)
+Mean diagonal correlation (same time step): 0.0915
+Mean off-diagonal |corr| (cross time steps): 0.0367
+Fraction of features with mean |off-diag| > 0.1: 0.0752
+
+Cross-temporal correlation matrix (mean over features):
+      t0  t1  t2  t3  t4  t5  t6  t7
+t0  0.08 0.04 0.04 0.03 0.03 0.03 0.03 0.03
+t1  0.04 0.10 0.05 0.04 0.03 0.03 0.03 0.03
+t2  0.04 0.05 0.10 0.05 0.04 0.04 0.03 0.03
+t3  0.03 0.04 0.05 0.10 0.05 0.04 0.04 0.03
+t4  0.03 0.03 0.04 0.05 0.10 0.05 0.04 0.03
+t5  0.03 0.03 0.04 0.04 0.05 0.09 0.05 0.03
+t6  0.03 0.03 0.03 0.04 0.04 0.05 0.09 0.04
+t7  0.03 0.03 0.03 0.03 0.03 0.03 0.04 0.08
+
+Ground-truth tau cross-temporal correlations:
+  speed         mean |off-diag| = 0.6345  diag = 1.0000
+  vel_x         mean |off-diag| = 0.5188  diag = 1.0000
+  vel_y         mean |off-diag| = 0.5514  diag = 1.0000
+  accel_mag     mean |off-diag| = 0.5122  diag = 1.0000
+  direction     mean |off-diag| = 0.6290  diag = 1.0000
+Saved -> /net/scratch2/renqy/nfp_results/videomae_deadpen_0p03.pt

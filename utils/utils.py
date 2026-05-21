@@ -23,6 +23,16 @@ class VideoMAECollate:
         frames_list = [item[0] for item in batch]
         return self.processor(images=frames_list, return_tensors="pt")
 
+class DinoSSv2Collate:
+    """Flatten SSv2 video frames as individual images for DINOv2."""
+    def __init__(self, processor):
+        self.processor = processor
+    def __call__(self, batch):
+        all_frames = []
+        for frames_list, _ in batch:
+            all_frames.extend(frames_list)
+        return self.processor(images=all_frames, return_tensors="pt")
+
 def get_collate_fn(processor):
     return ImageCollate(processor)
 
@@ -48,6 +58,15 @@ def get_dataset(args, preprocess, processor, split, subset=1.0):
         dl = DataLoader(ds, batch_size=args.batch_size, shuffle=False,
                         num_workers=args.num_workers,
                         collate_fn=get_videomae_collate_fn(processor))
+        return ds, dl
+    elif args.dataset_name == 'ssv2_dino':
+        ds = SSv2Dataset(args.data_path, split=split)
+        keep_every = int(1.0 / subset)
+        if keep_every > 1:
+            ds = Subset(ds, list(range(0, len(ds), keep_every)))
+        dl = DataLoader(ds, batch_size=args.batch_size, shuffle=False,
+                        num_workers=args.num_workers,
+                        collate_fn=DinoSSv2Collate(processor))
         return ds, dl
 
     keep_every = int(1.0 / subset)

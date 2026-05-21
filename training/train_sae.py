@@ -27,6 +27,8 @@ def get_args_parser():
     parser.add_argument("--l1_penalty", type=float, default=0.1)
     parser.add_argument("--warmup_steps", type=int, default=0)
     parser.add_argument("--resample_steps", type=int, default=None)
+    parser.add_argument("--dead_feature_threshold", type=int, default=10_000_000)
+    parser.add_argument("--dead_penalty_coef", type=float, default=0.0)
     # TopK + Batch TopK
     parser.add_argument("--k", type=int, default=8)
     parser.add_argument("--auxk_alpha", type=float, default=1/32)
@@ -104,6 +106,10 @@ def train_sae(args):
         trainer_cfg["l1_penalty"] = args.l1_penalty
         trainer_cfg["warmup_steps"] = args.warmup_steps
         trainer_cfg["resample_steps"] = args.resample_steps
+        trainer_cfg["auxk_alpha"] = args.auxk_alpha
+        trainer_cfg["dead_feature_threshold"] = args.dead_feature_threshold
+        trainer_cfg["dead_penalty_coef"] = args.dead_penalty_coef
+        trainer_cfg["sparsity_warmup_steps"] = None
     if args.sae_model == "top_k" or args.sae_model == "batch_top_k" or args.sae_model == "matroyshka_batch_top_k":
         trainer_cfg["k"] = args.k
         trainer_cfg["auxk_alpha"] = args.auxk_alpha

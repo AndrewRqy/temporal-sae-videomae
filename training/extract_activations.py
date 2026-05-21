@@ -32,6 +32,9 @@ def get_args_parser():
     parser.add_argument("--random_k", default=-1, type=int)
     parser.add_argument("--save_every", default=50_000, type=int)
     parser.add_argument("--max_clips", default=-1, type=int)
+    parser.add_argument("--frames_per_clip", default=1, type=int,
+                        help="Frames flattened per clip in the batch (e.g. 16 for ssv2_dino). "
+                             "Divides pixel_values.shape[0] so max_clips counts videos, not frames.")
     parser.add_argument("--device", default="cuda:0")
     return parser
 
@@ -98,7 +101,7 @@ def collect_activations(args):
             model.encode(image)
             activations.extend(model.register[f"{args.attachment_point}_{args.layer}"])
 
-        count += image['pixel_values'].shape[0]
+        count += image['pixel_values'].shape[0] // args.frames_per_clip
         pbar.set_postfix({'Processed data points': count})
 
         if count >= args.save_every * (save_count + 1):

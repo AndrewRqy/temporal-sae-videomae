@@ -1,0 +1,29 @@
+Loading DINOv2: facebook/dinov2-base
+Loading SAE: /net/scratch2/renqy/sae_checkpoints_dino/train_standard_8_x8/trainer_0/ae.pt
+Dataset: 3000 videos
+Feature tensor: torch.Size([3000, 8, 6144])
+Computing cross-temporal correlations...
+
+=== NFP Cross-Temporal Correlation Report (DINOv2 negative control) ===
+Features:     6144  (dict size)
+Mean off-diagonal |corr| (cross time steps): 0.2515
+Fraction of features with mean |off-diag| > 0.1: 0.3613
+
+Cross-temporal correlation matrix (mean over features):
+      t0  t1  t2  t3  t4  t5  t6  t7
+t0  0.39 0.30 0.25 0.23 0.21 0.21 0.21 0.21
+t1  0.30 0.40 0.30 0.25 0.23 0.22 0.23 0.23
+t2  0.25 0.30 0.40 0.29 0.26 0.26 0.24 0.21
+t3  0.23 0.25 0.29 0.40 0.31 0.28 0.24 0.22
+t4  0.21 0.23 0.26 0.31 0.39 0.30 0.26 0.23
+t5  0.21 0.22 0.26 0.28 0.30 0.40 0.30 0.26
+t6  0.21 0.23 0.24 0.24 0.26 0.30 0.39 0.30
+t7  0.21 0.23 0.21 0.22 0.23 0.26 0.30 0.40
+
+Ground-truth tau cross-temporal correlations:
+  speed         mean |off-diag| = 0.6345  diag = 1.0000
+  vel_x         mean |off-diag| = 0.5188  diag = 1.0000
+  vel_y         mean |off-diag| = 0.5514  diag = 1.0000
+  accel_mag     mean |off-diag| = 0.5122  diag = 1.0000
+  direction     mean |off-diag| = 0.6290  diag = 1.0000
+Saved -> /net/scratch2/renqy/nfp_results/dino_negative_control.pt
