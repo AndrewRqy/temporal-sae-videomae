@@ -1,0 +1,70 @@
+Loading VideoMAE: MCG-NJU/videomae-base-finetuned-ssv2
+Loading SAE: /net/scratch/renqy/sae_checkpoints_deadpen_0p03/train_standard_8_x8/trainer_0/ae.pt
+Dataset: 3000 videos | Testing all 5 tau variables
+C tensor: torch.Size([3000, 6144, 5])  Running t-tests...
+
+=================================================================
+NFP Test — VideoMAE SAE  (Bonferroni threshold p < 8.14e-06)
+=================================================================
+Tau            Sig+   Sig-   Total%   Mean|t|
+------------ ------ ------ -------- ---------
+speed             2      7    0.15%       nan
+vel_x            18     15    0.54%       nan
+vel_y             7     16    0.37%       nan
+accel_mag        13     23    0.59%       nan
+direction         3      9    0.20%       nan
+
+Features significant for at least one tau : 75 (1.22%)
+Features non-significant for all taus     : 6069 (98.78%)
+
+Claim (2) — non-significant features:
+  Mean |C_mean| across all taus : 0.000151
+
+Claim (3) — selectivity (mean |t| for sig-in-row across columns):
+                  speed      vel_x      vel_y  accel_mag  direction
+speed             6.33 <--      2.79       2.20       4.50       1.81 
+vel_x             2.20       6.69 <--      3.21       2.81       2.80 
+vel_y             2.26       4.29       5.87 <--      3.02       4.64 
+accel_mag         2.56       2.38       2.42       5.90 <--      2.23 
+direction         1.89       3.50       6.29       3.81       5.55 <--
+
+Top 5 features for speed (by t-stat):
+    feat   t-stat          p      speed       vel_x       vel_y   accel_mag   direction
+    4742    4.604   4.32e-06      +4.604      -3.398      -4.889      -1.199      -2.774  *SIG*
+    3191    4.589   4.65e-06      +4.589      -0.337      +0.479      -7.292      -0.052  *SIG*
+    4983    3.835   1.28e-04      +3.835      +9.427      -1.453      -3.821      -2.839  
+    1676    3.782   1.58e-04      +3.782      -5.549      -4.118      +0.221      -3.988  
+    1957    3.589   3.37e-04      +3.589      -6.673      +2.565      +1.282      +1.942  
+
+Top 5 features for vel_x (by t-stat):
+    feat   t-stat          p      speed       vel_x       vel_y   accel_mag   direction
+     610   13.551   0.00e+00      +2.610     +13.551      -4.533      +5.309      -3.651  *SIG*
+    4983    9.427   8.16e-21      +3.835      +9.427      -1.453      -3.821      -2.839  *SIG*
+    4453    9.011   3.56e-19      -0.490      +9.011      -1.025      +2.056      -1.349  *SIG*
+     370    8.725   4.32e-18      -0.036      +8.725      -0.132      -3.832      +0.422  *SIG*
+     939    8.396   7.01e-17      +2.643      +8.396      -4.074      -3.316      -4.141  *SIG*
+
+Top 5 features for vel_y (by t-stat):
+    feat   t-stat          p      speed       vel_x       vel_y   accel_mag   direction
+    5450    6.916   5.66e-12      +0.073      -4.206      +6.916      +1.257      +5.255  *SIG*
+    4251    5.784   8.04e-09      +2.833      -6.514      +5.784      +1.841      +4.317  *SIG*
+    1045    5.432   6.02e-08      +0.935      -3.761      +5.432      -1.571      +5.019  *SIG*
+    5452    5.267   1.48e-07      +1.968      -4.301      +5.267      -1.817      +4.925  *SIG*
+    3679    5.108   3.46e-07      -2.519      +0.167      +5.108      -4.081      +3.916  *SIG*
+
+Top 5 features for accel_mag (by t-stat):
+    feat   t-stat          p      speed       vel_x       vel_y   accel_mag   direction
+    5087    9.471   5.45e-21      -0.324      -1.542      +0.905      +9.471      +0.450  *SIG*
+    2125    7.015   2.84e-12      -5.698      -5.083      -5.106      +7.015      -3.101  *SIG*
+    5216    6.988   3.41e-12      -2.590      -1.406      +0.946      +6.988      -0.155  *SIG*
+    2879    6.554   6.58e-11      -3.424      -7.711      +0.616      +6.554      +1.241  *SIG*
+    2286    6.339   2.67e-10      +1.690      +1.682      +2.370      +6.339      +2.343  *SIG*
+
+Top 5 features for direction (by t-stat):
+    feat   t-stat          p      speed       vel_x       vel_y   accel_mag   direction
+    5450    5.255   1.58e-07      +0.073      -4.206      +6.916      +1.257      +5.255  *SIG*
+    1045    5.019   5.49e-07      +0.935      -3.761      +5.432      -1.571      +5.019  *SIG*
+    5452    4.925   8.87e-07      +1.968      -4.301      +5.267      -1.817      +4.925  *SIG*
+    4251    4.317   1.63e-05      +2.833      -6.514      +5.784      +1.841      +4.317  
+    3203    4.050   5.26e-05      +1.995      -3.581      +3.600      -3.623      +4.050  
+Saved -> /net/scratch2/renqy/nfp_results/videomae_deadpen_0p03.pt

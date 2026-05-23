@@ -1,0 +1,231 @@
+"""
+NFP test on the synthetic positive/negative control.
+
+Uses pre-generated synthetic representations h(V,t) where we know:
+  - W_tau  directions carry TEMPORAL structure (tau changes within each video)
+  - W_static directions carry STATIC structure  (constant within each video)
+
+The SAE was trained on these representations independently — it learned sparse
+codes without knowing which directions are temporal.  We then ask:
+
+  (1) Do any SAE features significantly covary with tau within videos?
+      (They should — the SAE must have encoded the temporal W_tau structure
+       to reconstruct h, since it dominates the signal.)
+
+  (2) Are significant features actually aligned with W_tau and NOT W_static?
+      (Ground truth check — validates the NFP test is identifying the
+       right subspace, not just firing randomly.)
+
+  (3) Is the selectivity matrix diagonal-dominant?
+      (Same claim as for VideoMAE — a speed-encoding feature should have
+       low covariance with direction, etc.)
+
+This is a genuine test: the SAE had no knowledge of tau during training.
+NFP must discover which features the SAE used for temporal encoding.
+"""
+
+import argparse
+import sys
+from pathlib import Path
+
+import numpy as np
+import torch
+from scipy import stats
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from dictionary_learning import AutoEncoder
+
+TAU_KEYS = ["speed", "vel_x", "vel_y", "accel_mag", "direction"]
+
+
+def within_video_covariance_all(feats: torch.Tensor,
+                                 tau:   torch.Tensor) -> torch.Tensor:
+    """feats [B,T,D_feat], tau [B,T,K] -> C [B,D_feat,K]"""
+    psi_c = feats - feats.mean(dim=1, keepdim=True)
+    tau_c = tau   - tau.mean(dim=1,   keepdim=True)
+    return torch.einsum("btd,btk->bdk", psi_c, tau_c) / feats.shape[1]
+
+
+def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
+    """
+    Report max-cosine and projection-fraction alignment with W_tau / W_static.
+    """
+    enc_W = sae.encoder.weight.data.cpu().float()           # [F, 768] tensor
+    enc_W_np = enc_W.numpy()
+
+    def max_subspace_cos(feat_idx, W):
+        W_np   = W.numpy().astype(np.float32)
+        W_unit = W_np / np.linalg.norm(W_np, axis=1, keepdims=True)
+        e_unit = enc_W_np[feat_idx] / (np.linalg.norm(enc_W_np[feat_idx], axis=1, keepdims=True) + 1e-8)
+        return np.abs(e_unit @ W_unit.T).max(axis=1)        # [len(feat_idx)]
+
+    def proj_frac(W):
+        # fraction of squared norm in subspace spanned by W (orthonormal rows)
+        proj = enc_W @ W.T                                  # [F, k]
+        norm_sq = (enc_W ** 2).sum(dim=1) + 1e-12          # [F]
+        return ((proj ** 2).sum(dim=1) / norm_sq).numpy()  # [F]
+
+    sig_idx    = np.where(sig_mask)[0]
+    nonsig_idx = np.where(~sig_mask)[0]
+
+    pf_tau    = proj_frac(W_tau)      # [F]
+    pf_static = proj_frac(W_static)   # [F]
+
+    print(f"\n--- Ground truth subspace alignment ---")
+    print(f"{'Group':<22} {'MaxCos W_tau':>13} {'MaxCos W_static':>16} "
+          f"{'ProjFrac W_tau':>15} {'ProjFrac W_static':>18}")
+
+    for label, idx in [("Significant", sig_idx), ("Non-significant", nonsig_idx)]:
+        if len(idx) == 0:
+            print(f"  {label:<22} (none)")
+            continue
+        mc_tau    = max_subspace_cos(idx, W_tau).mean()
+        mc_static = max_subspace_cos(idx, W_static).mean()
+        pft = pf_tau[idx].mean()
+        pfs = pf_static[idx].mean()
+        print(f"  {label:<22} {mc_tau:>13.4f} {mc_static:>16.4f} {pft:>15.4f} {pfs:>18.4f}")
+
+    if len(sig_idx) > 0 and len(nonsig_idx) > 0:
+        ratio = pf_tau[sig_idx].mean() / (pf_tau[nonsig_idx].mean() + 1e-8)
+        print(f"\n  Proj-frac W_tau ratio (sig / non-sig): {ratio:.1f}x")
+
+    # Per-tau breakdown
+    print(f"\n--- Per-tau proj-frac W_tau (features sig for that tau) ---")
+    print(f"  {'Tau':<12} {'N_sig':>6} {'ProjFrac W_tau':>15}")
+    for k, name in enumerate(TAU_KEYS):
+        sig_k = (p_val[:, k] < bonf)
+        n_k   = sig_k.sum()
+        pft_k = pf_tau[sig_k].mean() if n_k > 0 else float('nan')
+        print(f"  {name:<12} {n_k:>6} {pft_k:>15.4f}")
+
+
+def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=None):
+    D, K = t_stat.shape
+    if bonf is None:
+        bonf = alpha / D
+
+    print(f"\n{'='*68}")
+    print(f"NFP Test — Synthetic SAE (positive/negative control)")
+    print(f"  Temporal directions : W_tau   [5 x 768] — should trigger NFP")
+    print(f"  Static directions   : W_static [5 x 768] — should NOT trigger NFP")
+    print(f"  Bonferroni threshold: p < {bonf:.2e}")
+    print(f"{'='*68}")
+    print(f"{'Tau':<12} {'Sig+':>6} {'Sig-':>6} {'Total%':>8} {'Mean|t|':>9}")
+    print(f"{'-'*12} {'-'*6} {'-'*6} {'-'*8} {'-'*9}")
+
+    sig_any = np.zeros(D, dtype=bool)
+    for k, name in enumerate(TAU_KEYS):
+        t_k = t_stat[:, k]
+        p_k = p_val[:, k]
+        sp  = int(((p_k < bonf) & (t_k > 0)).sum())
+        sn  = int(((p_k < bonf) & (t_k < 0)).sum())
+        sig_any |= (p_k < bonf)
+        print(f"{name:<12} {sp:>6} {sn:>6} {100*(sp+sn)/D:>7.2f}% "
+              f"{np.abs(t_k[np.isfinite(t_k)]).mean():>9.4f}")
+
+    n_sig    = sig_any.sum()
+    n_nonsig = (~sig_any).sum()
+    print(f"\nFeatures significant for at least one tau : {n_sig} ({100*n_sig/D:.2f}%)")
+    print(f"Features non-significant for all taus     : {n_nonsig} ({100*n_nonsig/D:.2f}%)")
+
+    non_sig_C = C_mean[~sig_any]
+    print(f"\nClaim (2) — non-significant features:")
+    print(f"  Mean |C_mean| across all taus : {np.abs(non_sig_C).mean():.6f}")
+
+    # Selectivity matrix
+    print(f"\nClaim (3) — selectivity (mean |t| for sig-in-row across columns):")
+    header = f"{'':12}" + "".join(f"{n:>11}" for n in TAU_KEYS)
+    print(header)
+    for k_row, name_row in enumerate(TAU_KEYS):
+        sig_mask_k = (p_val[:, k_row] < bonf)
+        if sig_mask_k.sum() == 0:
+            row = f"{name_row:<12}" + "".join(f"{'(none)':>11}" for _ in TAU_KEYS)
+        else:
+            row = f"{name_row:<12}"
+            for k_col, _ in enumerate(TAU_KEYS):
+                mt     = np.abs(t_stat[sig_mask_k, k_col]).mean()
+                marker = " <--" if k_col == k_row else "    "
+                row   += f"{mt:>10.2f}{marker}"
+        print(row)
+
+    # Ground truth alignment
+    ground_truth_alignment(sae, W_tau, W_static, sig_any, p_val, bonf)
+
+
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--all_videos_path", required=True,
+                   help="all_videos.pt saved by gen_synthetic_activations.py")
+    p.add_argument("--matrices_path",   required=True,
+                   help="matrices.pt saved by gen_synthetic_activations.py")
+    p.add_argument("--sae_path",        required=True)
+    p.add_argument("--output_path",     required=True)
+    p.add_argument("--alpha",           default=0.05, type=float)
+    p.add_argument("--device",          default="cuda:0")
+    return p.parse_args()
+
+
+def main():
+    args   = parse_args()
+    device = torch.device(args.device)
+
+    print(f"Loading synthetic data: {args.all_videos_path}")
+    data     = torch.load(args.all_videos_path, map_location="cpu")
+    h        = data["h"]        # [N, 8, D]
+    tau      = data["tau"]      # [N, 8, 5]  original unnormalized tau
+
+    print(f"Loading ground truth matrices: {args.matrices_path}")
+    mat      = torch.load(args.matrices_path, map_location="cpu")
+    W_tau    = mat["W_tau"]     # [5, D]
+    W_static = mat["W_static"]  # [5, D]
+
+    print(f"Loading SAE: {args.sae_path}")
+    sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    sae.eval()
+
+    N, T, D = h.shape
+    print(f"\nDataset  : {N} videos, {T} temporal steps, {D}-dim reps")
+    print(f"SAE size : {sae.dict_size} features")
+
+    # Run SAE encoder on all synthetic representations
+    with torch.no_grad():
+        feats_flat = sae.encode(h.reshape(N * T, D).to(device))   # [N*8, F]
+    feats = feats_flat.cpu().reshape(N, T, -1)                     # [N, 8, F]
+
+    pct_active = (feats > 0).float().mean().item()
+    print(f"Mean feature activation rate: {100*pct_active:.1f}%")
+
+    # Within-video covariance [N, F, 5]
+    print("Computing within-video covariances...")
+    C    = within_video_covariance_all(feats, tau)
+    C_np = C.numpy()
+
+    # One-sample t-test across videos
+    print("Running t-tests...")
+    F      = sae.dict_size
+    t_stat = np.zeros((F, len(TAU_KEYS)), dtype=np.float32)
+    p_val  = np.ones_like(t_stat)
+    for k in range(len(TAU_KEYS)):
+        t_stat[:, k], p_val[:, k] = stats.ttest_1samp(C_np[:, :, k], 0.0)
+
+    C_mean = C_np.mean(axis=0)   # [F, 5]
+    print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=args.alpha,
+                 bonf=args.alpha / sae.dict_size)
+
+    out_path = Path(args.output_path)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    torch.save({
+        "C":         C,
+        "tau":       tau,
+        "t_stat":    torch.from_numpy(t_stat),
+        "p_val":     torch.from_numpy(p_val),
+        "C_mean":    torch.from_numpy(C_mean),
+        "W_tau":     W_tau,
+        "W_static":  W_static,
+        "tau_keys":  TAU_KEYS,
+    }, out_path)
+    print(f"\nSaved -> {out_path}")
+
+
+if __name__ == "__main__":
+    main()

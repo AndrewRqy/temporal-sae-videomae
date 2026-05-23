@@ -1,0 +1,26 @@
+Loading DINOv2: facebook/dinov2-base
+Loading SAE: /net/scratch2/renqy/sae_checkpoints_dino/train_standard_8_x8/trainer_0/ae.pt
+Dataset: 3000 videos | Testing all 5 tau variables
+(Each temporal step uses one independently-processed frame — no temporal context)
+C tensor: torch.Size([3000, 6144, 5])  Running t-tests...
+
+=================================================================
+NFP Test — DINOv2 SAE (negative control)  (Bonferroni p < 8.14e-06)
+=================================================================
+Expected: 0% significant features for all tau variables
+Tau            Sig+   Sig-   Total%   Mean|t|
+------------ ------ ------ -------- ---------
+speed             0      0    0.00%       nan
+vel_x             0      0    0.00%       nan
+vel_y             0      0    0.00%       nan
+accel_mag         0      0    0.00%       nan
+direction         0      0    0.00%       nan
+
+Features significant for at least one tau : 0 (0.00%)
+Features non-significant for all taus     : 6144 (100.00%)
+Overall mean |C_i|                        : 0.000063
+
+(Compare with VideoMAE SAE results — DINOv2 should show near-zero
+ significant counts, confirming the NFP test is not falsely flagging
+ temporally-blind features as temporal.)
+Saved -> /net/scratch2/renqy/nfp_results/dino_negative_control.pt

@@ -1,0 +1,46 @@
+Loading synthetic data: /net/scratch2/renqy/synthetic_acts/all_videos.pt
+Loading ground truth matrices: /net/scratch2/renqy/synthetic_acts/matrices.pt
+Loading SAE: /net/scratch2/renqy/sae_checkpoints_synthetic/train_standard_8_x8/trainer_0/ae.pt
+
+Dataset  : 3000 videos, 8 temporal steps, 768-dim reps
+SAE size : 6144 features
+Mean feature activation rate: 1.0%
+Computing within-video covariances...
+Running t-tests...
+
+====================================================================
+NFP Test — Synthetic SAE (positive/negative control)
+  Temporal directions : W_tau   [5 x 768] — should trigger NFP
+  Static directions   : W_static [5 x 768] — should NOT trigger NFP
+  Bonferroni threshold: p < 8.14e-06
+====================================================================
+Tau            Sig+   Sig-   Total%   Mean|t|
+------------ ------ ------ -------- ---------
+speed           552    397   15.45%    2.2334
+vel_x           605    756   22.15%    2.7226
+vel_y           738    724   23.80%    2.9600
+accel_mag        91     26    1.90%    1.1841
+direction       658    671   21.63%    2.7399
+
+Features significant for at least one tau : 2096 (34.11%)
+Features non-significant for all taus     : 4048 (65.89%)
+
+Claim (2) — non-significant features:
+  Mean |C_mean| across all taus : 0.000021
+
+Claim (3) — selectivity (mean |t| for sig-in-row across columns):
+                  speed      vel_x      vel_y  accel_mag  direction
+speed             7.07 <--      5.77          6.57           nan          4.47    
+vel_x             4.59          7.37 <--      6.31           nan          6.15    
+vel_y             4.80          5.81          7.66 <--       nan          6.10    
+accel_mag         4.28          4.90          4.78           inf <--      4.36    
+direction         3.73          6.00          6.48           nan          7.44 <--
+
+--- Ground truth subspace alignment ---
+Group                    vs W_tau  vs W_static  (mean max-cosine)
+  Significant                0.0765       0.0853
+  Non-significant            0.0129       0.0161
+  (Temporal features should have high W_tau alignment;
+   static features should have high W_static alignment.)
+
+Saved -> /net/scratch2/renqy/nfp_results/synthetic_nfp.pt

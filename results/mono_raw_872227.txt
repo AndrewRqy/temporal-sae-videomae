@@ -1,0 +1,33 @@
+No SAE attached. Saving original activations
+[SSv2Dataset] val: 24777 videos loaded
+Saved the activations at count 800 to /net/scratch2/renqy/sae_activations/raw_val/ssv2_val_activations_MCG-NJU_videomae-base-finetuned-ssv2_11_post_mlp_residual_part1.pt
+Loaded embeddings found at /net/scratch/renqy/embeddings/ssv2_val_dinov2.pt
+Embeddings shape: torch.Size([800, 768])
+Loaded activations found at /net/scratch2/renqy/sae_activations/raw_val
+Activations shape: torch.Size([800, 768])
+Monosemanticity: 0.4691023528575897 +- 0.006600223947316408
+Dead neurons: 0
+Total neurons: 768
+Top 10 most monosemantic neurons:
+1. Neuron 520 - 0.490386039018631
+2. Neuron 309 - 0.48901844024658203
+3. Neuron 315 - 0.48826250433921814
+4. Neuron 707 - 0.48687443137168884
+5. Neuron 682 - 0.4868534207344055
+6. Neuron 446 - 0.48664018511772156
+7. Neuron 437 - 0.4856959283351898
+8. Neuron 94 - 0.48567429184913635
+9. Neuron 399 - 0.4852856397628784
+10. Neuron 88 - 0.4850691854953766
+
+Bottom 10 least monosemantic neurons:
+1. Neuron 12 - 0.44446223974227905
+2. Neuron 591 - 0.4487258195877075
+3. Neuron 269 - 0.44965624809265137
+4. Neuron 746 - 0.45008087158203125
+5. Neuron 29 - 0.4501763880252838
+6. Neuron 307 - 0.4508170783519745
+7. Neuron 725 - 0.45135948061943054
+8. Neuron 570 - 0.4520752727985382
+9. Neuron 156 - 0.45210784673690796
+10. Neuron 47 - 0.45289289951324463

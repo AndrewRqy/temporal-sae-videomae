@@ -27,27 +27,29 @@ ACT_DIR="/net/scratch2/renqy/sae_activations"
 EMBED_PATH="/net/scratch/renqy/embeddings/ssv2_val_dinov2.pt"
 SAE_PATH="/net/scratch/renqy/sae_checkpoints_deadpen_0p03/train_standard_8_x8/trainer_0/ae.pt"
 
-# Step 1: Extract SAE activations (max-pooled over spatial/temporal tokens)
+# Prerequisites:
+#   - DINOv2 embeddings at EMBED_PATH (run jobs/dataset/run_ssv2_dino_embeddings.sh)
+#   - VideoMAE SAE checkpoint at SAE_PATH (run jobs/videomae_sae/run_sae_train_standard_deadpen.sh)
+
+# Extract max-pooled SAE activations (one 6144-dim vector per clip)
 python save_activations.py \
-    --model_name "${MODEL}" \
+    --model_name       "${MODEL}" \
     --attachment_point "${POINT}" \
-    --layer "${LAYER}" \
-    --dataset_name ssv2 \
-    --data_path "${DATA_PATH}" \
-    --split val \
-    --batch_size "${BATCH}" \
-    --num_workers "${WORKERS}" \
-    --output_dir "${ACT_DIR}/standard_deadpen_0p03_val" \
+    --layer            "${LAYER}" \
+    --dataset_name     ssv2 \
+    --data_path        "${DATA_PATH}" \
+    --split            val \
+    --batch_size       "${BATCH}" \
+    --num_workers      "${WORKERS}" \
+    --output_dir       "${ACT_DIR}/standard_deadpen_0p03_val" \
     --max_pool \
-    --sae_model standard \
-    --sae_path "${SAE_PATH}" \
-    --max_clips "${MAX_CLIPS}" \
-    --device "${DEVICE}"
+    --sae_model        standard \
+    --sae_path         "${SAE_PATH}" \
+    --max_clips        "${MAX_CLIPS}" \
+    --device           "${DEVICE}"
 
-# Step 2: DINOv2 embeddings already computed at ${EMBED_PATH} -- skipping
-
-# Step 3: Monosemanticity score
+# Monosemanticity score
 python eval/metric.py \
     --activations_dir "${ACT_DIR}/standard_deadpen_0p03_val" \
     --embeddings_path "${EMBED_PATH}" \
-    --output_subdir ms_dinov2
+    --output_subdir   ms_dinov2

@@ -1,0 +1,30 @@
+Loading SAE: /net/scratch2/renqy/sae_checkpoints_synthetic/train_standard_8_x8/trainer_0/ae.pt
+Loading matrices: /net/scratch2/renqy/synthetic_acts/matrices.pt
+Loading NFP results: /net/scratch2/renqy/nfp_results/synthetic_nfp.pt
+
+============================================================
+Projection Fraction Metric  (Bonferroni p < 8.14e-06)
+  Temporal subspace dim  : 5
+  Static subspace dim    : 100
+  SAE features total     : 6144
+============================================================
+
+Significant (31 features):
+  Proj frac in W_tau    : mean=0.2291  median=0.2161  max=0.5091
+  Proj frac in W_static : mean=0.3288  median=0.4091  max=0.5521
+  Residual (noise+other): mean=0.4420
+
+Non-significant (6113 features):
+  Proj frac in W_tau    : mean=0.0038  median=0.0006  max=0.4485
+  Proj frac in W_static : mean=0.2801  median=0.0169  max=0.7988
+  Residual (noise+other): mean=0.7161
+
+--- Per-tau projection fraction (features sig for that tau) ---
+Tau           N_sig  Mean frac_tau  Mean frac_static
+speed             8         0.3843            0.2029
+vel_x            22         0.2718            0.3602
+vel_y            26         0.2620            0.3785
+accel_mag         5         0.0584            0.0708
+direction        24         0.2585            0.3808
+
+Sig / non-sig proj-frac ratio (W_tau): 59.6x

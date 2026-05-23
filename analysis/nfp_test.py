@@ -143,7 +143,8 @@ def within_video_covariance_all(feats: torch.Tensor,
 # ---------------------------------------------------------------------------
 
 def print_report(t_stat: np.ndarray, p_val: np.ndarray,
-                 C_mean: np.ndarray, alpha: float = 0.05):
+                 C_mean: np.ndarray, alpha: float = 0.05,
+                 label: str = "VideoMAE SAE"):
     """
     t_stat, p_val, C_mean : [D, K]
     """
@@ -151,7 +152,7 @@ def print_report(t_stat: np.ndarray, p_val: np.ndarray,
     bonf = alpha / D
 
     print(f"\n{'='*65}")
-    print(f"NFP Test — VideoMAE SAE  (Bonferroni threshold p < {bonf:.2e})")
+    print(f"NFP Test — {label}  (Bonferroni threshold p < {bonf:.2e})")
     print(f"{'='*65}")
     print(f"{'Tau':<12} {'Sig+':>6} {'Sig-':>6} {'Total%':>8} {'Mean|t|':>9}")
     print(f"{'-'*12} {'-'*6} {'-'*6} {'-'*8} {'-'*9}")
@@ -222,6 +223,7 @@ def parse_args():
     p.add_argument("--batch_size",       default=4,  type=int)
     p.add_argument("--num_workers",      default=4,  type=int)
     p.add_argument("--alpha",            default=0.05, type=float)
+    p.add_argument("--label",            default="VideoMAE SAE")
     p.add_argument("--device",           default="cuda:0")
     return p.parse_args()
 
@@ -286,7 +288,7 @@ def main():
         t_stat[:, k], p_val[:, k] = stats.ttest_1samp(C_np[:, :, k], 0.0)
 
     C_mean = C_np.mean(axis=0)   # [D, 5]
-    print_report(t_stat, p_val, C_mean, alpha=args.alpha)
+    print_report(t_stat, p_val, C_mean, alpha=args.alpha, label=args.label)
 
     out_path = Path(args.output_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
