@@ -51,8 +51,9 @@ N_FRAMES   = 16
 # ---------------------------------------------------------------------------
 
 class NFPDataset(Dataset):
-    def __init__(self, root_dir: Path):
+    def __init__(self, root_dir: Path, tau_mode: str = "first_frame"):
         self.video_dirs = sorted(root_dir.glob("v*"))
+        self.tau_mode   = tau_mode
         if not self.video_dirs:
             raise FileNotFoundError(f"No video dirs found in {root_dir}")
 
@@ -73,9 +74,13 @@ class NFPDataset(Dataset):
         ball_token_steps = []   # [8]  -1 if off-screen
 
         for step in range(N_TEMPORAL):
-            frame_rec = traj[step * 2]   # first frame of tubelet
-            tau_steps.append([frame_rec["tau"][k] for k in TAU_KEYS])
-            ball_token_steps.append(frame_rec["spatial_token"])
+            r0 = traj[step * 2]       # first frame of tubelet
+            r1 = traj[step * 2 + 1]  # second frame of tubelet
+            if self.tau_mode == "avg_frames":
+                tau_steps.append([(r0["tau"][k] + r1["tau"][k]) / 2 for k in TAU_KEYS])
+            else:  # first_frame (default)
+                tau_steps.append([r0["tau"][k] for k in TAU_KEYS])
+            ball_token_steps.append(r0["spatial_token"])  # always use first frame for position
 
         return (
             frames,
@@ -225,6 +230,10 @@ def parse_args():
     p.add_argument("--alpha",            default=0.05, type=float)
     p.add_argument("--label",            default="VideoMAE SAE")
     p.add_argument("--device",           default="cuda:0")
+    p.add_argument("--tau_mode",         default="first_frame",
+                   choices=["first_frame", "avg_frames"],
+                   help="first_frame: use tau at first frame of each tubelet; "
+                        "avg_frames: average tau across both frames of each tubelet")
     return p.parse_args()
 
 
@@ -241,7 +250,8 @@ def main():
     sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
     sae.eval()
 
-    ds = NFPDataset(Path(args.dataset_dir))
+    print(f"Tau mode: {args.tau_mode}")
+    ds = NFPDataset(Path(args.dataset_dir), tau_mode=args.tau_mode)
     dl = DataLoader(ds, batch_size=args.batch_size, shuffle=False,
                     num_workers=args.num_workers,
                     collate_fn=make_collate(model.processor))

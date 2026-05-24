@@ -86,6 +86,8 @@ tau variables is significantly nonzero. Primary result of the paper.
 
 **Paper sections:** §3.2, §3.3, §4.2
 
+### 1a. Train SAE + NFP test (first-frame tau, primary result)
+
 | Step | Script | Input | Output |
 |------|--------|-------|--------|
 | 1. Train SAE | `jobs/videomae_sae/run_sae_train_standard_deadpen.sh` | `/net/scratch/renqy/activations/{train,val}` | `/net/scratch/renqy/sae_checkpoints_deadpen_0p03/` |
@@ -93,8 +95,34 @@ tau variables is significantly nonzero. Primary result of the paper.
 
 **Results:** 75/6144 significant (1.22%), diagonal-dominant selectivity matrix.
 
+### 1b. NFP test — avg-frames tau (methodological variant)
+
+Each VideoMAE tubelet spans 2 consecutive frames (16 frames → 8 temporal tokens).
+The default `first_frame` mode assigns each tubelet the tau values of its first frame.
+The `avg_frames` mode instead averages tau across both frames of the tubelet, giving
+a smoother signal that better represents the tubelet's temporal midpoint.
+
+**This uses the same trained SAE from step 1a — no retraining needed.**
+
+| Step | Script | Input | Output |
+|------|--------|-------|--------|
+| NFP test (avg-frames) | `jobs/videomae_sae/run_nfp_test_avg_tau.sh` | NFP dataset + SAE from 1a | `/net/scratch2/renqy/nfp_results/videomae_deadpen_0p03_avgtau.pt` |
+
+```bash
+sbatch jobs/videomae_sae/run_nfp_test_avg_tau.sh
+```
+
+**Results:** 151/6144 significant (2.46%). Accel_mag increases most (0.59% → 2.10%),
+consistent with avg-frames smoothing reducing tubelet-boundary noise for derived
+quantities. Selectivity matrix remains diagonal-dominant.
+
 **Notes:**
 - SAE: expansion ×8 → 6144 features, l1=0.1, dead_penalty=0.03, 15,320 steps, batch 4096.
+- Tau modes: `first_frame` (default, primary result) assigns each tubelet the tau of its
+  first constituent frame; `avg_frames` averages over both frames. See `--tau_mode` arg
+  in `analysis/nfp_test.py`.
+- DINOv2 and synthetic controls were run under `first_frame` mode; VideoMAE first-frame
+  (75 features) is the correct baseline for cross-condition comparisons.
 - Prerequisite: run `jobs/dataset/run_extract_videomae_activations.sh` first.
 
 ---

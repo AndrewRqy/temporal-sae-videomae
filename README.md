@@ -8,11 +8,17 @@ This repository extends the work of [Pach et al. (2025)](https://arxiv.org/abs/2
 
 ## Key results
 
-| Condition | Significant features | Selectivity |
-|---|---|---|
-| DINOv2 SAE (negative control) | 0 / 6144 (0.00%) | — |
-| VideoMAE SAE | 75 / 6144 (1.22%) | Diagonal dominant |
-| Synthetic SAE (positive control) | 31 / 6144 (0.50%) | Diagonal dominant |
+| Condition | Tau mode | Significant features | Selectivity |
+|---|---|---|---|
+| DINOv2 SAE (negative control) | first_frame | 0 / 6144 (0.00%) | — |
+| VideoMAE SAE | first_frame | 75 / 6144 (1.22%) | Diagonal dominant |
+| VideoMAE SAE | avg_frames | 151 / 6144 (2.46%) | Diagonal dominant |
+| Synthetic SAE (positive control) | first_frame | 31 / 6144 (0.50%) | Diagonal dominant |
+
+The `first_frame` mode assigns each tubelet's tau value from the first of its two
+constituent frames; `avg_frames` averages across both frames. First-frame results
+are the primary comparison across conditions. Avg-frames is reported as a
+methodological variant for VideoMAE only (see §4.2 of the paper).
 
 ---
 
