@@ -8,14 +8,21 @@ from pathlib import Path
 from torchvision.datasets import ImageFolder
 from utils import get_dataset, get_model
 from torchvision.transforms import ToTensor
-from dictionary_learning import AutoEncoder
-from dictionary_learning.trainers import BatchTopKSAE, MatroyshkaBatchTopKSAE
+from dictionary_learning import AutoEncoder, PCADict, ICADict
+# Note: BatchTopKSAE / MatroyshkaBatchTopKSAE are imported lazily inside collect_activations
+# (they pull in nnsight via trainers/top_k.py, which is not needed for raw/pca/ica extraction).
 
 
 def get_args_parser():
     parser = argparse.ArgumentParser("Save activations used to train SAE", add_help=False)
     parser.add_argument("--batch_size", default=128, type=int)
-    parser.add_argument("--sae_model", default=None, type=str)
+    parser.add_argument("--sae_model", default=None, type=str,
+                        help="standard | batch_top_k | matroyshka_batch_top_k | pca | ica")
+    parser.add_argument("--decomp_mode", default="sign_split", type=str,
+                        choices=["sign_split", "abs", "signed"],
+                        help="For pca/ica: how signed components map to non-negative "
+                             "features. sign_split -> ReLU(+c)/ReLU(-c) (2x features, "
+                             "primary); abs -> |c| (robustness check).")
     parser.add_argument("--model_name", default="clip", type=str)
     parser.add_argument("--attachment_point", default="post_mlp_residual", type=str)
     parser.add_argument("--layer", default=-1, type=int)
@@ -78,10 +85,17 @@ def collect_activations(args):
         if args.sae_model == "standard":
             sae = AutoEncoder.from_pretrained(args.sae_path).to(args.device)
         if args.sae_model == "batch_top_k":
+            from dictionary_learning.trainers import BatchTopKSAE
             sae = BatchTopKSAE.from_pretrained(args.sae_path).to(args.device)
         if args.sae_model == "matroyshka_batch_top_k":
+            from dictionary_learning.trainers import MatroyshkaBatchTopKSAE
             sae = MatroyshkaBatchTopKSAE.from_pretrained(args.sae_path).to(args.device)
-        print(f"Attached SAE from {args.sae_path}")
+        if args.sae_model == "pca":
+            sae = PCADict.from_pretrained(args.sae_path, device=args.device, mode=args.decomp_mode)
+        if args.sae_model == "ica":
+            sae = ICADict.from_pretrained(args.sae_path, device=args.device, mode=args.decomp_mode)
+        print(f"Attached {args.sae_model} from {args.sae_path}"
+              + (f" (mode={args.decomp_mode})" if args.sae_model in ("pca", "ica") else ""))
     else:
         sae = None
         print(f"No SAE attached. Saving original activations")

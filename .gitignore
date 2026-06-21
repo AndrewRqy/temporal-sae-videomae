@@ -10,10 +10,15 @@ build/
 results/*.pkl
 results/figures/
 
-# Datasets (too large for git)
+# Local single-GPU run outputs (cached activations, fits, MS/NFP/sweep results)
+local_runs/
+
+# Datasets (too large for git; regenerable)
 ball_dataset/
 SSv2/
 activations/
+# Kubric-rendered NFP ball videos (run data/run_nfp_dataset.ps1)
+data/output/
 
 # Logs
 logs/

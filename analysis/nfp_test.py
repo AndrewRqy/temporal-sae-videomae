@@ -37,7 +37,7 @@ from torch.utils.data import DataLoader, Dataset
 from tqdm import tqdm
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from dictionary_learning import AutoEncoder
+from dictionary_learning import AutoEncoder, PCADict, ICADict, IdentityDict
 from models.videomae import VideoMAE
 
 TAU_KEYS   = ["speed", "vel_x", "vel_y", "accel_mag", "direction"]
@@ -220,7 +220,16 @@ def print_report(t_stat: np.ndarray, p_val: np.ndarray,
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--dataset_dir",      required=True)
-    p.add_argument("--sae_path",         required=True)
+    p.add_argument("--sae_path",         default=None,
+                   help="Path to the dictionary checkpoint. Not needed for --sae_model identity.")
+    p.add_argument("--sae_model",        default="standard",
+                   choices=["standard", "pca", "ica", "identity"],
+                   help="standard=ReLU SAE; pca/ica=linear decomposition; "
+                        "identity=raw layer dimensions (no transform).")
+    p.add_argument("--decomp_mode",      default="sign_split",
+                   choices=["sign_split", "abs", "signed"],
+                   help="For pca/ica: how signed components map to features "
+                        "(sign_split=ReLU(+c)/ReLU(-c), matching the ReLU SAE).")
     p.add_argument("--output_path",      required=True)
     p.add_argument("--model_name",       default="MCG-NJU/videomae-base-finetuned-ssv2")
     p.add_argument("--layer",            default=11, type=int)
@@ -246,8 +255,19 @@ def main():
     hook_key = f"{args.attachment_point}_{args.layer}"
     model.attach(args.attachment_point, args.layer, sae=None)
 
-    print(f"Loading SAE: {args.sae_path}")
-    sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    print(f"Loading dictionary ({args.sae_model}): {args.sae_path}")
+    if args.sae_model == "standard":
+        sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    elif args.sae_model == "pca":
+        sae = PCADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    elif args.sae_model == "ica":
+        sae = ICADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    elif args.sae_model == "identity":
+        # Raw layer dimensions: encode is the identity, so feats == ball-tracking
+        # activations (768 raw VideoMAE dims). The NFP analog of the raw MS baseline.
+        sae = IdentityDict.from_pretrained(None)
+    else:
+        raise ValueError(f"Unknown sae_model: {args.sae_model}")
     sae.eval()
 
     print(f"Tau mode: {args.tau_mode}")

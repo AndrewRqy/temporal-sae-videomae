@@ -47,10 +47,14 @@ class VideoMAELayerPostMlpResidual(nn.Module):
     def forward(
         self,
         hidden_states: torch.Tensor,
+        *args,
         **kwargs,
     ) -> Union[Tuple[torch.Tensor, torch.Tensor], Tuple[torch.Tensor]]:
+        # Some transformers versions pass head_mask positionally
+        # (layer_module(hidden_states, layer_head_mask)), others as a kwarg.
+        # Forward whatever we got to the base layer; head masking is unused here.
         kwargs.pop('head_mask', None)
-        outputs = self.base_layer(hidden_states, **kwargs)
+        outputs = self.base_layer(hidden_states, *args, **kwargs)
 
         if isinstance(outputs, torch.Tensor):
             acts = outputs

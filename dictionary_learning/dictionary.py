@@ -145,6 +145,101 @@ class AutoEncoder(Dictionary, nn.Module):
         return autoencoder
 
 
+class LinearDict(Dictionary, nn.Module):
+    """
+    A linear decomposition (PCA or ICA) wrapped in the Dictionary interface so it
+    can be swapped in for an SAE in the activation-extraction / monosemanticity
+    pipeline.
+
+    A fitted decomposition is stored as three tensors:
+        mean   : (activation_dim,)            data mean removed before projecting
+        E      : (n_components, activation_dim)  encode  matrix:  s = (x - mean) @ E.T
+        D      : (n_components, activation_dim)  decode  matrix:  x_hat = s @ D + mean
+    For PCA, E = D = components_. For ICA, E = components_ (unmixing) and
+    D = mixing_.T, so encode/decode are exact inverses of sklearn's
+    transform / inverse_transform.
+
+    Because PCA/ICA components are *signed* while the monosemanticity metric assumes
+    non-negative "feature present" activations, encode() supports three modes:
+        "sign_split" (default, primary): each component c -> [ReLU(c), ReLU(-c)],
+            doubling the feature count to 2*n_components. Each half-feature has the
+            same "concept present, >=0" semantics as a ReLU SAE feature, and removes
+            ICA's arbitrary sign. decode recovers c = c_plus - c_minus exactly.
+        "abs": magnitude |c| (n_components features). Robustness variant; merges the
+            two poles of a component into one feature.
+        "signed": raw signed projection (n_components features). Not recommended for
+            the MS metric; provided for completeness.
+    """
+
+    def __init__(self, activation_dim, n_components, mode="sign_split"):
+        super().__init__()
+        assert mode in ("sign_split", "abs", "signed")
+        self.activation_dim = activation_dim
+        self.n_components = n_components
+        self.mode = mode
+        self.dict_size = 2 * n_components if mode == "sign_split" else n_components
+        self.register_buffer("mean", t.zeros(activation_dim))
+        self.register_buffer("E", t.zeros(n_components, activation_dim))
+        self.register_buffer("D", t.zeros(n_components, activation_dim))
+
+    def encode(self, x):
+        s = (x - self.mean) @ self.E.t()  # (..., n_components), signed
+        if self.mode == "sign_split":
+            return t.cat([t.relu(s), t.relu(-s)], dim=-1)
+        elif self.mode == "abs":
+            return s.abs()
+        else:
+            return s
+
+    def decode(self, f):
+        if self.mode == "sign_split":
+            s = f[..., : self.n_components] - f[..., self.n_components:]
+        elif self.mode == "abs":
+            # Sign is lost under |c|; reconstruct from magnitude (decode output is
+            # only used to continue the forward pass, never for the MS metric).
+            s = f
+        else:
+            s = f
+        return s @ self.D + self.mean
+
+    def forward(self, x, output_features=False, ghost_mask=None):
+        f = self.encode(x)
+        x_hat = self.decode(f)
+        if output_features:
+            return x_hat, f
+        return x_hat
+
+    @classmethod
+    def from_pretrained(cls, path, dtype=t.float, device=None, mode="sign_split"):
+        """
+        Load a fitted decomposition saved by analysis/fit_pca_ica.py.
+
+        The checkpoint is a dict with keys: mean, E, D, method, activation_dim,
+        n_components. `mode` selects how signed components are mapped to features
+        (overridable at eval time without refitting).
+        """
+        ckpt = t.load(path, map_location="cpu")
+        activation_dim = int(ckpt["activation_dim"])
+        n_components = int(ckpt["n_components"])
+        obj = cls(activation_dim, n_components, mode=mode)
+        obj.mean.copy_(ckpt["mean"].to(dtype))
+        obj.E.copy_(ckpt["E"].to(dtype))
+        obj.D.copy_(ckpt["D"].to(dtype))
+        if device is not None:
+            obj.to(dtype=dtype, device=device)
+        return obj
+
+
+class PCADict(LinearDict):
+    """PCA decomposition. Thin alias of LinearDict for an explicit --sae_model name."""
+    method = "pca"
+
+
+class ICADict(LinearDict):
+    """ICA decomposition. Thin alias of LinearDict for an explicit --sae_model name."""
+    method = "ica"
+
+
 class IdentityDict(Dictionary, nn.Module):
     """
     An identity dictionary, i.e. the identity function.
