@@ -174,8 +174,10 @@ def parse_args():
                    default=[16, 32, 64, 128, 256, 512])
     p.add_argument("--methods",     nargs="+", default=["pca", "ica"],
                    choices=["pca", "ica"])
-    p.add_argument("--mode",        default="sign_split",
-                   choices=["sign_split", "abs", "signed"])
+    p.add_argument("--modes",       nargs="+", default=["sign_split"],
+                   choices=["sign_split", "abs", "signed"],
+                   help="Run every (D, method) under each listed mode. The fit is "
+                        "mode-independent, so evaluating multiple modes is nearly free.")
     p.add_argument("--n_clips",     type=int, default=800)
     p.add_argument("--n_samples",   type=int, default=300_000)
     p.add_argument("--batch",       type=int, default=4)
@@ -217,9 +219,13 @@ def main():
         print(f"Fitting PCA once at D={Dmax} (nested; sliced for smaller D)...")
         pca_full = PCA(n_components=Dmax, svd_solver="randomized", random_state=args.seed).fit(Xtrain)
 
+    def feat_count(mode, D):
+        return 2 * D if mode == "sign_split" else D
+
     rows = []
     for D in grid:
         for method in args.methods:
+            # Fit is mode-independent: fit once per (D, method), evaluate every mode.
             if method == "pca":
                 mean, E = pca_full.mean_, pca_full.components_[:D]
             else:  # ica refit per D (not nested)
@@ -228,35 +234,40 @@ def main():
                                   max_iter=args.ica_max_iter, tol=1e-3, random_state=args.seed)
                     ica.fit(Xtrain)
                     mean, E = ica.mean_, ica.components_
-                    conv = "" if (getattr(ica, "n_iter_", 0) or 0) < args.ica_max_iter else " [ICA NOT CONVERGED]"
-                    if conv:
-                        print(f"  D={D} {method}{conv}")
+                    if (getattr(ica, "n_iter_", 0) or 0) >= args.ica_max_iter:
+                        print(f"  D={D} ica [NOT CONVERGED]")
                 except Exception as ex:
                     # FastICA can blow up numerically at high D (NaNs in decorrelation).
-                    M = 2 * D if args.mode == "sign_split" else D
-                    rows.append((D, method, M, float("nan"), float("nan"), float("nan"),
-                                 -1, float("nan"), False))
+                    for mode in args.modes:
+                        M = feat_count(mode, D)
+                        rows.append((D, method, mode, M, float("nan"), float("nan"),
+                                     float("nan"), -1, float("nan"), False))
                     print(f"  D={D:>4} ica  FAILED: {type(ex).__name__}: {ex}")
                     continue
-            enc = make_linear_encoder(mean, E, args.mode, device)
-            ms_mean, ms_std, ms_peak, ms_dead = ms_score(enc, ms_cache, embeds, device)
-            sig, M, diag = nfp_counts(enc, ball, tau, mask, device)
-            rows.append((D, method, M, ms_mean, ms_std, ms_peak, sig, 100 * sig / M, diag))
-            print(f"  D={D:>4} {method:<3} feats={M:<5} MS={ms_mean:.4f}±{ms_std:.4f} "
-                  f"peak={ms_peak:.3f}  NFP sig={sig}/{M} ({100*sig/M:.2f}%) diag={diag}")
+            for mode in args.modes:
+                enc = make_linear_encoder(mean, E, mode, device)
+                ms_mean, ms_std, ms_peak, _ = ms_score(enc, ms_cache, embeds, device)
+                sig, M, diag = nfp_counts(enc, ball, tau, mask, device)
+                rows.append((D, method, mode, M, ms_mean, ms_std, ms_peak, sig, 100 * sig / M, diag))
+                print(f"  D={D:>4} {method:<3} {mode:<10} feats={M:<5} "
+                      f"MS={ms_mean:.4f}±{ms_std:.4f} peak={ms_peak:.3f}  "
+                      f"NFP sig={sig}/{M} ({100*sig/M:.2f}%) diag={diag}")
 
     # write CSV
     out = Path(args.output_csv); out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w") as f:
-        f.write("D,method,n_features,ms_mean,ms_std,ms_peak,nfp_sig,nfp_pct,diag_dominant\n")
+        f.write("D,method,mode,n_features,ms_mean,ms_std,ms_peak,nfp_sig,nfp_pct,diag_dominant\n")
         for r in rows:
-            f.write(f"{r[0]},{r[1]},{r[2]},{r[3]:.6f},{r[4]:.6f},{r[5]:.6f},{r[6]},{r[7]:.4f},{r[8]}\n")
+            f.write(f"{r[0]},{r[1]},{r[2]},{r[3]},{r[4]:.6f},{r[5]:.6f},{r[6]:.6f},"
+                    f"{r[7]},{r[8]:.4f},{r[9]}\n")
     print(f"\nSaved -> {out}")
 
     # printed summary table
-    print(f"\n{'D':>5} {'method':<5} {'feats':>6} {'MS mean':>9} {'MS peak':>8} {'NFP %sig':>9} {'diag':>5}")
+    print(f"\n{'D':>5} {'method':<5} {'mode':<11} {'feats':>6} {'MS mean':>9} "
+          f"{'MS peak':>8} {'NFP %sig':>9} {'diag':>5}")
     for r in rows:
-        print(f"{r[0]:>5} {r[1]:<5} {r[2]:>6} {r[3]:>9.4f} {r[5]:>8.3f} {r[7]:>8.2f}% {str(r[8]):>5}")
+        print(f"{r[0]:>5} {r[1]:<5} {r[2]:<11} {r[3]:>6} {r[4]:>9.4f} {r[6]:>8.3f} "
+              f"{r[8]:>8.2f}% {str(r[9]):>5}")
 
 
 if __name__ == "__main__":

@@ -374,21 +374,43 @@ components D. Confirms the SAE's advantages are not recoverable by tuning D.
 
 Efficient design: the VideoMAE forward passes are independent of D, so they are cached **once**
 (per-token val acts for MS; ball-tracking acts for NFP), then D is swept as linear algebra. PCA
-is nested (fit once at the largest D, slice); ICA is refit per D (not nested).
+is nested (fit once at the largest D, slice); ICA is refit per D (not nested). The fit is
+**mode-independent**, so `--modes` evaluates several sign-handling modes per (D, method) for free.
 
 ```powershell
 $env:PYTHONPATH = (Get-Location).Path
 python analysis/sweep_pca_ica_dim.py `
     --ssv2_path <SSv2> --nfp_dir data/output/nfp --train_dir local_runs/train_acts `
     --embeds_path local_runs/embeds/ssv2_val_dinov2.pt --output_csv local_runs/sweep_dim.csv `
-    --grid 16 32 64 128 256 512 --methods pca ica --mode sign_split --device cuda:0
+    --grid 16 32 64 128 256 512 --methods pca ica --modes sign_split signed --device cuda:0
 ```
 
-**Results (`local_runs/sweep_dim.csv`):** MS mean is flat (~0.467) at every D for both methods;
-MS std shrinks with D (0.012→0.005); MS **peak** is flat (PCA ~0.497 — identical at every D
-because PCA is nested; ICA ~0.51–0.52) and never approaches the SAE's 0.80. NFP %-significant
-stays dense at every D (PCA 59%→69%, ICA 62%→70%, already ~60% at D=16) and never approaches the
-SAE's 1.2%. FastICA blew up numerically at D=512 (NaNs — high-D instability; PCA-512 is fine and
-the script records the ICA failure as a NaN row instead of crashing). **Conclusion:** the SAE's
-high-MS tail and NFP sparsity are intrinsic to sparse overcomplete coding, not a matter of
-choosing the right D.
+The CSV columns are `D, method, mode, n_features, ms_mean, ms_std, ms_peak, nfp_sig, nfp_pct,
+diag_dominant`. The sign_split and signed runs above were saved separately
+(`sweep_dim.csv` / `sweep_dim_signed.csv`) so the sign_split results are not recomputed.
+
+**Results — sign_split (`local_runs/sweep_dim.csv`):** MS mean is flat (~0.467) at every D for
+both methods; MS std shrinks with D (0.012→0.005); MS **peak** is flat (PCA ~0.497 — identical at
+every D because PCA is nested; ICA ~0.51–0.52) and never approaches the SAE's 0.80. NFP
+%-significant stays dense at every D (PCA 59%→69%, ICA 62%→70%, already ~60% at D=16) and never
+approaches the SAE's 1.2%. FastICA blew up numerically at D=512 (NaNs — high-D instability;
+PCA-512 is fine and the script records the ICA failure as a NaN row instead of crashing).
+
+**Results — signed robustness (`local_runs/sweep_dim_signed.csv`):** the conclusions are robust
+to sign handling. MS mean is again flat ~0.467 at every D; peak capped (PCA 0.484 identical at
+every D; ICA ~0.48–0.51), never near 0.80. NFP %-significant is **even denser** under signed
+(PCA 83–91%, ICA 91–94%) than under sign_split — approaching the raw-layer 90.9%, consistent with
+signed full-rank PCA being a rotation of the raw basis. Signed features are mostly *not*
+diagonal-dominant (less concept-selective), which is why `sign_split` is the better primary mode
+while `signed` serves as the robustness check. (ICA-512 fails the same way in signed mode.)
+
+**Conclusion:** under both sign modes, the SAE's high-MS tail (peak 0.80) and NFP sparsity (1.2%)
+are intrinsic to sparse overcomplete coding — not recoverable by choosing the right D or sign
+handling for PCA/ICA.
+
+**Note on the NFP detection threshold:** a feature is "significant" if its within-video
+covariance with some tau has a one-sample *t*-test (over N=3000 videos) `p < 0.05/D` (Bonferroni
+across features). This is a *significance*, not effect-size, threshold — with N=3000 the test is
+high-powered, so even tiny non-zero covariances pass. The high PCA/ICA/raw densities reflect that
+nearly every linear direction has a small but genuine motion covariance; the SAE's sparsity (not a
+stricter threshold) is what isolates the few strong temporal features.
