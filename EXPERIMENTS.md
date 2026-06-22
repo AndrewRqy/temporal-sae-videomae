@@ -35,6 +35,14 @@ PowerShell runners live in `jobs/local/`:
 Order: run `run_pca_ica_ms_local.ps1` first (it fits `pca.pt`/`ica.pt` and caches
 `train_acts` + DINOv2 embeddings that the NFP run and the sweep reuse).
 
+**Skip the heavy steps via HuggingFace.** The NFP dataset, fitted `pca.pt`/`ica.pt`, cached
+`train_acts`, DINOv2 embeddings, and the raw NFP result tensors are hosted (private) at
+[`AndrewRqy/temporal-sae-videomae`](https://huggingface.co/datasets/AndrewRqy/temporal-sae-videomae).
+Download them into the matching local paths (`data/output/nfp/`, `local_runs/decomp/`,
+`local_runs/train_acts/`, `local_runs/embeds/`) to reproduce the MS/NFP/sweep numbers without
+re-rendering or re-running VideoMAE. The upload script is `local_runs/hf_upload/upload_to_hf.py`
+and the file map is in the dataset card.
+
 ---
 
 ## 0. Dataset Generation (`jobs/dataset/`)

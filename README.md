@@ -54,7 +54,27 @@ extended here with `PCADict` / `ICADict` / `IdentityDict` so PCA, ICA, and the r
 swapped in wherever an SAE is used. `nnsight` is only needed for SAE *training* (the package
 import is guarded, so extraction / PCA-ICA / NFP run without it).
 
-For the NFP ball video dataset, render locally with Kubric via Docker:
+### Pretrained weights & data (HuggingFace)
+
+The NFP ball dataset, the fitted PCA/ICA weights, and the cached activations / embeddings are
+hosted (private) so you can reproduce the linear-decomposition baselines **without** re-rendering
+the dataset, re-running VideoMAE, or refitting:
+
+**[`AndrewRqy/temporal-sae-videomae`](https://huggingface.co/datasets/AndrewRqy/temporal-sae-videomae)** (request access)
+
+```bash
+# NFP ball dataset (3000 videos) -> data/output/nfp/
+huggingface-cli download AndrewRqy/temporal-sae-videomae nfp_ball_dataset.tar.gz --repo-type dataset --local-dir .
+tar xzf nfp_ball_dataset.tar.gz -C data/output/
+# Weights + caches (skip refit / re-extract): weights/, activations/, reproducibility/
+huggingface-cli download AndrewRqy/temporal-sae-videomae --repo-type dataset --local-dir hf_dl
+```
+
+See the repo's dataset card for the full file map. The trained **SAE** checkpoint is *not* included
+(it lived on a cluster that is no longer accessible); VideoMAE/DINOv2 weights download from the Hub
+automatically. The provenance/upload script is `local_runs/hf_upload/upload_to_hf.py`.
+
+Alternatively, render the NFP ball dataset locally with Kubric via Docker:
 
 ```powershell
 cd data
