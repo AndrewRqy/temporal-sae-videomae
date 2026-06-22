@@ -35,6 +35,19 @@ PowerShell runners live in `jobs/local/`:
 Order: run `run_pca_ica_ms_local.ps1` first (it fits `pca.pt`/`ica.pt` and caches
 `train_acts` + DINOv2 embeddings that the NFP run and the sweep reuse).
 
+**Skip the heavy steps via HuggingFace.** The trained **SAEs** (`weights/sae/`), fitted
+`pca.pt`/`ica.pt`, the NFP dataset, synthetic ground truth (`synthetic/`), cached `train_acts`,
+DINOv2 embeddings, and the NFP result tensors are hosted (public) at
+[`AndrewRqy/temporal-sae-videomae`](https://huggingface.co/datasets/AndrewRqy/temporal-sae-videomae).
+Download them into the matching local paths (`data/output/nfp/`, `local_runs/{sae,decomp,train_acts,embeds,synth_data,...}/`)
+to reproduce §1–§5 without re-training, re-rendering, or re-running VideoMAE. The upload script is
+`local_runs/hf_upload/upload_to_hf.py` and the full file map is in the dataset card.
+
+> **Upload status (in progress):** weights, synthetic data, dataset, caches, and most result
+> tensors are up; four large *cluster NFP result* tensors (`videomae_deadpen_0p03{,_avgtau,_analyzed}.pt`,
+> `synthetic_nfp.pt`) are still uploading. They are verification-only — every experiment is already
+> reproducible from the hosted weights + data.
+
 ---
 
 ## 0. Dataset Generation (`jobs/dataset/`)

@@ -54,7 +54,34 @@ extended here with `PCADict` / `ICADict` / `IdentityDict` so PCA, ICA, and the r
 swapped in wherever an SAE is used. `nnsight` is only needed for SAE *training* (the package
 import is guarded, so extraction / PCA-ICA / NFP run without it).
 
-For the NFP ball video dataset, render locally with Kubric via Docker:
+### Pretrained weights & data (HuggingFace)
+
+The **trained SAEs** (VideoMAE, DINOv2, both synthetic), the fitted **PCA/ICA** weights, the
+**NFP ball dataset**, the synthetic ground truth, and the cached activations / DINOv2 embeddings /
+NFP result tensors are hosted (public) so you can reproduce the full study **without** re-training,
+re-rendering the dataset, re-running VideoMAE, or refitting:
+
+**[`AndrewRqy/temporal-sae-videomae`](https://huggingface.co/datasets/AndrewRqy/temporal-sae-videomae)**
+
+```bash
+# NFP ball dataset (3000 videos) -> data/output/nfp/
+huggingface-cli download AndrewRqy/temporal-sae-videomae nfp_ball_dataset.tar.gz --repo-type dataset --local-dir .
+tar xzf nfp_ball_dataset.tar.gz -C data/output/
+# Everything else (weights/, synthetic/, activations/, reproducibility/, cluster_nfp_results/):
+huggingface-cli download AndrewRqy/temporal-sae-videomae --repo-type dataset --local-dir hf_dl
+```
+
+See the repo's dataset card for the full file map. VideoMAE/DINOv2 backbone weights download from
+the Hub automatically; SSv2 (public) is needed only to *re-extract* activations from scratch.
+Provenance/upload script: `local_runs/hf_upload/upload_to_hf.py`.
+
+> **Upload status:** the SAE/PCA/ICA weights, synthetic data, dataset, caches, and most result
+> tensors are up. Four large *cluster NFP result* tensors are still being uploaded
+> (`videomae_deadpen_0p03{,_avgtau,_analyzed}.pt`, `synthetic_nfp.pt`). These are
+> *verification-only* — every experiment is already reproducible from the hosted weights + data
+> (the results are regenerable by re-running the test).
+
+Alternatively, render the NFP ball dataset locally with Kubric via Docker:
 
 ```powershell
 cd data
