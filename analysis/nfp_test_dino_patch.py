@@ -28,7 +28,7 @@ from tqdm import tqdm
 from transformers import AutoImageProcessor, Dinov2Model
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from dictionary_learning import AutoEncoder
+from dictionary_learning import AutoEncoder, PCADict, ICADict, IdentityDict
 
 TAU_KEYS   = ["speed", "vel_x", "vel_y", "accel_mag", "direction"]
 N_TEMPORAL = 8   # 8 temporal steps (one frame each = frame 2t)
@@ -149,7 +149,15 @@ def print_report(t_stat, p_val, C_mean, alpha=0.05):
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--dataset_dir",  required=True)
-    p.add_argument("--sae_path",     required=True)
+    p.add_argument("--sae_path",     default=None,
+                   help="Dictionary checkpoint. Not needed for --sae_model identity.")
+    p.add_argument("--sae_model",    default="standard",
+                   choices=["standard", "pca", "ica", "identity"],
+                   help="standard=ReLU SAE; pca/ica=linear decomposition fit on DINO "
+                        "patch activations; identity=raw DINO patch dims (no transform).")
+    p.add_argument("--decomp_mode",  default="sign_split",
+                   choices=["sign_split", "abs", "signed"],
+                   help="For pca/ica: how signed components map to features.")
     p.add_argument("--output_path",  required=True)
     p.add_argument("--model_name",   default="dinov2-base")
     p.add_argument("--batch_size",   default=8,  type=int)
@@ -168,8 +176,17 @@ def main():
     model     = Dinov2Model.from_pretrained(f"facebook/{args.model_name}").to(device)
     model.eval()
 
-    print(f"Loading SAE: {args.sae_path}")
-    sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    print(f"Loading dictionary ({args.sae_model}): {args.sae_path}")
+    if args.sae_model == "standard":
+        sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    elif args.sae_model == "pca":
+        sae = PCADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    elif args.sae_model == "ica":
+        sae = ICADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    elif args.sae_model == "identity":
+        sae = IdentityDict.from_pretrained(None)
+    else:
+        raise ValueError(f"Unknown sae_model: {args.sae_model}")
     sae.eval()
 
     ds = NFPDataset(Path(args.dataset_dir))

@@ -137,19 +137,34 @@ def ms_score(encode, ms_cache, embeds, device, clip_batch=50):
     return float(np.mean(ms[valid])), float(np.std(ms[valid])), float(np.max(ms[valid])), int((~valid).sum())
 
 
-def nfp_counts(encode, ball, tau, mask, device, alpha=0.05):
-    """Within-video covariance + t-test; returns (#sig-any, M, diag_dominant)."""
+def nfp_counts(encode, ball, tau, mask, device, alpha=0.05, fixed_denom=768):
+    """Within-video covariance + t-test.
+
+    Returns (#sig adaptive, #sig fixed-denom, M, diag_dominant). Two significance
+    counts under two Bonferroni thresholds:
+      - adaptive : alpha / M, where M = #features. The per-condition default; the
+                   bar gets stricter as D grows, which mechanically suppresses the
+                   count, so adaptive counts are NOT comparable across D.
+      - fixed    : alpha / fixed_denom (default 768 = raw layer-11 dimensionality),
+                   INDEPENDENT of D. Holding the denominator fixed isolates how the
+                   raw count of temporal features changes with D from the changing
+                   multiple-comparisons correction.
+    Diagonal dominance uses the adaptive threshold (the per-condition definition).
+    """
     V, T, _ = ball.shape
     flat = ball.reshape(V * T, -1).to(device).float()
     feats = encode(flat).reshape(V, T, -1).cpu()               # [V,T,M]
     feats = feats * mask.unsqueeze(-1).float()                 # re-zero off-screen
     C = within_video_covariance_all(feats, tau).numpy()        # [V, M, 5]
-    M = C.shape[1]; bonf = alpha / M
+    M = C.shape[1]
+    bonf = alpha / M
+    bonf_fixed = alpha / fixed_denom
     t = np.zeros((M, 5), np.float32); p = np.ones_like(t)
     for k in range(5):
         t[:, k], p[:, k] = stats.ttest_1samp(C[:, :, k], 0.0)
     sig_any = (p < bonf).any(axis=1)
-    # diagonal dominance of the selectivity matrix
+    sig_any_fixed = (p < bonf_fixed).any(axis=1)
+    # diagonal dominance of the selectivity matrix (adaptive threshold)
     diag_dom = True
     for kr in range(5):
         m = p[:, kr] < bonf
@@ -158,7 +173,7 @@ def nfp_counts(encode, ball, tau, mask, device, alpha=0.05):
         row = [np.abs(t[m, kc]).mean() for kc in range(5)]
         if int(np.argmax(row)) != kr:
             diag_dom = False
-    return int(sig_any.sum()), M, bool(diag_dom)
+    return int(sig_any.sum()), int(sig_any_fixed.sum()), M, bool(diag_dom)
 
 
 # --------------------------------------------------------------------------- #
@@ -178,6 +193,9 @@ def parse_args():
                    choices=["sign_split", "abs", "signed"],
                    help="Run every (D, method) under each listed mode. The fit is "
                         "mode-independent, so evaluating multiple modes is nearly free.")
+    p.add_argument("--fixed_denom", type=int, default=768,
+                   help="D-independent Bonferroni denominator for the strict NFP cutoff "
+                        "(alpha/fixed_denom, applied at every D; 768 = raw layer dim).")
     p.add_argument("--n_clips",     type=int, default=800)
     p.add_argument("--n_samples",   type=int, default=300_000)
     p.add_argument("--batch",       type=int, default=4)
@@ -241,33 +259,39 @@ def main():
                     for mode in args.modes:
                         M = feat_count(mode, D)
                         rows.append((D, method, mode, M, float("nan"), float("nan"),
-                                     float("nan"), -1, float("nan"), False))
+                                     float("nan"), -1, float("nan"), -1, float("nan"), False))
                     print(f"  D={D:>4} ica  FAILED: {type(ex).__name__}: {ex}")
                     continue
             for mode in args.modes:
                 enc = make_linear_encoder(mean, E, mode, device)
                 ms_mean, ms_std, ms_peak, _ = ms_score(enc, ms_cache, embeds, device)
-                sig, M, diag = nfp_counts(enc, ball, tau, mask, device)
-                rows.append((D, method, mode, M, ms_mean, ms_std, ms_peak, sig, 100 * sig / M, diag))
+                sig, sig_fx, M, diag = nfp_counts(enc, ball, tau, mask, device,
+                                                  fixed_denom=args.fixed_denom)
+                rows.append((D, method, mode, M, ms_mean, ms_std, ms_peak,
+                             sig, 100 * sig / M, sig_fx, 100 * sig_fx / M, diag))
                 print(f"  D={D:>4} {method:<3} {mode:<10} feats={M:<5} "
                       f"MS={ms_mean:.4f}±{ms_std:.4f} peak={ms_peak:.3f}  "
-                      f"NFP sig={sig}/{M} ({100*sig/M:.2f}%) diag={diag}")
+                      f"NFP sig={sig}/{M} ({100*sig/M:.2f}%) "
+                      f"fix{args.fixed_denom}={sig_fx} ({100*sig_fx/M:.2f}%) diag={diag}")
 
     # write CSV
     out = Path(args.output_csv); out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w") as f:
-        f.write("D,method,mode,n_features,ms_mean,ms_std,ms_peak,nfp_sig,nfp_pct,diag_dominant\n")
+        f.write("D,method,mode,n_features,ms_mean,ms_std,ms_peak,"
+                f"nfp_sig,nfp_pct,nfp_sig_fixed{args.fixed_denom},nfp_pct_fixed{args.fixed_denom},"
+                "diag_dominant\n")
         for r in rows:
             f.write(f"{r[0]},{r[1]},{r[2]},{r[3]},{r[4]:.6f},{r[5]:.6f},{r[6]:.6f},"
-                    f"{r[7]},{r[8]:.4f},{r[9]}\n")
+                    f"{r[7]},{r[8]:.4f},{r[9]},{r[10]:.4f},{r[11]}\n")
     print(f"\nSaved -> {out}")
 
     # printed summary table
+    fx = f"fix{args.fixed_denom} %"
     print(f"\n{'D':>5} {'method':<5} {'mode':<11} {'feats':>6} {'MS mean':>9} "
-          f"{'MS peak':>8} {'NFP %sig':>9} {'diag':>5}")
+          f"{'MS peak':>8} {'NFP %sig':>9} {fx:>10} {'diag':>5}")
     for r in rows:
         print(f"{r[0]:>5} {r[1]:<5} {r[2]:<11} {r[3]:>6} {r[4]:>9.4f} {r[6]:>8.3f} "
-              f"{r[8]:>8.2f}% {str(r[9]):>5}")
+              f"{r[8]:>8.2f}% {r[10]:>9.2f}% {str(r[11]):>5}")
 
 
 if __name__ == "__main__":

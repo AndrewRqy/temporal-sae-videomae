@@ -75,11 +75,9 @@ See the repo's dataset card for the full file map. VideoMAE/DINOv2 backbone weig
 the Hub automatically; SSv2 (public) is needed only to *re-extract* activations from scratch.
 Provenance/upload script: `local_runs/hf_upload/upload_to_hf.py`.
 
-> **Upload status:** the SAE/PCA/ICA weights, synthetic data, dataset, caches, and most result
-> tensors are up. Four large *cluster NFP result* tensors are still being uploaded
-> (`videomae_deadpen_0p03{,_avgtau,_analyzed}.pt`, `synthetic_nfp.pt`). These are
-> *verification-only* — every experiment is already reproducible from the hosted weights + data
-> (the results are regenerable by re-running the test).
+> The `cluster_nfp_results/` tensors are *verification-only* — every experiment is reproducible
+> from the hosted weights + data; they just let you diff against the published numbers without
+> recomputing (the results are regenerable by re-running the test).
 
 Alternatively, render the NFP ball dataset locally with Kubric via Docker:
 
