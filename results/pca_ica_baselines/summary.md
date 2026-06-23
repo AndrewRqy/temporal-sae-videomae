@@ -347,6 +347,31 @@ map cleanly to one variable each — yet they are **dense** (69% flagged). So cl
 specificity is *not* unique to the SAE; **sparsity is**. The raw layer is the worst of both:
 dense *and* not diagonal-dominant. (Full per-condition file: `nfp_selectivity.md`.)
 
+### 4c. Where the features fall relative to the cutoff (the distribution)
+
+The "% significant" numbers are just counts on one side of a threshold; the picture below shows
+the *whole distribution* so the threshold is in context. For each feature we take its **strongest
+temporal signal** = the maximum, over the 5 τ variables, of the |t-statistic| from the NFP test
+(§2b). A feature is significant iff this exceeds the **Bonferroni cutoff** (the red dashed line;
+equivalently min p-value < α/D — and since all features share the same degrees of freedom, max|t|
+is monotonic in the p-value, so this line reproduces the significance call exactly).
+
+![NFP test statistic vs Bonferroni cutoff](figures/cutoff_distribution.png)
+
+*(Reproduce: `python analysis/cutoff_distribution.py` → `figures/cutoff_distribution.png`.)*
+
+Reading the four panels (cutoff |t| ≈ 3.9–4.5):
+- **SAE**: the bulk of features sits at |t| ≈ 1–2, **left of the cutoff**, with only a thin tail
+  crossing it — the visual signature of **sparsity** (1.4% pass).
+- **Raw layer**: the entire distribution is shifted to the **right of the cutoff** — almost every
+  raw neuron has a statistically reliable (if tiny) motion covariance, so 90.9% pass.
+- **PCA / ICA**: the bulk straddles and mostly sits to the **right of the cutoff** (≈69% pass) —
+  denser than the SAE, less extreme than raw.
+
+This makes concrete the §2b note: with N=3000 videos the test is high-powered, so the *position*
+of a basis's distribution relative to the cutoff — not the cutoff itself — is what produces the
+sparse-vs-dense contrast. Only the SAE concentrates its mass below the bar.
+
 ---
 
 ## 5. Result — dimensionality sweep on VideoMAE (does the number of components matter?)
@@ -401,43 +426,74 @@ a small practical mark against ICA versus PCA/SAE.
 > On the DINO control (§6a) ICA happened to converge cleanly (66 iterations) because those
 > activations are better-conditioned — so the instability is **data-dependent**, not universal.
 
-### sign_split mode (primary)
+The four cases — {PCA, ICA} × {sign_split, signed} — are shown separately below so the trend in
+**% significant as D grows** is visible for each. (`feats` = feature count M = 2·D for sign_split,
+D for signed; `%sig (α/M)` is the adaptive cutoff, `%sig (α/768)` the D-independent one.)
 
-| D | method | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
-|---|---|---|---|---|---|---|---|
-| 16 | pca | 32 | 0.4677 | 0.497 | 59.38% | 46.88% | No |
-| 16 | ica | 32 | 0.4677 | 0.511 | 62.50% | 46.88% | No |
-| 32 | pca | 64 | 0.4675 | 0.497 | 59.38% | 51.56% | Yes |
-| 32 | ica | 64 | 0.4675 | 0.512 | 65.62% | 62.50% | Yes |
-| 64 | pca | 128 | 0.4666 | 0.497 | 59.38% | 50.00% | No |
-| 64 | ica | 128 | 0.4672 | 0.515 | 68.75% | 64.06% | No |
-| 128 | pca | 256 | 0.4669 | 0.497 | 66.02% | 59.77% | Yes |
-| 128 | ica | 256 | 0.4676 | 0.519 | 67.97% | 66.41% | Yes |
-| 256 | pca | 512 | 0.4672 | 0.497 | 66.60% | 64.45% | Yes |
-| 256 | ica | 512 | 0.4674 | 0.512 | 70.51% | 69.53% | Yes |
-| 512 | pca | 1024 | 0.4677 | 0.497 | 69.43% | 70.12% | Yes |
-| 512 | ica | 1024 | — | — | — | — | FastICA NaN |
-| **768** | **pca** | **1536** | **0.4677** | **0.497** | **68.82%** | **71.03%** | No |
-| 768 | ica | 1536 | — | — | — | — | FastICA NaN |
+#### NFP %significant vs D — all four cases at a glance (adaptive α/M cutoff)
 
-### signed mode (robustness)
+| D | PCA · sign_split | ICA · sign_split | PCA · signed | ICA · signed |
+|---|---|---|---|---|
+| 16 | 59.38% | 62.50% | 87.50% | 93.75% |
+| 32 | 59.38% | 65.62% | 87.50% | 93.75% |
+| 64 | 59.38% | 68.75% | 82.81% | 90.62% |
+| 128 | 66.02% | 67.97% | 88.28% | 91.41% |
+| 256 | 66.60% | 70.51% | 89.84% | 91.02% |
+| 512 | 69.43% | NaN | 91.02% | NaN |
+| 768 | 68.82% | NaN | 90.89% | NaN |
 
-| D | method | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
-|---|---|---|---|---|---|---|---|
-| 16 | pca | 16 | 0.4658 | 0.484 | 87.50% | 75.00% | Yes |
-| 16 | ica | 16 | 0.4686 | 0.484 | 93.75% | 62.50% | Yes |
-| 32 | pca | 32 | 0.4642 | 0.484 | 87.50% | 81.25% | No |
-| 32 | ica | 32 | 0.4669 | 0.495 | 93.75% | 84.38% | No |
-| 64 | pca | 64 | 0.4645 | 0.484 | 82.81% | 81.25% | No |
-| 64 | ica | 64 | 0.4659 | 0.500 | 90.62% | 85.94% | No |
-| 128 | pca | 128 | 0.4657 | 0.484 | 88.28% | 85.16% | No |
-| 128 | ica | 128 | 0.4667 | 0.514 | 91.41% | 86.72% | Yes |
-| 256 | pca | 256 | 0.4667 | 0.484 | 89.84% | 88.28% | No |
-| 256 | ica | 256 | 0.4673 | 0.502 | 91.02% | 88.28% | No |
-| 512 | pca | 512 | 0.4675 | 0.484 | 91.02% | 90.43% | No |
-| 512 | ica | 512 | — | — | — | — | FastICA NaN |
-| **768** | **pca** | **768** | **0.4676** | **0.484** | **90.89%** | **90.89%** | No |
-| 768 | ica | 768 | — | — | — | — | FastICA NaN |
+Trend: in **sign_split**, % rises gently with D (PCA 59→69%, ICA 62→71%); in **signed**, % stays
+high and roughly flat (PCA ~83–91%, ICA ~91–94%). In **no** case does it fall toward the SAE's
+1.2% — increasing D never buys sparsity. ICA's column ends at D=256 (FastICA NaNs at D≥512, §5
+above). Detailed per-case tables (with the fixed α/768 cutoff, MS, and diagonal dominance) follow.
+
+#### PCA · sign_split
+
+| D | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
+|---|---|---|---|---|---|---|
+| 16 | 32 | 0.4677 | 0.497 | 59.38% | 46.88% | No |
+| 32 | 64 | 0.4675 | 0.497 | 59.38% | 51.56% | Yes |
+| 64 | 128 | 0.4666 | 0.497 | 59.38% | 50.00% | No |
+| 128 | 256 | 0.4669 | 0.497 | 66.02% | 59.77% | Yes |
+| 256 | 512 | 0.4672 | 0.497 | 66.60% | 64.45% | Yes |
+| 512 | 1024 | 0.4677 | 0.497 | 69.43% | 70.12% | Yes |
+| **768** | **1536** | **0.4677** | **0.497** | **68.82%** | **71.03%** | No |
+
+#### ICA · sign_split
+
+| D | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
+|---|---|---|---|---|---|---|
+| 16 | 32 | 0.4677 | 0.511 | 62.50% | 46.88% | No |
+| 32 | 64 | 0.4675 | 0.512 | 65.62% | 62.50% | Yes |
+| 64 | 128 | 0.4672 | 0.515 | 68.75% | 64.06% | No |
+| 128 | 256 | 0.4676 | 0.519 | 67.97% | 66.41% | Yes |
+| 256 | 512 | 0.4674 | 0.512 | 70.51% | 69.53% | Yes |
+| 512 | 1024 | — | — | — | — | FastICA NaN |
+| 768 | 1536 | — | — | — | — | FastICA NaN |
+
+#### PCA · signed
+
+| D | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
+|---|---|---|---|---|---|---|
+| 16 | 16 | 0.4658 | 0.484 | 87.50% | 75.00% | Yes |
+| 32 | 32 | 0.4642 | 0.484 | 87.50% | 81.25% | No |
+| 64 | 64 | 0.4645 | 0.484 | 82.81% | 81.25% | No |
+| 128 | 128 | 0.4657 | 0.484 | 88.28% | 85.16% | No |
+| 256 | 256 | 0.4667 | 0.484 | 89.84% | 88.28% | No |
+| 512 | 512 | 0.4675 | 0.484 | 91.02% | 90.43% | No |
+| **768** | **768** | **0.4676** | **0.484** | **90.89%** | **90.89%** | No |
+
+#### ICA · signed
+
+| D | feats | MS mean | MS peak | %sig (α/M) | %sig (α/768) | diag-dominant |
+|---|---|---|---|---|---|---|
+| 16 | 16 | 0.4686 | 0.484 | 93.75% | 62.50% | Yes |
+| 32 | 32 | 0.4669 | 0.495 | 93.75% | 84.38% | No |
+| 64 | 64 | 0.4659 | 0.500 | 90.62% | 85.94% | No |
+| 128 | 128 | 0.4667 | 0.514 | 91.41% | 86.72% | Yes |
+| 256 | 256 | 0.4673 | 0.502 | 91.02% | 88.28% | No |
+| 512 | 512 | — | — | — | — | FastICA NaN |
+| 768 | 768 | — | — | — | — | FastICA NaN |
 
 **Internal consistency check.** At **D = 768 signed**, the feature count M = 768 equals the fixed
 denominator, so the two cutoffs must coincide — and the count is **698/768 (90.89%), exactly equal
