@@ -43,10 +43,8 @@ Download them into the matching local paths (`data/output/nfp/`, `local_runs/{sa
 to reproduce §1–§5 without re-training, re-rendering, or re-running VideoMAE. The upload script is
 `local_runs/hf_upload/upload_to_hf.py` and the full file map is in the dataset card.
 
-> **Upload status (in progress):** weights, synthetic data, dataset, caches, and most result
-> tensors are up; four large *cluster NFP result* tensors (`videomae_deadpen_0p03{,_avgtau,_analyzed}.pt`,
-> `synthetic_nfp.pt`) are still uploading. They are verification-only — every experiment is already
-> reproducible from the hosted weights + data.
+> The `cluster_nfp_results/` tensors are verification-only — every experiment is reproducible from
+> the hosted weights + data; they let you diff against the published numbers without recomputing.
 
 ---
 
@@ -391,16 +389,23 @@ is nested (fit once at the largest D, slice); ICA is refit per D (not nested). T
 **mode-independent**, so `--modes` evaluates several sign-handling modes per (D, method) for free.
 
 ```powershell
+# convenience runner (grid to full-rank 768, both modes, fixed-768 cutoff):
+powershell -ExecutionPolicy Bypass -File jobs\local\run_sweep_local.ps1
+# or directly:
 $env:PYTHONPATH = (Get-Location).Path
 python analysis/sweep_pca_ica_dim.py `
     --ssv2_path <SSv2> --nfp_dir data/output/nfp --train_dir local_runs/train_acts `
-    --embeds_path local_runs/embeds/ssv2_val_dinov2.pt --output_csv local_runs/sweep_dim.csv `
-    --grid 16 32 64 128 256 512 --methods pca ica --modes sign_split signed --device cuda:0
+    --embeds_path local_runs/embeds/ssv2_val_dinov2.pt --output_csv local_runs/sweep_dim_fixed768.csv `
+    --grid 16 32 64 128 256 512 768 --methods pca ica --modes sign_split signed `
+    --fixed_denom 768 --device cuda:0
 ```
 
 The CSV columns are `D, method, mode, n_features, ms_mean, ms_std, ms_peak, nfp_sig, nfp_pct,
-diag_dominant`. The sign_split and signed runs above were saved separately
-(`sweep_dim.csv` / `sweep_dim_signed.csv`) so the sign_split results are not recomputed.
+nfp_sig_fixed768, nfp_pct_fixed768, diag_dominant`. The last two report NFP significance under a
+**D-independent** Bonferroni cutoff (`α/768`, denominator fixed at the raw layer dim) alongside
+the adaptive `α/M` count, so significance can be compared across D without the changing
+multiple-comparisons correction as a confound. Canonical CSV: `results/pca_ica_baselines/
+sweep_dim_fixed768.csv` (per-mode splits: `sweep_dim_sign_split.csv` / `sweep_dim_signed.csv`).
 
 **Results — sign_split (`local_runs/sweep_dim.csv`):** MS mean is flat (~0.467) at every D for
 both methods; MS std shrinks with D (0.012→0.005); MS **peak** is flat (PCA ~0.497 — identical at
@@ -417,9 +422,17 @@ signed full-rank PCA being a rotation of the raw basis. Signed features are most
 diagonal-dominant (less concept-selective), which is why `sign_split` is the better primary mode
 while `signed` serves as the robustness check. (ICA-512 fails the same way in signed mode.)
 
-**Conclusion:** under both sign modes, the SAE's high-MS tail (peak 0.80) and NFP sparsity (1.2%)
-are intrinsic to sparse overcomplete coding — not recoverable by choosing the right D or sign
-handling for PCA/ICA.
+**Results — full rank (D=768) + fixed cutoff (`results/pca_ica_baselines/sweep_dim_fixed768.csv`):**
+full-rank PCA does not help — at D=768 it still flags 68.8% (sign_split) / 90.9% (signed), never
+near the SAE's 1.2%. The denseness is robust to the cutoff: swapping the adaptive `α/M` bar for
+the fixed `α/768` bar moves the fractions only a few points (PCA/ICA stay in ~47–91% at every D
+under either threshold). FastICA NaNs at **both** D=512 and D=768. Internal check: PCA-signed at
+D=768 gives **698/768 — exactly the raw layer**, since full-rank signed PCA is a rotation of the
+raw basis and the per-feature t-test count is rotation-invariant.
+
+**Conclusion:** under both sign modes, all D up to full rank, and either Bonferroni cutoff, the
+SAE's high-MS tail (peak 0.80) and NFP sparsity (1.2%) are intrinsic to sparse overcomplete coding
+— not recoverable by choosing the right D, sign handling, or significance threshold for PCA/ICA.
 
 **Note on the NFP detection threshold:** a feature is "significant" if its within-video
 covariance with some tau has a one-sample *t*-test (over N=3000 videos) `p < 0.05/D` (Bonferroni
@@ -427,3 +440,53 @@ across features). This is a *significance*, not effect-size, threshold — with 
 high-powered, so even tiny non-zero covariances pass. The high PCA/ICA/raw densities reflect that
 nearly every linear direction has a small but genuine motion covariance; the SAE's sparsity (not a
 stricter threshold) is what isolates the few strong temporal features.
+
+## 5e. PCA/ICA on the DINO negative + synthetic positive controls
+
+**What it tests:** whether the linear-decomposition baselines behave on the two *controls* the
+way the SAE does — i.e. whether the PCA/ICA story (sparse SAE vs dense linear bases) is confirmed
+where we have an unambiguous expected answer. The same `PCADict`/`ICADict` drop-in is fit on each
+control's own representations and run through that control's NFP test.
+
+**Paper sections:** §2 (negative control) / §3–§4 (positive control).
+
+> MS does not transfer to either control: on DINO it would be circular (DINOv2 *is* the MS
+> image encoder); on synthetic there are no natural frames. For synthetic the stronger analog is
+> **ground-truth `W_τ` projection-fraction** alignment (already implemented in
+> `nfp_test_synthetic.py`); for DINO the test is purely NFP = 0.
+
+**DINO negative control** — `jobs/local/run_dino_pca_ica.ps1`: extract DINOv2 spatial patch
+activations over an independent SSv2-train corpus → fit PCA/ICA (256 comps) → run
+`analysis/nfp_test_dino_patch.py --sae_model {pca,ica,identity}` on the ball dataset. **Result:
+every basis flags 0 temporal features** — SAE 0/6144, raw 0/768, PCA 0/512, ICA 0/512 (ICA
+converges here, 66 iters). This is the load-bearing control: the same PCA/ICA recipe that flags
+69–91% on VideoMAE flags **nothing** on a temporally-blind encoder, so the VideoMAE flags are real
+temporal content, not an artifact of applying NFP to a non-sparse basis. Details:
+`results/pca_ica_baselines/dino_negcontrol.md`.
+
+**Synthetic positive control (100- and 763-static)** — `jobs/local/run_synth_pca_ica.ps1`: dump
+the synthetic reps (`analysis/dump_synth_acts.py`) → fit PCA/ICA (256 comps) → run
+`analysis/nfp_test_synthetic.py --sae_model {pca,ica}` (NFP + `W_τ`/`W_static` alignment), plus a
+same-pipeline SAE reference. **Result (100-static):** SAE is sparse (31/6144 = 0.50%) and its
+flagged features genuinely load on the temporal subspace (ProjFrac `W_τ` 0.229, ~35× random);
+PCA is dense (41%) and its flags are static-dominated (`W_τ` 0.048, `W_static` 0.952), so it does
+*not* isolate the temporal subspace; **ICA did not converge** (FastICA iteration cap) and is
+reported as such. **763-static:** `W_static` spans 763/768 dims so the alignment metric saturates,
+but the sparsity gap is starker — SAE 0.50% vs PCA *and* ICA both 100%. Details:
+`results/pca_ica_baselines/synthetic_alignment.md`.
+
+**Dimensionality sweep on both controls** (mirrors §5d) — `jobs/local/run_control_sweeps.ps1`,
+via `analysis/sweep_dino_dim.py` (NFP-only) and `analysis/sweep_synth_dim.py` (NFP + `W_τ`
+alignment); shared helpers in `analysis/sweep_common.py`. CSVs: `sweep_dim_dino.csv`,
+`sweep_dim_synth{100,763}.csv`. **DINO: 0 significant at every D** (the two stray single-feature
+blips under the adaptive bar vanish under the fixed α/768 cutoff) — the negative control is robust
+across all dimensionalities. **Synthetic-100:** PCA's absolute flagged count **saturates at ~210**
+(nested PCA — extra components are non-temporal noise), so %sig falls with D only via the growing
+denominator while `W_τ` alignment stays flat (~0.048, static-dominated); ICA NaNs at D≥512.
+**Synthetic-763:** 100% at every D. So, as in the VideoMAE sweep, no choice of D moves PCA/ICA
+toward the SAE on either control.
+
+**Conclusion:** both controls confirm the main study. The negative control shows NFP has no
+basis-dependent false positives (every basis → 0 on DINO, at every D); the positive control shows,
+against ground truth, that only the SAE is both sparse and correctly localized on the temporal
+directions, at every D.

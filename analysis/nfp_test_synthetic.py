@@ -33,9 +33,25 @@ import torch
 from scipy import stats
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from dictionary_learning import AutoEncoder
+from dictionary_learning import AutoEncoder, PCADict, ICADict, LinearDict
 
 TAU_KEYS = ["speed", "vel_x", "vel_y", "accel_mag", "direction"]
+
+
+def feature_input_directions(dic):
+    """Per-feature direction in input (activation) space, as a [F, d] tensor.
+
+    For an AutoEncoder this is the encoder weight rows. For a PCA/ICA LinearDict
+    the feature directions are the rows of the encode matrix E; under sign_split
+    each component contributes two features (+c, -c) whose directions are [E; -E],
+    matching the order of LinearDict.encode (cat([relu(s), relu(-s)])).
+    """
+    if isinstance(dic, LinearDict):
+        E = dic.E.detach().cpu().float()        # [n_components, d]
+        if dic.mode == "sign_split":
+            return torch.cat([E, -E], dim=0)    # [2*n_components, d]
+        return E                                # abs / signed: one feature per component
+    return dic.encoder.weight.data.cpu().float()
 
 
 def within_video_covariance_all(feats: torch.Tensor,
@@ -50,7 +66,7 @@ def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
     """
     Report max-cosine and projection-fraction alignment with W_tau / W_static.
     """
-    enc_W = sae.encoder.weight.data.cpu().float()           # [F, 768] tensor
+    enc_W = feature_input_directions(sae)                   # [F, 768] tensor
     enc_W_np = enc_W.numpy()
 
     def max_subspace_cos(feat_idx, W):
@@ -106,8 +122,8 @@ def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=N
 
     print(f"\n{'='*68}")
     print(f"NFP Test — Synthetic SAE (positive/negative control)")
-    print(f"  Temporal directions : W_tau   [5 x 768] — should trigger NFP")
-    print(f"  Static directions   : W_static [5 x 768] — should NOT trigger NFP")
+    print(f"  Temporal directions : W_tau   {list(W_tau.shape)} — should trigger NFP")
+    print(f"  Static directions   : W_static {list(W_static.shape)} — should NOT trigger NFP")
     print(f"  Bonferroni threshold: p < {bonf:.2e}")
     print(f"{'='*68}")
     print(f"{'Tau':<12} {'Sig+':>6} {'Sig-':>6} {'Total%':>8} {'Mean|t|':>9}")
@@ -158,7 +174,15 @@ def parse_args():
                    help="all_videos.pt saved by gen_synthetic_activations.py")
     p.add_argument("--matrices_path",   required=True,
                    help="matrices.pt saved by gen_synthetic_activations.py")
-    p.add_argument("--sae_path",        required=True)
+    p.add_argument("--sae_path",        required=True,
+                   help="Dictionary checkpoint (SAE ae.pt, or PCA/ICA pca.pt/ica.pt).")
+    p.add_argument("--sae_model",       default="standard",
+                   choices=["standard", "pca", "ica"],
+                   help="standard=ReLU SAE; pca/ica=linear decomposition fit on the "
+                        "synthetic representations.")
+    p.add_argument("--decomp_mode",     default="sign_split",
+                   choices=["sign_split", "abs", "signed"],
+                   help="For pca/ica: how signed components map to features.")
     p.add_argument("--output_path",     required=True)
     p.add_argument("--alpha",           default=0.05, type=float)
     p.add_argument("--device",          default="cuda:0")
@@ -179,8 +203,15 @@ def main():
     W_tau    = mat["W_tau"]     # [5, D]
     W_static = mat["W_static"]  # [5, D]
 
-    print(f"Loading SAE: {args.sae_path}")
-    sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    print(f"Loading dictionary ({args.sae_model}): {args.sae_path}")
+    if args.sae_model == "standard":
+        sae = AutoEncoder.from_pretrained(args.sae_path, device=device)
+    elif args.sae_model == "pca":
+        sae = PCADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    elif args.sae_model == "ica":
+        sae = ICADict.from_pretrained(args.sae_path, device=device, mode=args.decomp_mode)
+    else:
+        raise ValueError(f"Unknown sae_model: {args.sae_model}")
     sae.eval()
 
     N, T, D = h.shape

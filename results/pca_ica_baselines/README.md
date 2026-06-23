@@ -8,6 +8,7 @@ and `analysis/sweep_pca_ica_dim.py`. See `EXPERIMENTS.md` §5b-§5d for methodol
 |------|----------|
 | `summary.md` | **Start here** — all headline tables (MS, NFP, sweep, diagonal-dominance) in one place |
 | `ms_scores.md` | MS score comparison table (SAE / raw / PCA / ICA) |
+| `ms_sae_local.txt` | VideoMAE SAE MS (local run): mean +/- std + top/bottom-10 features |
 | `ms_pca_sign_split.txt` | PCA MS: mean +/- std + top/bottom-10 features (eval/metric.py output) |
 | `ms_ica_sign_split.txt` | ICA MS: mean +/- std + top/bottom-10 features |
 | `nfp_selectivity.md` | NFP significant-feature counts + selectivity (diagonal) matrices, raw/PCA/ICA |
