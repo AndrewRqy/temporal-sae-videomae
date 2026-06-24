@@ -611,6 +611,14 @@ It is the fraction of the feature direction's "energy" that lies in the planted 
 flagged features **actually point along the true temporal directions**. (`analysis/nfp_test_synthetic.py`;
 runner `jobs/local/run_synth_pca_ica.ps1`.)
 
+**How the per-method ProjFrac in the tables is computed.** ProjFrac is defined per feature; the
+single number reported for each basis is the **unweighted arithmetic mean of that per-feature
+ProjFrac over the NFP-flagged features only** (non-flagged features are excluded; each flagged
+feature counts equally — it is not weighted by t-statistic or activation). Concretely: compute
+ProjFrac_Wτ for every feature, keep the subset the NFP test flagged as significant, and average
+them. E.g. the SAE's 0.229 is the mean over its 31 flagged features. The per-τ breakdown uses the
+same recipe but restricts to the features flagged for *that specific* τ.
+
 **Result — 100-static variant:**
 
 | Basis | # features | Sig ≥1 τ | ProjFrac W_τ (flagged) | ProjFrac W_static (flagged) | ICA converged |
