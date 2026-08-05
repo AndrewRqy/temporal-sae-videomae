@@ -1,0 +1,109 @@
+{
+  "alphas": [
+    {
+      "alpha": 1.0,
+      "force_shift": 0.0578,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0074
+        ],
+        [
+          "Tearing [something] into two pieces",
+          0.0062
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0047
+        ],
+        [
+          "Dropping [something] onto [something]",
+          0.0046
+        ],
+        [
+          "Throwing [something]",
+          0.003
+        ]
+      ]
+    },
+    {
+      "alpha": 2.0,
+      "force_shift": 0.12935,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0215
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0137
+        ],
+        [
+          "Dropping [something] onto [something]",
+          0.0135
+        ],
+        [
+          "Tearing [something] into two pieces",
+          0.0118
+        ],
+        [
+          "Throwing [something]",
+          0.0075
+        ]
+      ]
+    },
+    {
+      "alpha": 4.0,
+      "force_shift": 0.26404,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0605
+        ],
+        [
+          "Dropping [something] onto [something]",
+          0.0359
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0345
+        ],
+        [
+          "Tearing [something] into two pieces",
+          0.0185
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0183
+        ]
+      ]
+    },
+    {
+      "alpha": 8.0,
+      "force_shift": 0.3724,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.1036
+        ],
+        [
+          "Dropping [something] onto [something]",
+          0.0586
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0522
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0288
+        ],
+        [
+          "Poking [something] so that it falls over",
+          0.0221
+        ]
+      ]
+    }
+  ],
+  "||v||": 44.014747619628906
+}

@@ -1,0 +1,3189 @@
+{
+  "s_abs": 100.0,
+  "n_clips": 256,
+  "null": {
+    "Sf_mean": 0.04563555366670092,
+    "Sf_std": 0.02733740388180036,
+    "force_mean": -0.004109781972753505,
+    "force_std": 0.029907238378769137,
+    "features": [
+      2411,
+      4267,
+      4525,
+      2058,
+      4691,
+      1638,
+      3238,
+      4466,
+      473,
+      249,
+      2600,
+      435,
+      321,
+      2122,
+      5546,
+      1591,
+      4205,
+      4214,
+      2893,
+      1166,
+      260,
+      1614,
+      1564,
+      2452,
+      2100,
+      4807,
+      4746,
+      4873,
+      393,
+      315
+    ]
+  },
+  "features": [
+    {
+      "S_f": 0.17396602034568787,
+      "force_shift": -0.002087600529193878,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.234
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0066
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0057
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0098
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0097
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0088
+        ]
+      ],
+      "feature": "feat05785",
+      "idx": 5785,
+      "dom_tau": "vel_x",
+      "z_Sf": 4.69,
+      "z_force": 0.07
+    },
+    {
+      "S_f": 0.14390236139297485,
+      "force_shift": 0.012682240456342697,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.2355
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0027
+        ],
+        [
+          "Pulling [something] from right to left",
+          0.0027
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0077
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.0069
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0068
+        ]
+      ],
+      "feature": "feat01321",
+      "idx": 1321,
+      "dom_tau": "vel_y",
+      "z_Sf": 3.59,
+      "z_force": 0.56
+    },
+    {
+      "S_f": 0.12124726176261902,
+      "force_shift": 0.0015282779932022095,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.1374
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0362
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.011
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0095
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0086
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0084
+        ]
+      ],
+      "feature": "feat00735",
+      "idx": 735,
+      "dom_tau": "accel_mag",
+      "z_Sf": 2.77,
+      "z_force": 0.19
+    },
+    {
+      "S_f": 0.12038303911685944,
+      "force_shift": 0.03645113855600357,
+      "up": [
+        [
+          "Holding [something]",
+          0.1665
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0089
+        ],
+        [
+          "Showing a photo of [something] to the camera",
+          0.0078
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0093
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.008
+        ],
+        [
+          "Opening [something]",
+          -0.0079
+        ]
+      ],
+      "feature": "feat04541",
+      "idx": 4541,
+      "dom_tau": "vel_y",
+      "z_Sf": 2.73,
+      "z_force": 1.36
+    },
+    {
+      "S_f": 0.10954803228378296,
+      "force_shift": -0.11689702421426773,
+      "up": [
+        [
+          "Spinning [something] so it continues spinning",
+          0.1293
+        ],
+        [
+          "Pushing [something] so it spins",
+          0.0132
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0112
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0088
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.008
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0072
+        ]
+      ],
+      "feature": "feat00250",
+      "idx": 250,
+      "dom_tau": "vel_x",
+      "z_Sf": 2.34,
+      "z_force": -3.77
+    },
+    {
+      "S_f": 0.10844062268733978,
+      "force_shift": 0.003975778818130493,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.137
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0036
+        ],
+        [
+          "Moving [something] down",
+          0.0035
+        ]
+      ],
+      "down": [
+        [
+          "Showing that [something] is empty",
+          -0.0073
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0071
+        ],
+        [
+          "Folding [something]",
+          -0.0067
+        ]
+      ],
+      "feature": "feat04562",
+      "idx": 4562,
+      "dom_tau": "speed",
+      "z_Sf": 2.3,
+      "z_force": 0.27
+    },
+    {
+      "S_f": 0.10591323673725128,
+      "force_shift": -0.17557653784751892,
+      "up": [
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.097
+        ],
+        [
+          "Poking [something] so it slightly moves",
+          0.0549
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0175
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.01
+        ],
+        [
+          "Folding [something]",
+          -0.01
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0071
+        ]
+      ],
+      "feature": "feat02211",
+      "idx": 2211,
+      "dom_tau": "speed",
+      "z_Sf": 2.2,
+      "z_force": -5.73
+    },
+    {
+      "S_f": 0.10473817586898804,
+      "force_shift": 0.09386580437421799,
+      "up": [
+        [
+          "Spinning [something] that quickly stops spinning",
+          0.1218
+        ],
+        [
+          "Pushing [something] so it spins",
+          0.0868
+        ],
+        [
+          "Spinning [something] so it continues spinning",
+          0.0479
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0095
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0075
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0073
+        ]
+      ],
+      "feature": "feat02312",
+      "idx": 2312,
+      "dom_tau": "speed",
+      "z_Sf": 2.16,
+      "z_force": 3.28
+    },
+    {
+      "S_f": 0.1023634672164917,
+      "force_shift": 0.01216711476445198,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.1087
+        ],
+        [
+          "Moving away from [something] with your camera",
+          0.0531
+        ],
+        [
+          "Approaching [something] with your camera",
+          0.0462
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0128
+        ],
+        [
+          "Folding [something]",
+          -0.0119
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0107
+        ]
+      ],
+      "feature": "feat03672",
+      "idx": 3672,
+      "dom_tau": "speed",
+      "z_Sf": 2.08,
+      "z_force": 0.54
+    },
+    {
+      "S_f": 0.10084766894578934,
+      "force_shift": 0.009174719452857971,
+      "up": [
+        [
+          "Showing [something] next to [something]",
+          0.1163
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.0383
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          0.0182
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0099
+        ],
+        [
+          "Folding [something]",
+          -0.0096
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0089
+        ]
+      ],
+      "feature": "feat04066",
+      "idx": 4066,
+      "dom_tau": "vel_x",
+      "z_Sf": 2.02,
+      "z_force": 0.44
+    },
+    {
+      "S_f": 0.09949646890163422,
+      "force_shift": 0.019932908937335014,
+      "up": [
+        [
+          "Letting [something] roll along a flat surface",
+          0.0983
+        ],
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.0288
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0283
+        ]
+      ],
+      "down": [
+        [
+          "Plugging [something] into [something]",
+          -0.0106
+        ],
+        [
+          "Folding [something]",
+          -0.0089
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0074
+        ]
+      ],
+      "feature": "feat04153",
+      "idx": 4153,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.97,
+      "z_force": 0.8
+    },
+    {
+      "S_f": 0.09848306328058243,
+      "force_shift": 0.05484586954116821,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0993
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0399
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.011
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0074
+        ],
+        [
+          "Folding [something]",
+          -0.0069
+        ],
+        [
+          "Putting [something] next to [something]",
+          -0.0064
+        ]
+      ],
+      "feature": "feat03471",
+      "idx": 3471,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.93,
+      "z_force": 1.97
+    },
+    {
+      "S_f": 0.09779079258441925,
+      "force_shift": -0.08139175921678543,
+      "up": [
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.1041
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0604
+        ],
+        [
+          "Lifting up one end of [something], then letting it drop down",
+          0.0346
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0097
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0081
+        ],
+        [
+          "Folding [something]",
+          -0.0075
+        ]
+      ],
+      "feature": "feat03636",
+      "idx": 3636,
+      "dom_tau": "speed",
+      "z_Sf": 1.91,
+      "z_force": -2.58
+    },
+    {
+      "S_f": 0.09528439491987228,
+      "force_shift": -0.10965382307767868,
+      "up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.1118
+        ],
+        [
+          "Moving [something] up",
+          0.0133
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0035
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0082
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0081
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0071
+        ]
+      ],
+      "feature": "feat03714",
+      "idx": 3714,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.82,
+      "z_force": -3.53
+    },
+    {
+      "S_f": 0.09254381060600281,
+      "force_shift": 0.09693598002195358,
+      "up": [
+        [
+          "Letting [something] roll along a flat surface",
+          0.0641
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0457
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0287
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0113
+        ],
+        [
+          "Folding [something]",
+          -0.0104
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.0101
+        ]
+      ],
+      "feature": "feat03150",
+      "idx": 3150,
+      "dom_tau": "speed",
+      "z_Sf": 1.72,
+      "z_force": 3.38
+    },
+    {
+      "S_f": 0.0920710414648056,
+      "force_shift": 0.039270445704460144,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.0676
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0337
+        ],
+        [
+          "Holding [something]",
+          0.0327
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0071
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.007
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0067
+        ]
+      ],
+      "feature": "feat05711",
+      "idx": 5711,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.7,
+      "z_force": 1.45
+    },
+    {
+      "S_f": 0.08812956511974335,
+      "force_shift": -0.003467874601483345,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.0589
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.054
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0369
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0097
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.0088
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0086
+        ]
+      ],
+      "feature": "feat01699",
+      "idx": 1699,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.55,
+      "z_force": 0.02
+    },
+    {
+      "S_f": 0.08679097890853882,
+      "force_shift": -0.002474577631801367,
+      "up": [
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0528
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          0.0512
+        ],
+        [
+          "Lifting a surface with [something] on it until it starts sliding down",
+          0.019
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0095
+        ],
+        [
+          "Folding [something]",
+          -0.0082
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.007
+        ]
+      ],
+      "feature": "feat01778",
+      "idx": 1778,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.51,
+      "z_force": 0.05
+    },
+    {
+      "S_f": 0.08222642540931702,
+      "force_shift": 0.02247411385178566,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0076
+        ],
+        [
+          "Moving [something] up",
+          0.0067
+        ],
+        [
+          "Showing that [something] is empty",
+          0.0055
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0102
+        ],
+        [
+          "Stuffing [something] into [something]",
+          -0.0059
+        ],
+        [
+          "Opening [something]",
+          -0.0059
+        ]
+      ],
+      "feature": "feat02191",
+      "idx": 2191,
+      "dom_tau": "speed",
+      "z_Sf": 1.34,
+      "z_force": 0.89
+    },
+    {
+      "S_f": 0.08194015920162201,
+      "force_shift": -0.018966898322105408,
+      "up": [
+        [
+          "Lifting [something] with [something] on it",
+          0.0772
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0264
+        ],
+        [
+          "Pretending to poke [something]",
+          0.0155
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0091
+        ],
+        [
+          "Folding [something]",
+          -0.0086
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.007
+        ]
+      ],
+      "feature": "feat04280",
+      "idx": 4280,
+      "dom_tau": "vel_y",
+      "z_Sf": 1.33,
+      "z_force": -0.5
+    },
+    {
+      "S_f": 0.081623375415802,
+      "force_shift": 0.005736595019698143,
+      "up": [
+        [
+          "Showing that [something] is inside [something]",
+          0.0646
+        ],
+        [
+          "Showing that [something] is empty",
+          0.0154
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0061
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0078
+        ],
+        [
+          "Folding [something]",
+          -0.0078
+        ],
+        [
+          "Opening [something]",
+          -0.0063
+        ]
+      ],
+      "feature": "feat03058",
+      "idx": 3058,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.32,
+      "z_force": 0.33
+    },
+    {
+      "S_f": 0.08120232820510864,
+      "force_shift": 0.0021741362288594246,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.0309
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0295
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0179
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0077
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0076
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0073
+        ]
+      ],
+      "feature": "feat00056",
+      "idx": 56,
+      "dom_tau": "speed",
+      "z_Sf": 1.3,
+      "z_force": 0.21
+    },
+    {
+      "S_f": 0.08062225580215454,
+      "force_shift": 0.01066617015749216,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0836
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0045
+        ],
+        [
+          "Uncovering [something]",
+          0.0028
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0082
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0068
+        ],
+        [
+          "Folding [something]",
+          -0.0066
+        ]
+      ],
+      "feature": "feat04196",
+      "idx": 4196,
+      "dom_tau": "vel_y",
+      "z_Sf": 1.28,
+      "z_force": 0.49
+    },
+    {
+      "S_f": 0.08026160299777985,
+      "force_shift": 0.04428034648299217,
+      "up": [
+        [
+          "Pushing [something] so that it almost falls off but doesn't",
+          0.0138
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0137
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          0.0088
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0079
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0071
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0068
+        ]
+      ],
+      "feature": "feat03883",
+      "idx": 3883,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.27,
+      "z_force": 1.62
+    },
+    {
+      "S_f": 0.07976818084716797,
+      "force_shift": -0.002359162550419569,
+      "up": [
+        [
+          "Moving away from [something] with your camera",
+          0.0401
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0096
+        ],
+        [
+          "Moving [something] away from the camera",
+          0.007
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0076
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0061
+        ],
+        [
+          "Lifting [something] up completely without letting it drop down",
+          -0.0058
+        ]
+      ],
+      "feature": "feat00394",
+      "idx": 394,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.25,
+      "z_force": 0.06
+    },
+    {
+      "S_f": 0.07986833155155182,
+      "force_shift": 0.0023712627589702606,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0195
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0161
+        ],
+        [
+          "Holding [something]",
+          0.0129
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0115
+        ],
+        [
+          "Folding [something]",
+          -0.0099
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.0081
+        ]
+      ],
+      "feature": "feat03379",
+      "idx": 3379,
+      "dom_tau": "vel_y",
+      "z_Sf": 1.25,
+      "z_force": 0.22
+    },
+    {
+      "S_f": 0.07786719501018524,
+      "force_shift": 0.08502748608589172,
+      "up": [
+        [
+          "Tilting [something] with [something] on it until it falls off",
+          0.0714
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0101
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0091
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0074
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0055
+        ],
+        [
+          "Opening [something]",
+          -0.0055
+        ]
+      ],
+      "feature": "feat03927",
+      "idx": 3927,
+      "dom_tau": "speed",
+      "z_Sf": 1.18,
+      "z_force": 2.98
+    },
+    {
+      "S_f": 0.07766144722700119,
+      "force_shift": 0.019729796797037125,
+      "up": [
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.068
+        ],
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.0195
+        ],
+        [
+          "Letting [something] roll along a flat surface",
+          0.0186
+        ]
+      ],
+      "down": [
+        [
+          "Pouring [something] into [something]",
+          -0.0087
+        ],
+        [
+          "Folding [something]",
+          -0.0083
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0076
+        ]
+      ],
+      "feature": "feat01230",
+      "idx": 1230,
+      "dom_tau": "speed",
+      "z_Sf": 1.17,
+      "z_force": 0.8
+    },
+    {
+      "S_f": 0.07769319415092468,
+      "force_shift": -0.0003379571717232466,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0759
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0151
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0149
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.009
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0084
+        ],
+        [
+          "Lifting [something] up completely without letting it drop down",
+          -0.0076
+        ]
+      ],
+      "feature": "feat05077",
+      "idx": 5077,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.17,
+      "z_force": 0.13
+    },
+    {
+      "S_f": 0.07747116684913635,
+      "force_shift": 0.013198429718613625,
+      "up": [
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0628
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0478
+        ],
+        [
+          "Turning [something] upside down",
+          0.0068
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] up completely without letting it drop down",
+          -0.0079
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0077
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0067
+        ]
+      ],
+      "feature": "feat05622",
+      "idx": 5622,
+      "dom_tau": "speed",
+      "z_Sf": 1.16,
+      "z_force": 0.58
+    },
+    {
+      "S_f": 0.076778344810009,
+      "force_shift": -0.020589549094438553,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.0313
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.023
+        ],
+        [
+          "Holding [something]",
+          0.0168
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0107
+        ],
+        [
+          "Folding [something]",
+          -0.0084
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0081
+        ]
+      ],
+      "feature": "feat06100",
+      "idx": 6100,
+      "dom_tau": "speed",
+      "z_Sf": 1.14,
+      "z_force": -0.55
+    },
+    {
+      "S_f": 0.07661320269107819,
+      "force_shift": -0.024686669930815697,
+      "up": [
+        [
+          "Holding [something]",
+          0.0472
+        ],
+        [
+          "Trying to bend [something unbendable] so nothing happens",
+          0.0255
+        ],
+        [
+          "Pulling two ends of [something] but nothing happens",
+          0.0165
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0092
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.008
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0067
+        ]
+      ],
+      "feature": "feat03519",
+      "idx": 3519,
+      "dom_tau": "speed",
+      "z_Sf": 1.13,
+      "z_force": -0.69
+    },
+    {
+      "S_f": 0.07601070404052734,
+      "force_shift": -0.000535979401320219,
+      "up": [
+        [
+          "Pushing [something] from right to left",
+          0.009
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0086
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0072
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0082
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0063
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0056
+        ]
+      ],
+      "feature": "feat05087",
+      "idx": 5087,
+      "dom_tau": "accel_mag",
+      "z_Sf": 1.11,
+      "z_force": 0.12
+    },
+    {
+      "S_f": 0.07545329630374908,
+      "force_shift": 0.033955108374357224,
+      "up": [
+        [
+          "Putting [something similar to other things that are already on the table]",
+          0.0113
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0089
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0043
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0083
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.007
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0063
+        ]
+      ],
+      "feature": "feat04188",
+      "idx": 4188,
+      "dom_tau": "vel_y",
+      "z_Sf": 1.09,
+      "z_force": 1.27
+    },
+    {
+      "S_f": 0.07480090856552124,
+      "force_shift": 0.0027409475296735764,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.085
+        ],
+        [
+          "Covering [something] with [something]",
+          0.003
+        ],
+        [
+          "Moving [something] and [something] closer to each other",
+          0.0024
+        ]
+      ],
+      "down": [
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0066
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.006
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0051
+        ]
+      ],
+      "feature": "feat00294",
+      "idx": 294,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.07,
+      "z_force": 0.23
+    },
+    {
+      "S_f": 0.07384076714515686,
+      "force_shift": -0.008925006724894047,
+      "up": [
+        [
+          "Pushing [something] from left to right",
+          0.0059
+        ],
+        [
+          "Moving [something] down",
+          0.0055
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0048
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0066
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0058
+        ],
+        [
+          "Removing [something], revealing [something] behind",
+          -0.0056
+        ]
+      ],
+      "feature": "feat05955",
+      "idx": 5955,
+      "dom_tau": "vel_x",
+      "z_Sf": 1.03,
+      "z_force": -0.16
+    },
+    {
+      "S_f": 0.07199777662754059,
+      "force_shift": 0.017718058079481125,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0076
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0067
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0065
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.008
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0073
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0071
+        ]
+      ],
+      "feature": "feat02125",
+      "idx": 2125,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.96,
+      "z_force": 0.73
+    },
+    {
+      "S_f": 0.07188493758440018,
+      "force_shift": 0.008124466985464096,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0375
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0157
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          0.0153
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0079
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0075
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0063
+        ]
+      ],
+      "feature": "feat05987",
+      "idx": 5987,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.96,
+      "z_force": 0.41
+    },
+    {
+      "S_f": 0.07143884152173996,
+      "force_shift": -0.001756979152560234,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.1516
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0038
+        ],
+        [
+          "Pulling two ends of [something] but nothing happens",
+          0.0036
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.007
+        ],
+        [
+          "Stuffing [something] into [something]",
+          -0.0066
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.0065
+        ]
+      ],
+      "feature": "feat00950",
+      "idx": 950,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.94,
+      "z_force": 0.08
+    },
+    {
+      "S_f": 0.06908687949180603,
+      "force_shift": -0.012925563380122185,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.0236
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0152
+        ],
+        [
+          "Pretending to poke [something]",
+          0.0138
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0105
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.009
+        ],
+        [
+          "Folding [something]",
+          -0.0073
+        ]
+      ],
+      "feature": "feat01262",
+      "idx": 1262,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.86,
+      "z_force": -0.29
+    },
+    {
+      "S_f": 0.06903395056724548,
+      "force_shift": -0.012414912693202496,
+      "up": [
+        [
+          "Pulling [something] from left to right",
+          0.0605
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0317
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0096
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.009
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0083
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0076
+        ]
+      ],
+      "feature": "feat04416",
+      "idx": 4416,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.86,
+      "z_force": -0.28
+    },
+    {
+      "S_f": 0.06862904876470566,
+      "force_shift": -0.009137608110904694,
+      "up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0892
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0029
+        ],
+        [
+          "Putting [something], [something] and [something] on the table",
+          0.0026
+        ]
+      ],
+      "down": [
+        [
+          "[Something] falling like a rock",
+          -0.0084
+        ],
+        [
+          "Folding [something]",
+          -0.0056
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          -0.0054
+        ]
+      ],
+      "feature": "feat04665",
+      "idx": 4665,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.84,
+      "z_force": -0.17
+    },
+    {
+      "S_f": 0.0676846131682396,
+      "force_shift": 0.012971418909728527,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0079
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0058
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0052
+        ]
+      ],
+      "down": [
+        [
+          "Pouring [something] into [something]",
+          -0.0082
+        ],
+        [
+          "Folding [something]",
+          -0.0079
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          -0.0045
+        ]
+      ],
+      "feature": "feat04796",
+      "idx": 4796,
+      "dom_tau": "speed",
+      "z_Sf": 0.81,
+      "z_force": 0.57
+    },
+    {
+      "S_f": 0.06762105971574783,
+      "force_shift": -0.004540608264505863,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0275
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0116
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0092
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0069
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0061
+        ],
+        [
+          "Folding [something]",
+          -0.006
+        ]
+      ],
+      "feature": "feat00978",
+      "idx": 978,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.8,
+      "z_force": -0.01
+    },
+    {
+      "S_f": 0.06735029816627502,
+      "force_shift": 0.013319501653313637,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.1191
+        ],
+        [
+          "Stacking [number of] [something]",
+          0.0021
+        ],
+        [
+          "Throwing [something]",
+          0.0018
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0065
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0059
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          -0.005
+        ]
+      ],
+      "feature": "feat00214",
+      "idx": 214,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.79,
+      "z_force": 0.58
+    },
+    {
+      "S_f": 0.06659377366304398,
+      "force_shift": -0.01188050489872694,
+      "up": [
+        [
+          "Attaching [something] to [something]",
+          0.009
+        ],
+        [
+          "Trying but failing to attach [something] to [something] because it doesn't stick",
+          0.008
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0079
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0119
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0083
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0079
+        ]
+      ],
+      "feature": "feat01576",
+      "idx": 1576,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.77,
+      "z_force": -0.26
+    },
+    {
+      "S_f": 0.06645231693983078,
+      "force_shift": -0.005907345563173294,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.0605
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.058
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0524
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0085
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0071
+        ],
+        [
+          "Folding [something]",
+          -0.0064
+        ]
+      ],
+      "feature": "feat02509",
+      "idx": 2509,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.76,
+      "z_force": -0.06
+    },
+    {
+      "S_f": 0.06530825793743134,
+      "force_shift": -0.005679653491824865,
+      "up": [
+        [
+          "Scooping [something] up with [something]",
+          0.0059
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0049
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0041
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0084
+        ],
+        [
+          "Picking [something] up",
+          -0.0069
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0066
+        ]
+      ],
+      "feature": "feat02825",
+      "idx": 2825,
+      "dom_tau": "direction",
+      "z_Sf": 0.72,
+      "z_force": -0.05
+    },
+    {
+      "S_f": 0.06483275443315506,
+      "force_shift": 0.019378341734409332,
+      "up": [
+        [
+          "Holding [something]",
+          0.0095
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0079
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0074
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0067
+        ],
+        [
+          "Putting [something] into [something]",
+          -0.006
+        ],
+        [
+          "Opening [something]",
+          -0.0048
+        ]
+      ],
+      "feature": "feat03280",
+      "idx": 3280,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.7,
+      "z_force": 0.79
+    },
+    {
+      "S_f": 0.06461226940155029,
+      "force_shift": -0.04252050071954727,
+      "up": [
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.052
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0064
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0054
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0072
+        ],
+        [
+          "Lifting [something] up completely, then letting it drop down",
+          -0.0071
+        ],
+        [
+          "Folding [something]",
+          -0.0059
+        ]
+      ],
+      "feature": "feat01365",
+      "idx": 1365,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.69,
+      "z_force": -1.28
+    },
+    {
+      "S_f": 0.06380759924650192,
+      "force_shift": -0.019399214535951614,
+      "up": [
+        [
+          "Plugging [something] into [something]",
+          0.0595
+        ],
+        [
+          "Twisting [something]",
+          0.0266
+        ],
+        [
+          "Attaching [something] to [something]",
+          0.0165
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0088
+        ],
+        [
+          "Folding [something]",
+          -0.0076
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0069
+        ]
+      ],
+      "feature": "feat02820",
+      "idx": 2820,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.66,
+      "z_force": -0.51
+    },
+    {
+      "S_f": 0.06339135766029358,
+      "force_shift": -0.013421742245554924,
+      "up": [
+        [
+          "Attaching [something] to [something]",
+          0.0095
+        ],
+        [
+          "Moving [something] up",
+          0.0061
+        ],
+        [
+          "Moving [something] down",
+          0.0056
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0085
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0069
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0067
+        ]
+      ],
+      "feature": "feat03908",
+      "idx": 3908,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.65,
+      "z_force": -0.31
+    },
+    {
+      "S_f": 0.06309700757265091,
+      "force_shift": -0.018391454592347145,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.0132
+        ],
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0084
+        ],
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.007
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0065
+        ],
+        [
+          "Opening [something]",
+          -0.006
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0057
+        ]
+      ],
+      "feature": "feat01919",
+      "idx": 1919,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.64,
+      "z_force": -0.48
+    },
+    {
+      "S_f": 0.06249625235795975,
+      "force_shift": -0.10192757844924927,
+      "up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0617
+        ],
+        [
+          "Poking [something] so it slightly moves",
+          0.0214
+        ],
+        [
+          "Moving [something] away from [something]",
+          0.0192
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0087
+        ],
+        [
+          "Folding [something]",
+          -0.0086
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.007
+        ]
+      ],
+      "feature": "feat03309",
+      "idx": 3309,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.62,
+      "z_force": -3.27
+    },
+    {
+      "S_f": 0.06209459900856018,
+      "force_shift": 0.024529188871383667,
+      "up": [
+        [
+          "Pushing [something] from left to right",
+          0.0102
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0076
+        ],
+        [
+          "Moving [something] and [something] closer to each other",
+          0.0074
+        ]
+      ],
+      "down": [
+        [
+          "[Something] falling like a rock",
+          -0.0075
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0067
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0056
+        ]
+      ],
+      "feature": "feat01345",
+      "idx": 1345,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.6,
+      "z_force": 0.96
+    },
+    {
+      "S_f": 0.061924003064632416,
+      "force_shift": 0.021662462502717972,
+      "up": [
+        [
+          "Holding [something] in front of [something]",
+          0.0076
+        ],
+        [
+          "Dropping [something] into [something]",
+          0.0054
+        ],
+        [
+          "Dropping [something] onto [something]",
+          0.0039
+        ]
+      ],
+      "down": [
+        [
+          "Pouring [something] into [something]",
+          -0.006
+        ],
+        [
+          "Folding [something]",
+          -0.0058
+        ],
+        [
+          "Unfolding [something]",
+          -0.004
+        ]
+      ],
+      "feature": "feat03974",
+      "idx": 3974,
+      "dom_tau": "speed",
+      "z_Sf": 0.6,
+      "z_force": 0.86
+    },
+    {
+      "S_f": 0.0616050586104393,
+      "force_shift": -0.04082794487476349,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.059
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0183
+        ],
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0162
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.009
+        ],
+        [
+          "Folding [something]",
+          -0.0078
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0075
+        ]
+      ],
+      "feature": "feat02491",
+      "idx": 2491,
+      "dom_tau": "speed",
+      "z_Sf": 0.58,
+      "z_force": -1.23
+    },
+    {
+      "S_f": 0.061347514390945435,
+      "force_shift": 0.005908627063035965,
+      "up": [
+        [
+          "Pushing [something] from left to right",
+          0.0088
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0067
+        ],
+        [
+          "Pushing [something] with [something]",
+          0.0046
+        ]
+      ],
+      "down": [
+        [
+          "Plugging [something] into [something]",
+          -0.0059
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.005
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0048
+        ]
+      ],
+      "feature": "feat00939",
+      "idx": 939,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.57,
+      "z_force": 0.33
+    },
+    {
+      "S_f": 0.0610998198390007,
+      "force_shift": 0.055348917841911316,
+      "up": [
+        [
+          "[Something] falling like a rock",
+          0.0355
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0297
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0164
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0106
+        ],
+        [
+          "Moving [something] down",
+          -0.0076
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0071
+        ]
+      ],
+      "feature": "feat02818",
+      "idx": 2818,
+      "dom_tau": "speed",
+      "z_Sf": 0.57,
+      "z_force": 1.99
+    },
+    {
+      "S_f": 0.061252154409885406,
+      "force_shift": 0.01449557114392519,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.1109
+        ],
+        [
+          "Putting [something] and [something] on the table",
+          0.0016
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0016
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0087
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0071
+        ],
+        [
+          "Folding [something]",
+          -0.0051
+        ]
+      ],
+      "feature": "feat03968",
+      "idx": 3968,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.57,
+      "z_force": 0.62
+    },
+    {
+      "S_f": 0.061323583126068115,
+      "force_shift": 0.005665406584739685,
+      "up": [
+        [
+          "Covering [something] with [something]",
+          0.0065
+        ],
+        [
+          "Uncovering [something]",
+          0.005
+        ],
+        [
+          "Moving [something] and [something] closer to each other",
+          0.0034
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0052
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0051
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.005
+        ]
+      ],
+      "feature": "feat04974",
+      "idx": 4974,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.57,
+      "z_force": 0.33
+    },
+    {
+      "S_f": 0.06042412668466568,
+      "force_shift": -0.023068789392709732,
+      "up": [
+        [
+          "Holding [something]",
+          0.0582
+        ],
+        [
+          "Bending [something] so that it deforms",
+          0.0319
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0132
+        ]
+      ],
+      "down": [
+        [
+          "[Something] falling like a feather or paper",
+          -0.0079
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0076
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0069
+        ]
+      ],
+      "feature": "feat04254",
+      "idx": 4254,
+      "dom_tau": "speed",
+      "z_Sf": 0.54,
+      "z_force": -0.63
+    },
+    {
+      "S_f": 0.05979108437895775,
+      "force_shift": -0.029611751437187195,
+      "up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0077
+        ],
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.0052
+        ],
+        [
+          "Pretending to take [something] from [somewhere]",
+          0.0052
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] onto [something]",
+          -0.0053
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          -0.0053
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0052
+        ]
+      ],
+      "feature": "feat03685",
+      "idx": 3685,
+      "dom_tau": "speed",
+      "z_Sf": 0.52,
+      "z_force": -0.85
+    },
+    {
+      "S_f": 0.0597090944647789,
+      "force_shift": 0.027635395526885986,
+      "up": [
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0438
+        ],
+        [
+          "Tilting [something] with [something] on it until it falls off",
+          0.0274
+        ],
+        [
+          "Lifting up one end of [something], then letting it drop down",
+          0.0191
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] into [something]",
+          -0.0081
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0065
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0065
+        ]
+      ],
+      "feature": "feat04716",
+      "idx": 4716,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.51,
+      "z_force": 1.06
+    },
+    {
+      "S_f": 0.05890145152807236,
+      "force_shift": -0.039361611008644104,
+      "up": [
+        [
+          "Moving [something] and [something] away from each other",
+          0.0654
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0282
+        ],
+        [
+          "Pulling [something] from right to left",
+          0.0121
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0081
+        ],
+        [
+          "Lifting [something] up completely without letting it drop down",
+          -0.008
+        ],
+        [
+          "Folding [something]",
+          -0.0067
+        ]
+      ],
+      "feature": "feat01544",
+      "idx": 1544,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.49,
+      "z_force": -1.18
+    },
+    {
+      "S_f": 0.05704323947429657,
+      "force_shift": -0.0039443364366889,
+      "up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0096
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0069
+        ],
+        [
+          "Putting [something] on a flat surface without letting it roll",
+          0.0051
+        ]
+      ],
+      "down": [
+        [
+          "Plugging [something] into [something]",
+          -0.0074
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.007
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0068
+        ]
+      ],
+      "feature": "feat05866",
+      "idx": 5866,
+      "dom_tau": "speed",
+      "z_Sf": 0.42,
+      "z_force": 0.01
+    },
+    {
+      "S_f": 0.056418247520923615,
+      "force_shift": -0.048508420586586,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.0139
+        ],
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0134
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.008
+        ]
+      ],
+      "down": [
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0073
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          -0.0071
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0066
+        ]
+      ],
+      "feature": "feat02952",
+      "idx": 2952,
+      "dom_tau": "speed",
+      "z_Sf": 0.39,
+      "z_force": -1.48
+    },
+    {
+      "S_f": 0.055291078984737396,
+      "force_shift": -0.02338448166847229,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0056
+        ],
+        [
+          "[Something] being deflected from [something]",
+          0.0052
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0051
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0099
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0089
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0066
+        ]
+      ],
+      "feature": "feat03809",
+      "idx": 3809,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.35,
+      "z_force": -0.64
+    },
+    {
+      "S_f": 0.05500633642077446,
+      "force_shift": -0.03463110327720642,
+      "up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0285
+        ],
+        [
+          "Pulling two ends of [something] but nothing happens",
+          0.0064
+        ],
+        [
+          "Twisting [something]",
+          0.0061
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0069
+        ],
+        [
+          "Folding [something]",
+          -0.0069
+        ],
+        [
+          "Picking [something] up",
+          -0.0053
+        ]
+      ],
+      "feature": "feat00648",
+      "idx": 648,
+      "dom_tau": "speed",
+      "z_Sf": 0.34,
+      "z_force": -1.02
+    },
+    {
+      "S_f": 0.05439509451389313,
+      "force_shift": 0.0560811311006546,
+      "up": [
+        [
+          "Moving [something] away from [something]",
+          0.0438
+        ],
+        [
+          "Picking [something] up",
+          0.0234
+        ],
+        [
+          "Throwing [something] onto a surface",
+          0.0106
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0091
+        ],
+        [
+          "Opening [something]",
+          -0.0068
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0064
+        ]
+      ],
+      "feature": "feat04904",
+      "idx": 4904,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.32,
+      "z_force": 2.01
+    },
+    {
+      "S_f": 0.05353855341672897,
+      "force_shift": 0.011154251173138618,
+      "up": [
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.0071
+        ],
+        [
+          "Hitting [something] with [something]",
+          0.0051
+        ],
+        [
+          "Letting [something] roll along a flat surface",
+          0.005
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0059
+        ],
+        [
+          "Folding [something]",
+          -0.0057
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.005
+        ]
+      ],
+      "feature": "feat05179",
+      "idx": 5179,
+      "dom_tau": "vel_x",
+      "z_Sf": 0.29,
+      "z_force": 0.51
+    },
+    {
+      "S_f": 0.0527697317302227,
+      "force_shift": -0.0076721226796507835,
+      "up": [
+        [
+          "Pushing [something] with [something]",
+          0.043
+        ],
+        [
+          "Holding [something]",
+          0.0063
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0062
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0074
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          -0.0065
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0046
+        ]
+      ],
+      "feature": "feat02736",
+      "idx": 2736,
+      "dom_tau": "vel_y",
+      "z_Sf": 0.26,
+      "z_force": -0.12
+    },
+    {
+      "S_f": 0.05194498971104622,
+      "force_shift": 0.0056056855246424675,
+      "up": [
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0058
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.005
+        ],
+        [
+          "Pulling [something] from right to left",
+          0.0042
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.006
+        ],
+        [
+          "Pouring [something] into [something]",
+          -0.0059
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.0044
+        ]
+      ],
+      "feature": "feat00326",
+      "idx": 326,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.23,
+      "z_force": 0.32
+    },
+    {
+      "S_f": 0.051100634038448334,
+      "force_shift": -0.009997047483921051,
+      "up": [
+        [
+          "Pretending to put [something] on a surface",
+          0.0074
+        ],
+        [
+          "Putting [something] on a flat surface without letting it roll",
+          0.0067
+        ],
+        [
+          "Throwing [something] onto a surface",
+          0.0065
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0076
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0058
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0049
+        ]
+      ],
+      "feature": "feat05303",
+      "idx": 5303,
+      "dom_tau": "speed",
+      "z_Sf": 0.2,
+      "z_force": -0.2
+    },
+    {
+      "S_f": 0.04914790764451027,
+      "force_shift": 0.0008738255128264427,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0146
+        ],
+        [
+          "Pulling [something] from right to left",
+          0.0053
+        ],
+        [
+          "Taking [something] from [somewhere]",
+          0.004
+        ]
+      ],
+      "down": [
+        [
+          "Plugging [something] into [something]",
+          -0.0072
+        ],
+        [
+          "Folding [something]",
+          -0.0062
+        ],
+        [
+          "Putting [something] next to [something]",
+          -0.0055
+        ]
+      ],
+      "feature": "feat03819",
+      "idx": 3819,
+      "dom_tau": "speed",
+      "z_Sf": 0.13,
+      "z_force": 0.17
+    },
+    {
+      "S_f": 0.046176694333553314,
+      "force_shift": -0.006352654658257961,
+      "up": [
+        [
+          "Stacking [number of] [something]",
+          0.0052
+        ],
+        [
+          "Putting [something] upright on the table",
+          0.0032
+        ],
+        [
+          "Putting [something] and [something] on the table",
+          0.0031
+        ]
+      ],
+      "down": [
+        [
+          "Plugging [something] into [something]",
+          -0.0053
+        ],
+        [
+          "Removing [something], revealing [something] behind",
+          -0.0051
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.005
+        ]
+      ],
+      "feature": "feat04624",
+      "idx": 4624,
+      "dom_tau": "accel_mag",
+      "z_Sf": 0.02,
+      "z_force": -0.07
+    },
+    {
+      "S_f": 0.044143859297037125,
+      "force_shift": 0.0007105246186256409,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0159
+        ],
+        [
+          "Attaching [something] to [something]",
+          0.0102
+        ],
+        [
+          "Putting [something] on a surface",
+          0.01
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0086
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0058
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0057
+        ]
+      ],
+      "feature": "feat05216",
+      "idx": 5216,
+      "dom_tau": "direction",
+      "z_Sf": -0.05,
+      "z_force": 0.16
+    },
+    {
+      "S_f": 0.043964680284261703,
+      "force_shift": -0.007120904512703419,
+      "up": [
+        [
+          "Approaching [something] with your camera",
+          0.0513
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0125
+        ],
+        [
+          "Taking [something] out of [something]",
+          0.0033
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0063
+        ],
+        [
+          "Picking [something] up",
+          -0.0056
+        ],
+        [
+          "Opening [something]",
+          -0.0056
+        ]
+      ],
+      "feature": "feat05228",
+      "idx": 5228,
+      "dom_tau": "vel_y",
+      "z_Sf": -0.06,
+      "z_force": -0.1
+    },
+    {
+      "S_f": 0.04199415445327759,
+      "force_shift": -0.02810009755194187,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0232
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0231
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0206
+        ]
+      ],
+      "down": [
+        [
+          "Tearing [something] into two pieces",
+          -0.0071
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0065
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0064
+        ]
+      ],
+      "feature": "feat03059",
+      "idx": 3059,
+      "dom_tau": "vel_x",
+      "z_Sf": -0.13,
+      "z_force": -0.8
+    },
+    {
+      "S_f": 0.04012323170900345,
+      "force_shift": 0.0011443635448813438,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.0155
+        ],
+        [
+          "Dropping [something] next to [something]",
+          0.0072
+        ],
+        [
+          "Holding [something]",
+          0.0067
+        ]
+      ],
+      "down": [
+        [
+          "Putting [something] on a surface",
+          -0.0064
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0059
+        ],
+        [
+          "Putting [something] next to [something]",
+          -0.0054
+        ]
+      ],
+      "feature": "feat03735",
+      "idx": 3735,
+      "dom_tau": "vel_x",
+      "z_Sf": -0.2,
+      "z_force": 0.18
+    },
+    {
+      "S_f": 0.03796856105327606,
+      "force_shift": -0.020303523167967796,
+      "up": [
+        [
+          "Uncovering [something]",
+          0.0056
+        ],
+        [
+          "Putting [something] on a surface",
+          0.005
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0046
+        ]
+      ],
+      "down": [
+        [
+          "Lifting [something] with [something] on it",
+          -0.0064
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0056
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0051
+        ]
+      ],
+      "feature": "feat05758",
+      "idx": 5758,
+      "dom_tau": "speed",
+      "z_Sf": -0.28,
+      "z_force": -0.54
+    },
+    {
+      "S_f": 0.03476592153310776,
+      "force_shift": -0.03466913104057312,
+      "up": [
+        [
+          "Rolling [something] on a flat surface",
+          0.0196
+        ],
+        [
+          "Letting [something] roll along a flat surface",
+          0.0167
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0157
+        ]
+      ],
+      "down": [
+        [
+          "Holding [something] in front of [something]",
+          -0.0054
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          -0.0049
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0048
+        ]
+      ],
+      "feature": "feat04870",
+      "idx": 4870,
+      "dom_tau": "vel_y",
+      "z_Sf": -0.4,
+      "z_force": -1.02
+    },
+    {
+      "S_f": 0.032597653567790985,
+      "force_shift": -0.032046228647232056,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.0104
+        ],
+        [
+          "Poking [something] so it slightly moves",
+          0.0071
+        ],
+        [
+          "Pretending to take [something] from [somewhere]",
+          0.006
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0071
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0067
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0056
+        ]
+      ],
+      "feature": "feat05472",
+      "idx": 5472,
+      "dom_tau": "vel_x",
+      "z_Sf": -0.48,
+      "z_force": -0.93
+    },
+    {
+      "S_f": 0.03102969191968441,
+      "force_shift": -0.011624686419963837,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.005
+        ],
+        [
+          "Holding [something]",
+          0.0034
+        ],
+        [
+          "Pushing [something] so that it almost falls off but doesn't",
+          0.003
+        ]
+      ],
+      "down": [
+        [
+          "Folding [something]",
+          -0.0052
+        ],
+        [
+          "Plugging [something] into [something]",
+          -0.0042
+        ],
+        [
+          "Tearing [something] into two pieces",
+          -0.0038
+        ]
+      ],
+      "feature": "feat01903",
+      "idx": 1903,
+      "dom_tau": "speed",
+      "z_Sf": -0.53,
+      "z_force": -0.25
+    },
+    {
+      "S_f": 0.017432808876037598,
+      "force_shift": 0.026932135224342346,
+      "up": [
+        [
+          "Throwing [something]",
+          0.0099
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0064
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          0.0056
+        ]
+      ],
+      "down": [
+        [
+          "Moving [something] down",
+          -0.0052
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          -0.005
+        ],
+        [
+          "Moving [something] up",
+          -0.005
+        ]
+      ],
+      "feature": "feat05321",
+      "idx": 5321,
+      "dom_tau": "speed",
+      "z_Sf": -1.03,
+      "z_force": 1.04
+    }
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "per_class": 12,
+  "pairs": [
+    {
+      "key": "push_lr",
+      "axis": "vel_x",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.016,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": -0.003,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.0,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": -0.0,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.174,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.055,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.082,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.004,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 8.293,
+            "flip": 0.917,
+            "flip_base": 0.0,
+            "top1_donor": 0.833
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 7.956,
+            "flip": 1.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.833
+          }
+        }
+      }
+    },
+    {
+      "key": "pull_lr",
+      "axis": "vel_x",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.027,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.078,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": -0.0,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": -0.0,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.007,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.001,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.006,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.025,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 9.333,
+            "flip": 0.833,
+            "flip_base": 0.0,
+            "top1_donor": 0.833
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 9.593,
+            "flip": 1.0,
+            "flip_base": 0.083,
+            "top1_donor": 0.917
+          }
+        }
+      }
+    },
+    {
+      "key": "cam_lr",
+      "axis": "vel_x",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 2.684,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 3.971,
+            "flip": 0.167,
+            "flip_base": 0.0,
+            "top1_donor": 0.167
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 2.574,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 3.875,
+            "flip": 0.167,
+            "flip_base": 0.0,
+            "top1_donor": 0.167
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.009,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.007,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.054,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.04,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 10.115,
+            "flip": 1.0,
+            "flip_base": 0.0,
+            "top1_donor": 1.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 9.646,
+            "flip": 1.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.917
+          }
+        }
+      }
+    },
+    {
+      "key": "move_ud",
+      "axis": "vel_y",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.005,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.012,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.002,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": -0.0,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.008,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.002,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.001,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.01,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 6.496,
+            "flip": 0.667,
+            "flip_base": 0.0,
+            "top1_donor": 0.667
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 6.627,
+            "flip": 0.833,
+            "flip_base": 0.0,
+            "top1_donor": 0.75
+          }
+        }
+      }
+    },
+    {
+      "key": "cam_ud",
+      "axis": "vel_y",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 1.879,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 2.436,
+            "flip": 0.167,
+            "flip_base": 0.083,
+            "top1_donor": 0.083
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 1.525,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 1.615,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.017,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.011,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.011,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.022,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 8.722,
+            "flip": 0.917,
+            "flip_base": 0.0,
+            "top1_donor": 0.833
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 9.074,
+            "flip": 1.0,
+            "flip_base": 0.083,
+            "top1_donor": 0.75
+          }
+        }
+      }
+    },
+    {
+      "key": "fall_speed",
+      "axis": "speed",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.029,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.023,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.025,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.013,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.783,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.927,
+            "flip": 0.167,
+            "flip_base": 0.0,
+            "top1_donor": 0.083
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.063,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.0
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.119,
+            "flip": 0.0,
+            "flip_base": 0.0,
+            "top1_donor": 0.0
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 5.128,
+            "flip": 1.0,
+            "flip_base": 0.083,
+            "top1_donor": 0.917
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 5.379,
+            "flip": 0.833,
+            "flip_base": 0.0,
+            "top1_donor": 0.833
+          }
+        }
+      }
+    },
+    {
+      "key": "spin_stop",
+      "axis": "accel",
+      "sets": {
+        "NFP temporal x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.251,
+            "flip": 0.25,
+            "flip_base": 0.25,
+            "top1_donor": 0.167
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.465,
+            "flip": 0.167,
+            "flip_base": 0.083,
+            "top1_donor": 0.083
+          }
+        },
+        "flippers x12": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.246,
+            "flip": 0.25,
+            "flip_base": 0.25,
+            "top1_donor": 0.167
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.46,
+            "flip": 0.167,
+            "flip_base": 0.083,
+            "top1_donor": 0.083
+          }
+        },
+        "random x85 (s0)": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.01,
+            "flip": 0.25,
+            "flip_base": 0.25,
+            "top1_donor": 0.167
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.104,
+            "flip": 0.083,
+            "flip_base": 0.083,
+            "top1_donor": 0.083
+          }
+        },
+        "static x85": {
+          "pos<-neg": {
+            "dLO_to_donor": 0.288,
+            "flip": 0.25,
+            "flip_base": 0.25,
+            "top1_donor": 0.167
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 0.441,
+            "flip": 0.25,
+            "flip_base": 0.083,
+            "top1_donor": 0.083
+          }
+        },
+        "ALL 6144 (ceiling)": {
+          "pos<-neg": {
+            "dLO_to_donor": 3.27,
+            "flip": 0.75,
+            "flip_base": 0.25,
+            "top1_donor": 0.75
+          },
+          "neg<-pos": {
+            "dLO_to_donor": 3.171,
+            "flip": 0.5,
+            "flip_base": 0.083,
+            "top1_donor": 0.5
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "NFP temporal x85": {
+      "dLO": 0.848,
+      "flip": 0.066,
+      "top1": 0.036
+    },
+    "flippers x12": {
+      "dLO": 0.738,
+      "flip": 0.06,
+      "top1": 0.03
+    },
+    "random x85 (s0)": {
+      "dLO": 0.151,
+      "flip": 0.053,
+      "top1": 0.024
+    },
+    "static x85": {
+      "dLO": 0.083,
+      "flip": 0.053,
+      "top1": 0.018
+    },
+    "ALL 6144 (ceiling)": {
+      "dLO": 7.343,
+      "flip": 0.875,
+      "top1": 0.809
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "s_grid": [
+    -150,
+    -100,
+    -40,
+    0,
+    40,
+    100,
+    150
+  ],
+  "pairs": [
+    {
+      "axis": "vel_x",
+      "pos": "Pulling [something] from left to right",
+      "neg": "Pulling [something] from right to left",
+      "n_videos": [
+        24,
+        24
+      ],
+      "features": [
+        {
+          "idx": 255,
+          "feature": "feat00255",
+          "nfp_t": NaN,
+          "act_pref": -37.3623,
+          "lo_pos_side": [
+            7.422,
+            7.138,
+            6.246,
+            5.2,
+            3.865,
+            1.761,
+            0.274
+          ],
+          "lo_neg_side": [
+            1.363,
+            -0.478,
+            -2.934,
+            -4.869,
+            -5.034,
+            -5.668,
+            -5.895
+          ],
+          "shift": -7.203,
+          "flips": {
+            "neg->pos": {
+              "s": -150,
+              "pair_flip": 0.875,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            },
+            "pos->neg": {
+              "s": 150,
+              "pair_flip": 0.333,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.333
+            }
+          }
+        },
+        {
+          "idx": 831,
+          "feature": "feat00831",
+          "nfp_t": NaN,
+          "act_pref": 29.8765,
+          "lo_pos_side": [
+            -1.24,
+            0.751,
+            3.292,
+            5.2,
+            5.464,
+            6.176,
+            6.458
+          ],
+          "lo_neg_side": [
+            -7.64,
+            -7.239,
+            -6.121,
+            -4.869,
+            -3.337,
+            -1.048,
+            0.502
+          ],
+          "shift": 7.921,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.583,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.583
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 0.875,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            }
+          }
+        },
+        {
+          "idx": 1652,
+          "feature": "feat01652",
+          "nfp_t": 1.06,
+          "act_pref": 26.2837,
+          "lo_pos_side": [
+            -2.632,
+            0.102,
+            3.265,
+            5.2,
+            5.571,
+            6.337,
+            6.684
+          ],
+          "lo_neg_side": [
+            -9.153,
+            -8.44,
+            -6.634,
+            -4.869,
+            -2.969,
+            -0.474,
+            1.088
+          ],
+          "shift": 9.778,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.875,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.875
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            }
+          }
+        },
+        {
+          "idx": 2731,
+          "feature": "feat02731",
+          "nfp_t": NaN,
+          "act_pref": -28.6644,
+          "lo_pos_side": [
+            9.078,
+            8.454,
+            6.811,
+            5.2,
+            3.453,
+            1.1,
+            -0.408
+          ],
+          "lo_neg_side": [
+            2.611,
+            0.087,
+            -2.927,
+            -4.869,
+            -5.19,
+            -5.913,
+            -6.222
+          ],
+          "shift": -9.16,
+          "flips": {
+            "neg->pos": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.042
+            },
+            "pos->neg": {
+              "s": 150,
+              "pair_flip": 0.583,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.583
+            }
+          }
+        }
+      ],
+      "random": [],
+      "null_abs_shift_mean": 0.0,
+      "null_abs_shift_sd": 0.0
+    }
+  ]
+}

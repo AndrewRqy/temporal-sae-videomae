@@ -1,0 +1,30 @@
+{
+  "part1": {
+    "cam_lr": {
+      "cbar_shift": -4.084,
+      "cbar_flip": 0.417,
+      "null_shift_mean": 0.601,
+      "null_shift_max": 2.519,
+      "manifold_shift_max": 2.519,
+      "null_flip_max": 0.125,
+      "p_emp": 0.0
+    },
+    "cam_ud": {
+      "cbar_shift": 3.239,
+      "cbar_flip": 0.25,
+      "null_shift_mean": 0.594,
+      "null_shift_max": 2.904,
+      "manifold_shift_max": 2.904,
+      "null_flip_max": 0.208,
+      "p_emp": 0.0
+    }
+  },
+  "part2": {
+    "fwd": 4.79,
+    "rev": -3.192,
+    "NFP-85": 0.128,
+    "rnd85-s101": 0.005,
+    "rnd85-s202": 0.002,
+    "actmatch-85": 0.019
+  }
+}

@@ -1,0 +1,3216 @@
+{
+  "s_abs": 100.0,
+  "frame": "first",
+  "n_clips": 256,
+  "baseline_top": [
+    [
+      "Showing [something] on top of [something]",
+      0.04809001833200455
+    ],
+    [
+      "Showing [something] next to [something]",
+      0.04784662649035454
+    ],
+    [
+      "Showing [something] behind [something]",
+      0.04567340016365051
+    ],
+    [
+      "Holding [something]",
+      0.028995204716920853
+    ],
+    [
+      "Showing that [something] is inside [something]",
+      0.0285178292542696
+    ],
+    [
+      "Showing that [something] is empty",
+      0.020561104640364647
+    ],
+    [
+      "[Something] falling like a rock",
+      0.019966939464211464
+    ],
+    [
+      "Pulling [something] from left to right",
+      0.01577211730182171
+    ]
+  ],
+  "null_motion_mean": 0.10596901966879765,
+  "null_motion_std": 0.12456419292792854,
+  "motion_classes": [
+    "Bending [something] so that it deforms",
+    "Bending [something] until it breaks",
+    "Dropping [something] behind [something]",
+    "Dropping [something] in front of [something]",
+    "Dropping [something] into [something]",
+    "Dropping [something] next to [something]",
+    "Dropping [something] onto [something]",
+    "Hitting [something] with [something]",
+    "Lifting a surface with [something] on it but not enough for it to slide down",
+    "Lifting a surface with [something] on it until it starts sliding down",
+    "Lifting [something] up completely without letting it drop down",
+    "Lifting [something] up completely, then letting it drop down",
+    "Lifting [something] with [something] on it",
+    "Lifting up one end of [something] without letting it drop down",
+    "Lifting up one end of [something], then letting it drop down",
+    "Moving away from [something] with your camera",
+    "Moving [part] of [something]",
+    "Moving [something] across a surface until it falls down",
+    "Moving [something] across a surface without it falling down",
+    "Moving [something] and [something] away from each other",
+    "Moving [something] and [something] closer to each other",
+    "Moving [something] and [something] so they collide with each other",
+    "Moving [something] and [something] so they pass each other",
+    "Moving [something] away from [something]",
+    "Moving [something] away from the camera",
+    "Moving [something] closer to [something]",
+    "Moving [something] down",
+    "Moving [something] towards the camera",
+    "Moving [something] up",
+    "Piling [something] up",
+    "Plugging [something] into [something] but pulling it right out as you remove your hand",
+    "Poking a hole into [some substance]",
+    "Poking a hole into [something soft]",
+    "Poking a stack of [something] so the stack collapses",
+    "Poking a stack of [something] without the stack collapsing",
+    "Poking [something] so it slightly moves",
+    "Poking [something] so lightly that it doesn't or almost doesn't move",
+    "Poking [something] so that it falls over",
+    "Poking [something] so that it spins around",
+    "Pouring [something] into [something]",
+    "Pouring [something] into [something] until it overflows",
+    "Pouring [something] onto [something]",
+    "Pouring [something] out of [something]",
+    "Pretending to be tearing [something that is not tearable]",
+    "Pulling [something] from behind of [something]",
+    "Pulling [something] from left to right",
+    "Pulling [something] from right to left",
+    "Pulling [something] onto [something]",
+    "Pulling [something] out of [something]",
+    "Pulling two ends of [something] but nothing happens",
+    "Pulling two ends of [something] so that it gets stretched",
+    "Pulling two ends of [something] so that it separates into two pieces",
+    "Pushing [something] from left to right",
+    "Pushing [something] from right to left",
+    "Pushing [something] off of [something]",
+    "Pushing [something] onto [something]",
+    "Pushing [something] so it spins",
+    "Pushing [something] so that it almost falls off but doesn't",
+    "Pushing [something] so that it falls off the table",
+    "Pushing [something] so that it slightly moves",
+    "Pushing [something] with [something]",
+    "Putting [number of] [something] onto [something]",
+    "Putting [something] and [something] on the table",
+    "Putting [something] behind [something]",
+    "Putting [something] in front of [something]",
+    "Putting [something] into [something]",
+    "Putting [something] next to [something]",
+    "Putting [something] on a flat surface without letting it roll",
+    "Putting [something] on a surface",
+    "Putting [something] on the edge of [something] so it is not supported and falls down",
+    "Putting [something] onto a slanted surface but it doesn't glide down",
+    "Putting [something] onto [something]",
+    "Putting [something] onto [something else that cannot support it] so it falls down",
+    "Putting [something similar to other things that are already on the table]",
+    "Putting [something] that can't roll onto a slanted surface, so it slides down",
+    "Putting [something] that can't roll onto a slanted surface, so it stays where it is",
+    "Putting [something that cannot actually stand upright] upright on the table, so it falls on its side",
+    "Putting [something] underneath [something]",
+    "Putting [something] upright on the table",
+    "Putting [something], [something] and [something] on the table",
+    "Removing [something], revealing [something] behind",
+    "Rolling [something] on a flat surface",
+    "Scooping [something] up with [something]",
+    "[Something] colliding with [something] and both are being deflected",
+    "[Something] colliding with [something] and both come to a halt",
+    "[Something] falling like a feather or paper",
+    "[Something] falling like a rock",
+    "Spilling [something] behind [something]",
+    "Spilling [something] next to [something]",
+    "Spilling [something] onto [something]",
+    "Spinning [something] so it continues spinning",
+    "Spinning [something] that quickly stops spinning",
+    "Sprinkling [something] onto [something]",
+    "Squeezing [something]",
+    "Stacking [number of] [something]",
+    "Stuffing [something] into [something]",
+    "Taking [one of many similar things on the table]",
+    "Taking [something] from [somewhere]",
+    "Taking [something] out of [something]",
+    "Tearing [something] into two pieces",
+    "Tearing [something] just a little bit",
+    "Throwing [something]",
+    "Throwing [something] against [something]",
+    "Throwing [something] in the air and catching it",
+    "Throwing [something] in the air and letting it fall",
+    "Throwing [something] onto a surface",
+    "Tipping [something] over",
+    "Tipping [something] with [something in it] over, so [something in it] falls out",
+    "Touching (without moving) [part] of [something]",
+    "Twisting (wringing) [something] wet until water comes out",
+    "Twisting [something]"
+  ],
+  "features": [
+    {
+      "d_motion": 0.4407329857349396,
+      "tv": 0.43541181087493896,
+      "up": [
+        [
+          "Spinning [something] that quickly stops spinning",
+          0.1827
+        ],
+        [
+          "Pushing [something] so it spins",
+          0.1741
+        ],
+        [
+          "Spinning [something] so it continues spinning",
+          0.0676
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0322
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0279
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0227
+        ]
+      ],
+      "feature": "feat02312",
+      "idx": 2312,
+      "dom_tau": "speed",
+      "z_motion": 2.69
+    },
+    {
+      "d_motion": 0.37361252307891846,
+      "tv": 0.29390501976013184,
+      "up": [
+        [
+          "Lifting [something] with [something] on it",
+          0.081
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0785
+        ],
+        [
+          "Lifting a surface with [something] on it until it starts sliding down",
+          0.027
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0366
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0353
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0292
+        ]
+      ],
+      "feature": "feat01778",
+      "idx": 1778,
+      "dom_tau": "vel_x",
+      "z_motion": 2.15
+    },
+    {
+      "d_motion": 0.3533990979194641,
+      "tv": 0.30925339460372925,
+      "up": [
+        [
+          "Spinning [something] so it continues spinning",
+          0.2058
+        ],
+        [
+          "Pushing [something] so it spins",
+          0.0262
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0168
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0341
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0311
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0268
+        ]
+      ],
+      "feature": "feat00250",
+      "idx": 250,
+      "dom_tau": "vel_x",
+      "z_motion": 1.99
+    },
+    {
+      "d_motion": 0.298745334148407,
+      "tv": 0.32280680537223816,
+      "up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.1051
+        ],
+        [
+          "Poking [something] so it slightly moves",
+          0.043
+        ],
+        [
+          "Moving [something] away from [something]",
+          0.0257
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0312
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0279
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0186
+        ]
+      ],
+      "feature": "feat03309",
+      "idx": 3309,
+      "dom_tau": "vel_x",
+      "z_motion": 1.55
+    },
+    {
+      "d_motion": 0.29495182633399963,
+      "tv": 0.26530954241752625,
+      "up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.1854
+        ],
+        [
+          "Moving [something] up",
+          0.0172
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0035
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0277
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0237
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0228
+        ]
+      ],
+      "feature": "feat03714",
+      "idx": 3714,
+      "dom_tau": "vel_x",
+      "z_motion": 1.52
+    },
+    {
+      "d_motion": 0.28021448850631714,
+      "tv": 0.26491740345954895,
+      "up": [
+        [
+          "Moving [something] away from [something]",
+          0.0654
+        ],
+        [
+          "Picking [something] up",
+          0.029
+        ],
+        [
+          "Moving [something] closer to [something]",
+          0.0171
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0288
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0254
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0248
+        ]
+      ],
+      "feature": "feat04904",
+      "idx": 4904,
+      "dom_tau": "vel_x",
+      "z_motion": 1.4
+    },
+    {
+      "d_motion": 0.27814987301826477,
+      "tv": 0.292056143283844,
+      "up": [
+        [
+          "Moving [something] and [something] away from each other",
+          0.1218
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0468
+        ],
+        [
+          "Pulling [something] from left to right",
+          0.0217
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0355
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0341
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0221
+        ]
+      ],
+      "feature": "feat01544",
+      "idx": 1544,
+      "dom_tau": "vel_y",
+      "z_motion": 1.38
+    },
+    {
+      "d_motion": 0.2307923585176468,
+      "tv": 0.3912513256072998,
+      "up": [
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.2097
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0808
+        ],
+        [
+          "Lifting up one end of [something], then letting it drop down",
+          0.04
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0323
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0319
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0277
+        ]
+      ],
+      "feature": "feat03636",
+      "idx": 3636,
+      "dom_tau": "speed",
+      "z_motion": 1.0
+    },
+    {
+      "d_motion": 0.22804710268974304,
+      "tv": 0.1941564977169037,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0138
+        ],
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.0097
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0093
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0289
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0258
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.02
+        ]
+      ],
+      "feature": "feat02125",
+      "idx": 2125,
+      "dom_tau": "vel_y",
+      "z_motion": 0.98
+    },
+    {
+      "d_motion": 0.2228010892868042,
+      "tv": 0.2505584955215454,
+      "up": [
+        [
+          "Pulling [something] from left to right",
+          0.1379
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.037
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0121
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0331
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0276
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0197
+        ]
+      ],
+      "feature": "feat04416",
+      "idx": 4416,
+      "dom_tau": "vel_y",
+      "z_motion": 0.94
+    },
+    {
+      "d_motion": 0.2195836305618286,
+      "tv": 0.2030218541622162,
+      "up": [
+        [
+          "Attaching [something] to [something]",
+          0.0107
+        ],
+        [
+          "Moving [something] down",
+          0.0103
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0093
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0294
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.023
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0201
+        ]
+      ],
+      "feature": "feat03908",
+      "idx": 3908,
+      "dom_tau": "accel_mag",
+      "z_motion": 0.91
+    },
+    {
+      "d_motion": 0.21853972971439362,
+      "tv": 0.2799795866012573,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0622
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          0.0295
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.024
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0391
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0319
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0242
+        ]
+      ],
+      "feature": "feat05987",
+      "idx": 5987,
+      "dom_tau": "vel_x",
+      "z_motion": 0.9
+    },
+    {
+      "d_motion": 0.21597614884376526,
+      "tv": 0.17639270424842834,
+      "up": [
+        [
+          "Putting [something] on a surface",
+          0.0098
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0078
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0073
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0252
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0246
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0187
+        ]
+      ],
+      "feature": "feat05087",
+      "idx": 5087,
+      "dom_tau": "accel_mag",
+      "z_motion": 0.88
+    },
+    {
+      "d_motion": 0.2134740799665451,
+      "tv": 0.3894030451774597,
+      "up": [
+        [
+          "Letting [something] roll along a flat surface",
+          0.0934
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0526
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0509
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0325
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0272
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0212
+        ]
+      ],
+      "feature": "feat03150",
+      "idx": 3150,
+      "dom_tau": "speed",
+      "z_motion": 0.86
+    },
+    {
+      "d_motion": 0.2054917812347412,
+      "tv": 0.19383007287979126,
+      "up": [
+        [
+          "Pushing [something] so that it almost falls off but doesn't",
+          0.0189
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0161
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          0.015
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0221
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0129
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0112
+        ]
+      ],
+      "feature": "feat03883",
+      "idx": 3883,
+      "dom_tau": "vel_x",
+      "z_motion": 0.8
+    },
+    {
+      "d_motion": 0.20484575629234314,
+      "tv": 0.28174638748168945,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.149
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0638
+        ],
+        [
+          "Throwing [something] in the air and catching it",
+          0.0105
+        ]
+      ],
+      "down": [
+        [
+          "Showing that [something] is inside [something]",
+          -0.0153
+        ],
+        [
+          "Pulling [something] from left to right",
+          -0.0118
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0116
+        ]
+      ],
+      "feature": "feat03471",
+      "idx": 3471,
+      "dom_tau": "vel_x",
+      "z_motion": 0.79
+    },
+    {
+      "d_motion": 0.20156759023666382,
+      "tv": 0.23540207743644714,
+      "up": [
+        [
+          "Trying but failing to attach [something] to [something] because it doesn't stick",
+          0.0156
+        ],
+        [
+          "Moving [something] up",
+          0.0115
+        ],
+        [
+          "Attaching [something] to [something]",
+          0.0103
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0409
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.031
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0264
+        ]
+      ],
+      "feature": "feat01576",
+      "idx": 1576,
+      "dom_tau": "vel_x",
+      "z_motion": 0.77
+    },
+    {
+      "d_motion": 0.20183724164962769,
+      "tv": 0.31549930572509766,
+      "up": [
+        [
+          "Letting [something] roll along a flat surface",
+          0.1342
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0468
+        ],
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.0459
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0248
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0233
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0225
+        ]
+      ],
+      "feature": "feat04153",
+      "idx": 4153,
+      "dom_tau": "vel_x",
+      "z_motion": 0.77
+    },
+    {
+      "d_motion": 0.19731202721595764,
+      "tv": 0.18094423413276672,
+      "up": [
+        [
+          "Moving [something] down",
+          0.01
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0073
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0061
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0273
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0263
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0256
+        ]
+      ],
+      "feature": "feat05955",
+      "idx": 5955,
+      "dom_tau": "vel_x",
+      "z_motion": 0.73
+    },
+    {
+      "d_motion": 0.19515648484230042,
+      "tv": 0.18081560730934143,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0112
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0065
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0063
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0302
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0287
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0218
+        ]
+      ],
+      "feature": "feat04796",
+      "idx": 4796,
+      "dom_tau": "speed",
+      "z_motion": 0.72
+    },
+    {
+      "d_motion": 0.19266609847545624,
+      "tv": 0.17150381207466125,
+      "up": [
+        [
+          "Covering [something] with [something]",
+          0.0075
+        ],
+        [
+          "Uncovering [something]",
+          0.0066
+        ],
+        [
+          "Tearing [something] into two pieces",
+          0.005
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0284
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0282
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0245
+        ]
+      ],
+      "feature": "feat04974",
+      "idx": 4974,
+      "dom_tau": "accel_mag",
+      "z_motion": 0.7
+    },
+    {
+      "d_motion": 0.1880558431148529,
+      "tv": 0.3101012110710144,
+      "up": [
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.1404
+        ],
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.0261
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0231
+        ]
+      ],
+      "down": [
+        [
+          "Holding [something]",
+          -0.0176
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0172
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0097
+        ]
+      ],
+      "feature": "feat01230",
+      "idx": 1230,
+      "dom_tau": "speed",
+      "z_motion": 0.66
+    },
+    {
+      "d_motion": 0.18819132447242737,
+      "tv": 0.26219654083251953,
+      "up": [
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0958
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0694
+        ],
+        [
+          "Turning [something] upside down",
+          0.008
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0321
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0219
+        ],
+        [
+          "Holding [something]",
+          -0.0195
+        ]
+      ],
+      "feature": "feat05622",
+      "idx": 5622,
+      "dom_tau": "speed",
+      "z_motion": 0.66
+    },
+    {
+      "d_motion": 0.1815461814403534,
+      "tv": 0.196791410446167,
+      "up": [
+        [
+          "Putting [something similar to other things that are already on the table]",
+          0.0136
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0117
+        ],
+        [
+          "Hitting [something] with [something]",
+          0.006
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0222
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.022
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.016
+        ]
+      ],
+      "feature": "feat04188",
+      "idx": 4188,
+      "dom_tau": "vel_y",
+      "z_motion": 0.61
+    },
+    {
+      "d_motion": 0.18143290281295776,
+      "tv": 0.22664183378219604,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0268
+        ],
+        [
+          "Trying but failing to attach [something] to [something] because it doesn't stick",
+          0.0187
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0109
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0322
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0298
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0199
+        ]
+      ],
+      "feature": "feat05216",
+      "idx": 5216,
+      "dom_tau": "direction",
+      "z_motion": 0.61
+    },
+    {
+      "d_motion": 0.17659756541252136,
+      "tv": 0.16244840621948242,
+      "up": [
+        [
+          "Pushing [something] from left to right",
+          0.0093
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.006
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0051
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0253
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.025
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0126
+        ]
+      ],
+      "feature": "feat00939",
+      "idx": 939,
+      "dom_tau": "vel_x",
+      "z_motion": 0.57
+    },
+    {
+      "d_motion": 0.17416977882385254,
+      "tv": 0.2398156225681305,
+      "up": [
+        [
+          "Tilting [something] with [something] on it until it falls off",
+          0.1321
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0111
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.01
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0307
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0276
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0259
+        ]
+      ],
+      "feature": "feat03927",
+      "idx": 3927,
+      "dom_tau": "speed",
+      "z_motion": 0.55
+    },
+    {
+      "d_motion": 0.17158567905426025,
+      "tv": 0.202806293964386,
+      "up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0168
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0154
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          0.0083
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0267
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.026
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0124
+        ]
+      ],
+      "feature": "feat05866",
+      "idx": 5866,
+      "dom_tau": "speed",
+      "z_motion": 0.53
+    },
+    {
+      "d_motion": 0.17033751308918,
+      "tv": 0.20948171615600586,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0464
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          0.0142
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0133
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0337
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0253
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0118
+        ]
+      ],
+      "feature": "feat00978",
+      "idx": 978,
+      "dom_tau": "vel_x",
+      "z_motion": 0.52
+    },
+    {
+      "d_motion": 0.16912893950939178,
+      "tv": 0.18726646900177002,
+      "up": [
+        [
+          "Pretending to put [something] on a surface",
+          0.0111
+        ],
+        [
+          "Moving [something] down",
+          0.008
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0077
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0325
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0295
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0267
+        ]
+      ],
+      "feature": "feat05303",
+      "idx": 5303,
+      "dom_tau": "speed",
+      "z_motion": 0.51
+    },
+    {
+      "d_motion": 0.16301751136779785,
+      "tv": 0.16583214700222015,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.0111
+        ],
+        [
+          "Moving [something] up",
+          0.0072
+        ],
+        [
+          "Putting [something that cannot actually stand upright] upright on the table, so it falls on its side",
+          0.0068
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0289
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0261
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0112
+        ]
+      ],
+      "feature": "feat02191",
+      "idx": 2191,
+      "dom_tau": "speed",
+      "z_motion": 0.46
+    },
+    {
+      "d_motion": 0.16114206612110138,
+      "tv": 0.2713177800178528,
+      "up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.04
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.039
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0363
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0372
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0302
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0282
+        ]
+      ],
+      "feature": "feat03059",
+      "idx": 3059,
+      "dom_tau": "vel_x",
+      "z_motion": 0.44
+    },
+    {
+      "d_motion": 0.1592043787240982,
+      "tv": 0.23777781426906586,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.1345
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0049
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0033
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0353
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0329
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0308
+        ]
+      ],
+      "feature": "feat04196",
+      "idx": 4196,
+      "dom_tau": "vel_y",
+      "z_motion": 0.43
+    },
+    {
+      "d_motion": 0.15972822904586792,
+      "tv": 0.1722855269908905,
+      "up": [
+        [
+          "[Something] falling like a rock",
+          0.0083
+        ],
+        [
+          "Uncovering [something]",
+          0.0072
+        ],
+        [
+          "Pretending to put [something] on a surface",
+          0.0064
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0284
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0233
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0153
+        ]
+      ],
+      "feature": "feat05758",
+      "idx": 5758,
+      "dom_tau": "speed",
+      "z_motion": 0.43
+    },
+    {
+      "d_motion": 0.15651728212833405,
+      "tv": 0.20032557845115662,
+      "up": [
+        [
+          "Moving away from [something] with your camera",
+          0.0549
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0175
+        ],
+        [
+          "Moving [something] away from the camera",
+          0.0104
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0291
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0216
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.016
+        ]
+      ],
+      "feature": "feat00394",
+      "idx": 394,
+      "dom_tau": "vel_x",
+      "z_motion": 0.41
+    },
+    {
+      "d_motion": 0.15753528475761414,
+      "tv": 0.2858242988586426,
+      "up": [
+        [
+          "[Something] falling like a feather or paper",
+          0.1436
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0235
+        ],
+        [
+          "[Something] being deflected from [something]",
+          0.0209
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0329
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0282
+        ],
+        [
+          "Holding [something]",
+          -0.0134
+        ]
+      ],
+      "feature": "feat05077",
+      "idx": 5077,
+      "dom_tau": "vel_x",
+      "z_motion": 0.41
+    },
+    {
+      "d_motion": 0.13868966698646545,
+      "tv": 0.16712000966072083,
+      "up": [
+        [
+          "[Something] falling like a rock",
+          0.0115
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0101
+        ],
+        [
+          "Moving [something] down",
+          0.0089
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0196
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0184
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0125
+        ]
+      ],
+      "feature": "feat03280",
+      "idx": 3280,
+      "dom_tau": "accel_mag",
+      "z_motion": 0.26
+    },
+    {
+      "d_motion": 0.1383201777935028,
+      "tv": 0.2662924528121948,
+      "up": [
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0649
+        ],
+        [
+          "Tilting [something] with [something] on it until it falls off",
+          0.0476
+        ],
+        [
+          "Lifting up one end of [something], then letting it drop down",
+          0.0237
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0257
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0253
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0197
+        ]
+      ],
+      "feature": "feat04716",
+      "idx": 4716,
+      "dom_tau": "vel_x",
+      "z_motion": 0.26
+    },
+    {
+      "d_motion": 0.1308397352695465,
+      "tv": 0.31195417046546936,
+      "up": [
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.1632
+        ],
+        [
+          "Poking [something] so it slightly moves",
+          0.0925
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0224
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0254
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0226
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0218
+        ]
+      ],
+      "feature": "feat02211",
+      "idx": 2211,
+      "dom_tau": "speed",
+      "z_motion": 0.2
+    },
+    {
+      "d_motion": 0.12722495198249817,
+      "tv": 0.14145448803901672,
+      "up": [
+        [
+          "Stacking [number of] [something]",
+          0.0044
+        ],
+        [
+          "Turning [something] upside down",
+          0.0042
+        ],
+        [
+          "Putting [something] upright on the table",
+          0.0039
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0219
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0117
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.011
+        ]
+      ],
+      "feature": "feat04624",
+      "idx": 4624,
+      "dom_tau": "accel_mag",
+      "z_motion": 0.17
+    },
+    {
+      "d_motion": 0.1256970465183258,
+      "tv": 0.16834115982055664,
+      "up": [
+        [
+          "[Something] colliding with [something] and both are being deflected",
+          0.013
+        ],
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.0094
+        ],
+        [
+          "Hitting [something] with [something]",
+          0.0081
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0293
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0208
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0125
+        ]
+      ],
+      "feature": "feat05179",
+      "idx": 5179,
+      "dom_tau": "vel_x",
+      "z_motion": 0.16
+    },
+    {
+      "d_motion": 0.12030313909053802,
+      "tv": 0.2451685667037964,
+      "up": [
+        [
+          "Plugging [something] into [something]",
+          0.0704
+        ],
+        [
+          "Twisting [something]",
+          0.0269
+        ],
+        [
+          "Attaching [something] to [something]",
+          0.0243
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0295
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0241
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0238
+        ]
+      ],
+      "feature": "feat02820",
+      "idx": 2820,
+      "dom_tau": "vel_x",
+      "z_motion": 0.12
+    },
+    {
+      "d_motion": 0.12116199731826782,
+      "tv": 0.2846640646457672,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.2187
+        ],
+        [
+          "Moving [something] down",
+          0.006
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0036
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0327
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0304
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.03
+        ]
+      ],
+      "feature": "feat04562",
+      "idx": 4562,
+      "dom_tau": "speed",
+      "z_motion": 0.12
+    },
+    {
+      "d_motion": 0.12017723172903061,
+      "tv": 0.2803194224834442,
+      "up": [
+        [
+          "[Something] falling like a rock",
+          0.0708
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0442
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0242
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0291
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0175
+        ],
+        [
+          "Moving [something] up",
+          -0.0109
+        ]
+      ],
+      "feature": "feat02818",
+      "idx": 2818,
+      "dom_tau": "speed",
+      "z_motion": 0.11
+    },
+    {
+      "d_motion": 0.11098585277795792,
+      "tv": 0.22792762517929077,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.1508
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0029
+        ],
+        [
+          "Pushing [something] so it spins",
+          0.0028
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0335
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0307
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0242
+        ]
+      ],
+      "feature": "feat03968",
+      "idx": 3968,
+      "dom_tau": "vel_x",
+      "z_motion": 0.04
+    },
+    {
+      "d_motion": 0.10996443033218384,
+      "tv": 0.13304591178894043,
+      "up": [
+        [
+          "Holding [something] in front of [something]",
+          0.0095
+        ],
+        [
+          "Dropping [something] into [something]",
+          0.0062
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0053
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0204
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0148
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0123
+        ]
+      ],
+      "feature": "feat03974",
+      "idx": 3974,
+      "dom_tau": "speed",
+      "z_motion": 0.03
+    },
+    {
+      "d_motion": 0.10846488177776337,
+      "tv": 0.16649822890758514,
+      "up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0113
+        ],
+        [
+          "Lifting [something] up completely without letting it drop down",
+          0.0076
+        ],
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.0065
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0224
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0159
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0144
+        ]
+      ],
+      "feature": "feat03685",
+      "idx": 3685,
+      "dom_tau": "speed",
+      "z_motion": 0.02
+    },
+    {
+      "d_motion": 0.10380086302757263,
+      "tv": 0.26406723260879517,
+      "up": [
+        [
+          "Lifting [something] with [something] on it",
+          0.1037
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0411
+        ],
+        [
+          "Pretending to poke [something]",
+          0.0264
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0269
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0233
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0136
+        ]
+      ],
+      "feature": "feat04280",
+      "idx": 4280,
+      "dom_tau": "vel_y",
+      "z_motion": -0.02
+    },
+    {
+      "d_motion": 0.09753601998090744,
+      "tv": 0.15650859475135803,
+      "up": [
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0074
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0058
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0056
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0335
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0128
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0107
+        ]
+      ],
+      "feature": "feat02825",
+      "idx": 2825,
+      "dom_tau": "direction",
+      "z_motion": -0.07
+    },
+    {
+      "d_motion": 0.0951983630657196,
+      "tv": 0.16683092713356018,
+      "up": [
+        [
+          "Pushing [something] from left to right",
+          0.0097
+        ],
+        [
+          "Moving [something] and [something] closer to each other",
+          0.0082
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0081
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0258
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0127
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0112
+        ]
+      ],
+      "feature": "feat01345",
+      "idx": 1345,
+      "dom_tau": "vel_x",
+      "z_motion": -0.09
+    },
+    {
+      "d_motion": 0.09248974919319153,
+      "tv": 0.2314494550228119,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0249
+        ],
+        [
+          "Holding [something]",
+          0.0176
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0175
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0341
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0272
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0147
+        ]
+      ],
+      "feature": "feat03379",
+      "idx": 3379,
+      "dom_tau": "vel_y",
+      "z_motion": -0.11
+    },
+    {
+      "d_motion": 0.08674972504377365,
+      "tv": 0.19483891129493713,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.1216
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0033
+        ],
+        [
+          "Lifting [something] up completely, then letting it drop down",
+          0.0032
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0273
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0208
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0166
+        ]
+      ],
+      "feature": "feat00294",
+      "idx": 294,
+      "dom_tau": "vel_x",
+      "z_motion": -0.15
+    },
+    {
+      "d_motion": 0.08502945303916931,
+      "tv": 0.15321391820907593,
+      "up": [
+        [
+          "Moving [something] up",
+          0.0231
+        ],
+        [
+          "Lifting [something] with [something] on it",
+          0.0058
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0047
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0214
+        ],
+        [
+          "Holding [something]",
+          -0.0132
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0127
+        ]
+      ],
+      "feature": "feat03819",
+      "idx": 3819,
+      "dom_tau": "speed",
+      "z_motion": -0.17
+    },
+    {
+      "d_motion": 0.0832347646355629,
+      "tv": 0.22758863866329193,
+      "up": [
+        [
+          "Showing [something] next to [something]",
+          0.0453
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0352
+        ],
+        [
+          "Letting [something] roll along a flat surface",
+          0.0243
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0214
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0139
+        ],
+        [
+          "Holding [something]",
+          -0.0116
+        ]
+      ],
+      "feature": "feat04870",
+      "idx": 4870,
+      "dom_tau": "vel_y",
+      "z_motion": -0.18
+    },
+    {
+      "d_motion": 0.07971905171871185,
+      "tv": 0.22288309037685394,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.1798
+        ],
+        [
+          "Lifting [something] up completely, then letting it drop down",
+          0.0025
+        ],
+        [
+          "Throwing [something]",
+          0.0025
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.027
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.026
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.015
+        ]
+      ],
+      "feature": "feat00214",
+      "idx": 214,
+      "dom_tau": "vel_x",
+      "z_motion": -0.21
+    },
+    {
+      "d_motion": 0.07641185820102692,
+      "tv": 0.19440609216690063,
+      "up": [
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.0996
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0071
+        ],
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.006
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0179
+        ],
+        [
+          "Holding [something]",
+          -0.0118
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0113
+        ]
+      ],
+      "feature": "feat01365",
+      "idx": 1365,
+      "dom_tau": "vel_y",
+      "z_motion": -0.24
+    },
+    {
+      "d_motion": 0.07467938214540482,
+      "tv": 0.17535927891731262,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.0154
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0117
+        ],
+        [
+          "Dropping [something] next to [something]",
+          0.0115
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0283
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0116
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0112
+        ]
+      ],
+      "feature": "feat03735",
+      "idx": 3735,
+      "dom_tau": "vel_x",
+      "z_motion": -0.25
+    },
+    {
+      "d_motion": 0.07341504842042923,
+      "tv": 0.12149287015199661,
+      "up": [
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0087
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0048
+        ],
+        [
+          "Pushing [something] so that it almost falls off but doesn't",
+          0.0042
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0219
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0101
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0091
+        ]
+      ],
+      "feature": "feat00326",
+      "idx": 326,
+      "dom_tau": "accel_mag",
+      "z_motion": -0.26
+    },
+    {
+      "d_motion": 0.07065953314304352,
+      "tv": 0.40502992272377014,
+      "up": [
+        [
+          "Turning the camera left while filming [something]",
+          0.146
+        ],
+        [
+          "Moving away from [something] with your camera",
+          0.0726
+        ],
+        [
+          "Approaching [something] with your camera",
+          0.0708
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0325
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0276
+        ],
+        [
+          "Holding [something]",
+          -0.0231
+        ]
+      ],
+      "feature": "feat03672",
+      "idx": 3672,
+      "dom_tau": "speed",
+      "z_motion": -0.28
+    },
+    {
+      "d_motion": 0.07102710008621216,
+      "tv": 0.1468266248703003,
+      "up": [
+        [
+          "Throwing [something]",
+          0.0144
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0078
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          0.0059
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0234
+        ],
+        [
+          "Moving [something] up",
+          -0.0086
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0078
+        ]
+      ],
+      "feature": "feat05321",
+      "idx": 5321,
+      "dom_tau": "speed",
+      "z_motion": -0.28
+    },
+    {
+      "d_motion": 0.07044542580842972,
+      "tv": 0.21160262823104858,
+      "up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0257
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0165
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0124
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0283
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0279
+        ],
+        [
+          "Holding [something]",
+          -0.0111
+        ]
+      ],
+      "feature": "feat02952",
+      "idx": 2952,
+      "dom_tau": "speed",
+      "z_motion": -0.29
+    },
+    {
+      "d_motion": 0.06044390797615051,
+      "tv": 0.19469918310642242,
+      "up": [
+        [
+          "Poking [something] so it slightly moves",
+          0.0143
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.013
+        ],
+        [
+          "Pretending to take [something] from [somewhere]",
+          0.0096
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0196
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0185
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0185
+        ]
+      ],
+      "feature": "feat05472",
+      "idx": 5472,
+      "dom_tau": "vel_x",
+      "z_motion": -0.37
+    },
+    {
+      "d_motion": 0.05770403519272804,
+      "tv": 0.26510822772979736,
+      "up": [
+        [
+          "Holding [something]",
+          0.0896
+        ],
+        [
+          "Trying to bend [something unbendable] so nothing happens",
+          0.03
+        ],
+        [
+          "Pulling two ends of [something] but nothing happens",
+          0.0216
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0362
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0325
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0292
+        ]
+      ],
+      "feature": "feat03519",
+      "idx": 3519,
+      "dom_tau": "speed",
+      "z_motion": -0.39
+    },
+    {
+      "d_motion": 0.05365400388836861,
+      "tv": 0.17635688185691833,
+      "up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.056
+        ],
+        [
+          "Pretending to poke [something]",
+          0.0076
+        ],
+        [
+          "Pulling two ends of [something] but nothing happens",
+          0.0075
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0271
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0246
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0201
+        ]
+      ],
+      "feature": "feat00648",
+      "idx": 648,
+      "dom_tau": "speed",
+      "z_motion": -0.42
+    },
+    {
+      "d_motion": 0.05373048782348633,
+      "tv": 0.23737789690494537,
+      "up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.1761
+        ],
+        [
+          "Covering [something] with [something]",
+          0.0027
+        ],
+        [
+          "Putting [something], [something] and [something] on the table",
+          0.0021
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0253
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.024
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0164
+        ]
+      ],
+      "feature": "feat04665",
+      "idx": 4665,
+      "dom_tau": "vel_y",
+      "z_motion": -0.42
+    },
+    {
+      "d_motion": 0.04265359044075012,
+      "tv": 0.11591050773859024,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.0088
+        ],
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.0056
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0042
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0201
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0073
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0058
+        ]
+      ],
+      "feature": "feat01903",
+      "idx": 1903,
+      "dom_tau": "speed",
+      "z_motion": -0.51
+    },
+    {
+      "d_motion": 0.04025384038686752,
+      "tv": 0.13432647287845612,
+      "up": [
+        [
+          "Letting [something] roll down a slanted surface",
+          0.0092
+        ],
+        [
+          "[Something] being deflected from [something]",
+          0.0087
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          0.0085
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0115
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0112
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0108
+        ]
+      ],
+      "feature": "feat03809",
+      "idx": 3809,
+      "dom_tau": "accel_mag",
+      "z_motion": -0.53
+    },
+    {
+      "d_motion": 0.011353261768817902,
+      "tv": 0.21335339546203613,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.044
+        ],
+        [
+          "Pretending to poke [something]",
+          0.022
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0138
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0284
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0249
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0167
+        ]
+      ],
+      "feature": "feat01262",
+      "idx": 1262,
+      "dom_tau": "vel_x",
+      "z_motion": -0.76
+    },
+    {
+      "d_motion": 0.008982952684164047,
+      "tv": 0.18547168374061584,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.0276
+        ],
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0141
+        ],
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.0099
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0312
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0159
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0129
+        ]
+      ],
+      "feature": "feat01919",
+      "idx": 1919,
+      "dom_tau": "vel_x",
+      "z_motion": -0.78
+    },
+    {
+      "d_motion": 0.006035352125763893,
+      "tv": 0.14794452488422394,
+      "up": [
+        [
+          "Pushing [something] with [something]",
+          0.0527
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0073
+        ],
+        [
+          "Holding [something]",
+          0.0069
+        ]
+      ],
+      "down": [
+        [
+          "Pulling [something] from left to right",
+          -0.0096
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0084
+        ],
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          -0.0069
+        ]
+      ],
+      "feature": "feat02736",
+      "idx": 2736,
+      "dom_tau": "vel_y",
+      "z_motion": -0.8
+    },
+    {
+      "d_motion": -0.00575767457485199,
+      "tv": 0.3420632481575012,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.3224
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0029
+        ],
+        [
+          "Pulling [something] from right to left",
+          0.0021
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.028
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0193
+        ],
+        [
+          "Holding [something]",
+          -0.0182
+        ]
+      ],
+      "feature": "feat01321",
+      "idx": 1321,
+      "dom_tau": "vel_y",
+      "z_motion": -0.9
+    },
+    {
+      "d_motion": -0.013823890127241611,
+      "tv": 0.195831760764122,
+      "up": [
+        [
+          "Approaching [something] with your camera",
+          0.0831
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0343
+        ],
+        [
+          "Moving [something] towards the camera",
+          0.0043
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0325
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0246
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.012
+        ]
+      ],
+      "feature": "feat05228",
+      "idx": 5228,
+      "dom_tau": "vel_y",
+      "z_motion": -0.96
+    },
+    {
+      "d_motion": -0.05121179297566414,
+      "tv": 0.3051725924015045,
+      "up": [
+        [
+          "Holding [something]",
+          0.1241
+        ],
+        [
+          "Bending [something] so that it deforms",
+          0.043
+        ],
+        [
+          "Putting [something that cannot actually stand upright] upright on the table, so it falls on its side",
+          0.0176
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0304
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0285
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0251
+        ]
+      ],
+      "feature": "feat04254",
+      "idx": 4254,
+      "dom_tau": "speed",
+      "z_motion": -1.26
+    },
+    {
+      "d_motion": -0.0770234763622284,
+      "tv": 0.2504234313964844,
+      "up": [
+        [
+          "Showing that [something] is inside [something]",
+          0.1523
+        ],
+        [
+          "Showing that [something] is empty",
+          0.0169
+        ],
+        [
+          "Pouring [something] out of [something]",
+          0.0067
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0339
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0332
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0179
+        ]
+      ],
+      "feature": "feat03058",
+      "idx": 3058,
+      "dom_tau": "vel_x",
+      "z_motion": -1.47
+    },
+    {
+      "d_motion": -0.0839337557554245,
+      "tv": 0.35696348547935486,
+      "up": [
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0858
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0775
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0659
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] next to [something]",
+          -0.0389
+        ],
+        [
+          "Holding [something]",
+          -0.0146
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0122
+        ]
+      ],
+      "feature": "feat02509",
+      "idx": 2509,
+      "dom_tau": "accel_mag",
+      "z_motion": -1.52
+    },
+    {
+      "d_motion": -0.09565406292676926,
+      "tv": 0.26476678252220154,
+      "up": [
+        [
+          "Turning the camera right while filming [something]",
+          0.1938
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0163
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0078
+        ]
+      ],
+      "down": [
+        [
+          "Holding [something]",
+          -0.0113
+        ],
+        [
+          "Moving [something] up",
+          -0.0101
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0093
+        ]
+      ],
+      "feature": "feat00950",
+      "idx": 950,
+      "dom_tau": "vel_x",
+      "z_motion": -1.62
+    },
+    {
+      "d_motion": -0.15941990911960602,
+      "tv": 0.21737080812454224,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.0721
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0527
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0252
+        ]
+      ],
+      "down": [
+        [
+          "Holding [something]",
+          -0.0156
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0124
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0093
+        ]
+      ],
+      "feature": "feat00056",
+      "idx": 56,
+      "dom_tau": "speed",
+      "z_motion": -2.13
+    },
+    {
+      "d_motion": -0.2127837836742401,
+      "tv": 0.32175248861312866,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.1304
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0554
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0436
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0325
+        ],
+        [
+          "Holding [something]",
+          -0.0206
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0111
+        ]
+      ],
+      "feature": "feat01699",
+      "idx": 1699,
+      "dom_tau": "vel_x",
+      "z_motion": -2.56
+    },
+    {
+      "d_motion": -0.3088887631893158,
+      "tv": 0.22505120933055878,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.0523
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.0459
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0357
+        ]
+      ],
+      "down": [
+        [
+          "Showing that [something] is inside [something]",
+          -0.015
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0096
+        ],
+        [
+          "Pulling [something] from left to right",
+          -0.0092
+        ]
+      ],
+      "feature": "feat06100",
+      "idx": 6100,
+      "dom_tau": "speed",
+      "z_motion": -3.33
+    },
+    {
+      "d_motion": -0.32814013957977295,
+      "tv": 0.34871262311935425,
+      "up": [
+        [
+          "Holding [something]",
+          0.2971
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0156
+        ],
+        [
+          "Dropping [something] into [something]",
+          0.0082
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] on top of [something]",
+          -0.0288
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0234
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0174
+        ]
+      ],
+      "feature": "feat04541",
+      "idx": 4541,
+      "dom_tau": "vel_y",
+      "z_motion": -3.49
+    },
+    {
+      "d_motion": -0.35219380259513855,
+      "tv": 0.2970617413520813,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.1238
+        ],
+        [
+          "Holding [something]",
+          0.0564
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.0354
+        ]
+      ],
+      "down": [
+        [
+          "Showing that [something] is inside [something]",
+          -0.0122
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0118
+        ],
+        [
+          "Pretending to pick [something] up",
+          -0.0106
+        ]
+      ],
+      "feature": "feat05711",
+      "idx": 5711,
+      "dom_tau": "vel_x",
+      "z_motion": -3.68
+    },
+    {
+      "d_motion": -0.3990338146686554,
+      "tv": 0.44958627223968506,
+      "up": [
+        [
+          "Showing [something] to the camera",
+          0.4271
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0058
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0047
+        ]
+      ],
+      "down": [
+        [
+          "Showing [something] behind [something]",
+          -0.0357
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0304
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0301
+        ]
+      ],
+      "feature": "feat05785",
+      "idx": 5785,
+      "dom_tau": "vel_x",
+      "z_motion": -4.05
+    },
+    {
+      "d_motion": -0.4102615714073181,
+      "tv": 0.31044113636016846,
+      "up": [
+        [
+          "Showing [something] behind [something]",
+          0.1261
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0539
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.0293
+        ]
+      ],
+      "down": [
+        [
+          "Pulling [something] from left to right",
+          -0.013
+        ],
+        [
+          "Holding [something]",
+          -0.0117
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0114
+        ]
+      ],
+      "feature": "feat02491",
+      "idx": 2491,
+      "dom_tau": "speed",
+      "z_motion": -4.14
+    },
+    {
+      "d_motion": -0.4177253246307373,
+      "tv": 0.39015257358551025,
+      "up": [
+        [
+          "Showing [something] next to [something]",
+          0.2721
+        ],
+        [
+          "Showing [something] on top of [something]",
+          0.0675
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0114
+        ]
+      ],
+      "down": [
+        [
+          "Holding [something]",
+          -0.0216
+        ],
+        [
+          "Showing that [something] is inside [something]",
+          -0.0172
+        ],
+        [
+          "Pretending to pick [something] up",
+          -0.011
+        ]
+      ],
+      "feature": "feat04066",
+      "idx": 4066,
+      "dom_tau": "vel_x",
+      "z_motion": -4.2
+    },
+    {
+      "d_motion": -0.4843233823776245,
+      "tv": 0.3609841465950012,
+      "up": [
+        [
+          "Showing [something] on top of [something]",
+          0.2869
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0506
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.009
+        ]
+      ],
+      "down": [
+        [
+          "[Something] falling like a rock",
+          -0.016
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0157
+        ],
+        [
+          "Holding [something]",
+          -0.0129
+        ]
+      ],
+      "feature": "feat00735",
+      "idx": 735,
+      "dom_tau": "accel_mag",
+      "z_motion": -4.74
+    }
+  ]
+}

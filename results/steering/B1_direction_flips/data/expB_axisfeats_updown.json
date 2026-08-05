@@ -1,0 +1,183 @@
+{
+  "s_grid": [
+    -150,
+    -100,
+    -40,
+    0,
+    40,
+    100,
+    150
+  ],
+  "pairs": [
+    {
+      "axis": "vel_y",
+      "pos": "Moving [something] up",
+      "neg": "Moving [something] down",
+      "n_videos": [
+        24,
+        24
+      ],
+      "features": [
+        {
+          "idx": 1387,
+          "feature": "feat01387",
+          "nfp_t": NaN,
+          "act_pref": 9.6159,
+          "lo_pos_side": [
+            -2.28,
+            -0.403,
+            2.179,
+            3.939,
+            4.868,
+            5.949,
+            6.441
+          ],
+          "lo_neg_side": [
+            -7.209,
+            -6.476,
+            -4.759,
+            -3.061,
+            -1.224,
+            1.132,
+            2.524
+          ],
+          "shift": 9.227,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.917,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.792
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 0.958,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            }
+          }
+        },
+        {
+          "idx": 860,
+          "feature": "feat00860",
+          "nfp_t": -0.32,
+          "act_pref": 18.0024,
+          "lo_pos_side": [
+            -2.607,
+            -0.35,
+            2.34,
+            3.939,
+            4.594,
+            5.415,
+            5.798
+          ],
+          "lo_neg_side": [
+            -7.825,
+            -6.968,
+            -4.909,
+            -3.061,
+            -1.266,
+            0.843,
+            2.054
+          ],
+          "shift": 9.142,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.833,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.708
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.083
+            }
+          }
+        },
+        {
+          "idx": 5258,
+          "feature": "feat05258",
+          "nfp_t": NaN,
+          "act_pref": 8.1203,
+          "lo_pos_side": [
+            -2.442,
+            -0.457,
+            2.222,
+            3.939,
+            4.876,
+            5.913,
+            6.393
+          ],
+          "lo_neg_side": [
+            -7.612,
+            -6.802,
+            -4.889,
+            -3.061,
+            -1.163,
+            1.177,
+            2.538
+          ],
+          "shift": 9.493,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.917,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.833
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 0.958,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            }
+          }
+        },
+        {
+          "idx": 1484,
+          "feature": "feat01484",
+          "nfp_t": NaN,
+          "act_pref": 4.6258,
+          "lo_pos_side": [
+            -1.489,
+            0.39,
+            2.714,
+            3.939,
+            4.592,
+            5.218,
+            5.494
+          ],
+          "lo_neg_side": [
+            -7.166,
+            -6.458,
+            -4.696,
+            -3.061,
+            -1.432,
+            0.509,
+            1.631
+          ],
+          "shift": 7.89,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.667,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.542
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 0.542,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            }
+          }
+        }
+      ],
+      "random": [],
+      "null_abs_shift_mean": 0.0,
+      "null_abs_shift_sd": 0.0
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "features": {
+    "right": 1321,
+    "down": 4665
+  },
+  "conditions": {
+    "baseline": {
+      "right": 0.0055,
+      "left": 0.0032,
+      "up": 0.0116,
+      "down": 0.0031
+    },
+    "right-only@s40": {
+      "right": 0.0335,
+      "left": 0.0032,
+      "up": 0.0095,
+      "down": 0.0032
+    },
+    "down-only@s40": {
+      "right": 0.0041,
+      "left": 0.0028,
+      "up": 0.0072,
+      "down": 0.0158
+    },
+    "joint@s40": {
+      "right": 0.0256,
+      "left": 0.003,
+      "up": 0.0073,
+      "down": 0.0159
+    },
+    "joint@s20 (budget-matched)": {
+      "right": 0.0126,
+      "left": 0.003,
+      "up": 0.0094,
+      "down": 0.0073
+    },
+    "right-only@s100": {
+      "right": 0.2372,
+      "left": 0.0032,
+      "up": 0.0061,
+      "down": 0.0033
+    },
+    "down-only@s100": {
+      "right": 0.0028,
+      "left": 0.0023,
+      "up": 0.0033,
+      "down": 0.0961
+    },
+    "joint@s100": {
+      "right": 0.1156,
+      "left": 0.0029,
+      "up": 0.005,
+      "down": 0.0797
+    },
+    "joint@s50 (budget-matched)": {
+      "right": 0.0352,
+      "left": 0.003,
+      "up": 0.0066,
+      "down": 0.0226
+    }
+  },
+  "verdict@s40": "superposition",
+  "verdict@s100": "superposition"
+}

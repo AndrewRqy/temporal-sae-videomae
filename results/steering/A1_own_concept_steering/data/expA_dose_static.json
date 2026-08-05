@@ -1,0 +1,84 @@
+{
+  "input": "static",
+  "s_list": [
+    0.0,
+    10.0,
+    20.0,
+    40.0,
+    60.0,
+    100.0,
+    150.0
+  ],
+  "features": [
+    {
+      "feature": "feat02312",
+      "idx": 2312,
+      "concept": "Spinning [something] that quickly stops spinning",
+      "p_by_s": [
+        0.0074,
+        0.0117,
+        0.0186,
+        0.0426,
+        0.0826,
+        0.1901,
+        0.2997
+      ]
+    },
+    {
+      "feature": "feat04280",
+      "idx": 4280,
+      "concept": "Lifting [something] with [something] on it",
+      "p_by_s": [
+        0.0054,
+        0.0083,
+        0.0124,
+        0.0258,
+        0.0471,
+        0.1092,
+        0.1944
+      ]
+    },
+    {
+      "feature": "feat03150",
+      "idx": 3150,
+      "concept": "Removing [something], revealing [something] behind",
+      "p_by_s": [
+        0.0021,
+        0.0021,
+        0.0021,
+        0.002,
+        0.002,
+        0.0018,
+        0.0014
+      ]
+    },
+    {
+      "feature": "feat02211",
+      "idx": 2211,
+      "concept": "Letting [something] roll along a flat surface",
+      "p_by_s": [
+        0.0068,
+        0.0068,
+        0.0068,
+        0.0066,
+        0.0062,
+        0.0052,
+        0.004
+      ]
+    },
+    {
+      "feature": "feat03714",
+      "idx": 3714,
+      "concept": "Pushing [something] so that it slightly moves",
+      "p_by_s": [
+        0.0098,
+        0.0155,
+        0.0236,
+        0.0491,
+        0.088,
+        0.1952,
+        0.3361
+      ]
+    }
+  ]
+}

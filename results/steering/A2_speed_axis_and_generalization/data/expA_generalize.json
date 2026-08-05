@@ -1,0 +1,996 @@
+{
+  "s_grid": [
+    0.0,
+    50.0,
+    100.0,
+    150.0
+  ],
+  "panel": [
+    "Showing [something] on top of [something]",
+    "Pretending to poke [something]",
+    "Putting [something] behind [something]",
+    "Spinning [something] that quickly stops spinning",
+    "Pouring [something] into [something]",
+    "Pulling [something] onto [something]",
+    "[Something] being deflected from [something]",
+    "Putting [something] onto [something else that cannot support it] so it falls down",
+    "Putting [something] and [something] on the table",
+    "Pulling [something] out of [something]",
+    "Poking a hole into [some substance]",
+    "Burying [something] in [something]"
+  ],
+  "panel_speed_z": [
+    -2.38,
+    -1.4,
+    -0.79,
+    -0.49,
+    -0.31,
+    -0.1,
+    -0.01,
+    0.18,
+    0.39,
+    0.67,
+    1.15,
+    4.28
+  ],
+  "n_proven": 9,
+  "n_generalize_up075": 9,
+  "rand_up_frac_mean": 0.6054666666666667,
+  "rand_up_frac_sd": 0.19123140141956002,
+  "features": [
+    {
+      "up_frac": 1.0,
+      "mean_slope": 0.0132,
+      "pos_slope_frac": 1.0,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0165,
+          "up": true,
+          "e0": -0.728,
+          "emax": 1.719
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0162,
+          "up": true,
+          "e0": -0.572,
+          "emax": 1.83
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0153,
+          "up": true,
+          "e0": -0.522,
+          "emax": 1.759
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0114,
+          "up": true,
+          "e0": -0.266,
+          "emax": 1.462
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0127,
+          "up": true,
+          "e0": -0.118,
+          "emax": 1.791
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0157,
+          "up": true,
+          "e0": 0.091,
+          "emax": 2.373
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0165,
+          "up": true,
+          "e0": -0.169,
+          "emax": 2.234
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.015,
+          "up": true,
+          "e0": 0.055,
+          "emax": 2.256
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0083,
+          "up": true,
+          "e0": 0.396,
+          "emax": 1.66
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0156,
+          "up": true,
+          "e0": -0.098,
+          "emax": 2.179
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0116,
+          "up": true,
+          "e0": 0.535,
+          "emax": 2.26
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": 0.0042,
+          "up": true,
+          "e0": 1.859,
+          "emax": 2.492
+        }
+      ],
+      "idx": 1321,
+      "dom_tau": "vel_y",
+      "feature": "feat01321"
+    },
+    {
+      "up_frac": 1.0,
+      "mean_slope": 0.0076,
+      "pos_slope_frac": 1.0,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0099,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.736
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.01,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.901
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0088,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.787
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0089,
+          "up": true,
+          "e0": -0.266,
+          "emax": 1.06
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0079,
+          "up": true,
+          "e0": -0.118,
+          "emax": 1.067
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0085,
+          "up": true,
+          "e0": 0.091,
+          "emax": 1.333
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0096,
+          "up": true,
+          "e0": -0.169,
+          "emax": 1.23
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.008,
+          "up": true,
+          "e0": 0.055,
+          "emax": 1.234
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.004,
+          "up": true,
+          "e0": 0.396,
+          "emax": 1.001
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0092,
+          "up": true,
+          "e0": -0.098,
+          "emax": 1.239
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0056,
+          "up": true,
+          "e0": 0.535,
+          "emax": 1.36
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": 0.0003,
+          "up": true,
+          "e0": 1.859,
+          "emax": 1.912
+        }
+      ],
+      "idx": 2509,
+      "dom_tau": "accel_mag",
+      "feature": "feat02509"
+    },
+    {
+      "up_frac": 1.0,
+      "mean_slope": 0.0087,
+      "pos_slope_frac": 1.0,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.009,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.625
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0113,
+          "up": true,
+          "e0": -0.572,
+          "emax": 1.123
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0098,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.963
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0075,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.883
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0088,
+          "up": true,
+          "e0": -0.118,
+          "emax": 1.224
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0112,
+          "up": true,
+          "e0": 0.091,
+          "emax": 1.748
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0119,
+          "up": true,
+          "e0": -0.169,
+          "emax": 1.581
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0096,
+          "up": true,
+          "e0": 0.055,
+          "emax": 1.486
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0046,
+          "up": true,
+          "e0": 0.396,
+          "emax": 1.115
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0115,
+          "up": true,
+          "e0": -0.098,
+          "emax": 1.605
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0074,
+          "up": true,
+          "e0": 0.535,
+          "emax": 1.651
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": 0.0024,
+          "up": true,
+          "e0": 1.859,
+          "emax": 2.239
+        }
+      ],
+      "idx": 950,
+      "dom_tau": "vel_x",
+      "feature": "feat00950"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.0066,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0115,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.986
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0089,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.771
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0081,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.695
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.005,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.493
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0063,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.844
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0086,
+          "up": true,
+          "e0": 0.091,
+          "emax": 1.371
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0089,
+          "up": true,
+          "e0": -0.169,
+          "emax": 1.151
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0073,
+          "up": true,
+          "e0": 0.055,
+          "emax": 1.145
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0029,
+          "up": true,
+          "e0": 0.396,
+          "emax": 0.847
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.008,
+          "up": true,
+          "e0": -0.098,
+          "emax": 1.101
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0048,
+          "up": true,
+          "e0": 0.535,
+          "emax": 1.272
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0006,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.797
+        }
+      ],
+      "idx": 3968,
+      "dom_tau": "vel_x",
+      "feature": "feat03968"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.0036,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0071,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.319
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0062,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.351
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0048,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.201
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0035,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.264
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0036,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.431
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0046,
+          "up": true,
+          "e0": 0.091,
+          "emax": 0.784
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0054,
+          "up": true,
+          "e0": -0.169,
+          "emax": 0.631
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0043,
+          "up": true,
+          "e0": 0.055,
+          "emax": 0.701
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0015,
+          "up": true,
+          "e0": 0.396,
+          "emax": 0.629
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0049,
+          "up": true,
+          "e0": -0.098,
+          "emax": 0.636
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0025,
+          "up": true,
+          "e0": 0.535,
+          "emax": 0.921
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0047,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.179
+        }
+      ],
+      "idx": 4665,
+      "dom_tau": "vel_y",
+      "feature": "feat04665"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.0031,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0068,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.282
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0034,
+          "up": true,
+          "e0": -0.572,
+          "emax": -0.072
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0065,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.434
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0043,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.375
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0035,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.403
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0043,
+          "up": true,
+          "e0": 0.091,
+          "emax": 0.722
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0046,
+          "up": true,
+          "e0": -0.169,
+          "emax": 0.513
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0039,
+          "up": true,
+          "e0": 0.055,
+          "emax": 0.638
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0006,
+          "up": true,
+          "e0": 0.396,
+          "emax": 0.499
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0047,
+          "up": true,
+          "e0": -0.098,
+          "emax": 0.599
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0007,
+          "up": true,
+          "e0": 0.535,
+          "emax": 0.651
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0057,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.034
+        }
+      ],
+      "idx": 1699,
+      "dom_tau": "vel_x",
+      "feature": "feat01699"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.0071,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0122,
+          "up": true,
+          "e0": -0.728,
+          "emax": 1.06
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0086,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.695
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0082,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.704
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0067,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.743
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0074,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.985
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0074,
+          "up": true,
+          "e0": 0.091,
+          "emax": 1.166
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0086,
+          "up": true,
+          "e0": -0.169,
+          "emax": 1.096
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0071,
+          "up": true,
+          "e0": 0.055,
+          "emax": 1.101
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.004,
+          "up": true,
+          "e0": 0.396,
+          "emax": 1.005
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0096,
+          "up": true,
+          "e0": -0.098,
+          "emax": 1.299
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0053,
+          "up": true,
+          "e0": 0.535,
+          "emax": 1.325
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0001,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.85
+        }
+      ],
+      "idx": 3672,
+      "dom_tau": "speed",
+      "feature": "feat03672"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.0051,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0093,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.651
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.0063,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.371
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0066,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.478
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0048,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.456
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.0048,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.604
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0062,
+          "up": true,
+          "e0": 0.091,
+          "emax": 1.018
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0072,
+          "up": true,
+          "e0": -0.169,
+          "emax": 0.904
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0054,
+          "up": true,
+          "e0": 0.055,
+          "emax": 0.864
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0018,
+          "up": true,
+          "e0": 0.396,
+          "emax": 0.685
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0072,
+          "up": true,
+          "e0": -0.098,
+          "emax": 0.962
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0036,
+          "up": true,
+          "e0": 0.535,
+          "emax": 1.079
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0023,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.54
+        }
+      ],
+      "idx": 214,
+      "dom_tau": "vel_x",
+      "feature": "feat00214"
+    },
+    {
+      "up_frac": 0.917,
+      "mean_slope": 0.003,
+      "pos_slope_frac": 0.917,
+      "per_class": [
+        {
+          "cls": "Showing [something] on top of [something]",
+          "speed_z": -2.38,
+          "slope": 0.0085,
+          "up": true,
+          "e0": -0.728,
+          "emax": 0.53
+        },
+        {
+          "cls": "Pretending to poke [something]",
+          "speed_z": -1.4,
+          "slope": 0.005,
+          "up": true,
+          "e0": -0.572,
+          "emax": 0.172
+        },
+        {
+          "cls": "Putting [something] behind [something]",
+          "speed_z": -0.79,
+          "slope": 0.0047,
+          "up": true,
+          "e0": -0.522,
+          "emax": 0.177
+        },
+        {
+          "cls": "Spinning [something] that quickly stops spinning",
+          "speed_z": -0.49,
+          "slope": 0.0041,
+          "up": true,
+          "e0": -0.266,
+          "emax": 0.345
+        },
+        {
+          "cls": "Pouring [something] into [something]",
+          "speed_z": -0.31,
+          "slope": 0.003,
+          "up": true,
+          "e0": -0.118,
+          "emax": 0.333
+        },
+        {
+          "cls": "Pulling [something] onto [something]",
+          "speed_z": -0.1,
+          "slope": 0.0029,
+          "up": true,
+          "e0": 0.091,
+          "emax": 0.516
+        },
+        {
+          "cls": "[Something] being deflected from [something]",
+          "speed_z": -0.01,
+          "slope": 0.0031,
+          "up": true,
+          "e0": -0.169,
+          "emax": 0.289
+        },
+        {
+          "cls": "Putting [something] onto [something else that cannot support it] so it falls down",
+          "speed_z": 0.18,
+          "slope": 0.0029,
+          "up": true,
+          "e0": 0.055,
+          "emax": 0.493
+        },
+        {
+          "cls": "Putting [something] and [something] on the table",
+          "speed_z": 0.39,
+          "slope": 0.0008,
+          "up": true,
+          "e0": 0.396,
+          "emax": 0.52
+        },
+        {
+          "cls": "Pulling [something] out of [something]",
+          "speed_z": 0.67,
+          "slope": 0.0032,
+          "up": true,
+          "e0": -0.098,
+          "emax": 0.37
+        },
+        {
+          "cls": "Poking a hole into [some substance]",
+          "speed_z": 1.15,
+          "slope": 0.0011,
+          "up": true,
+          "e0": 0.535,
+          "emax": 0.703
+        },
+        {
+          "cls": "Burying [something] in [something]",
+          "speed_z": 4.28,
+          "slope": -0.0032,
+          "up": false,
+          "e0": 1.859,
+          "emax": 1.395
+        }
+      ],
+      "idx": 3059,
+      "dom_tau": "vel_x",
+      "feature": "feat03059"
+    }
+  ]
+}

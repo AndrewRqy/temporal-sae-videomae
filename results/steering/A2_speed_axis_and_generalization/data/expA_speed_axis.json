@@ -1,0 +1,3985 @@
+{
+  "s_grid": [
+    -50.0,
+    0.0,
+    50.0,
+    100.0,
+    150.0
+  ],
+  "n_eval": 85,
+  "rand_slope_mean": -8.333333333333333e-05,
+  "rand_slope_sd": 0.0017721142426178084,
+  "n_all_4_cells": 5,
+  "n_ge_3_cells": 24,
+  "n_both_slopes_pos": 15,
+  "n_slope_z2_and_pos": 9,
+  "features": [
+    {
+      "feature": "feat01321",
+      "idx": 1321,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": 0.0143,
+      "slope_lo": 0.0111,
+      "y_hi": [
+        0.44,
+        1.947,
+        2.941,
+        3.248,
+        3.356
+      ],
+      "y_lo": [
+        -0.939,
+        -0.973,
+        -0.756,
+        0.109,
+        1.304
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0127,
+      "slope_z": 7.21
+    },
+    {
+      "feature": "feat02509",
+      "idx": 2509,
+      "dom_tau": "accel_mag",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Holding [something] in front of [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.46,
+      "slope_hi": 0.0112,
+      "slope_lo": 0.0075,
+      "y_hi": [
+        0.918,
+        2.276,
+        3.013,
+        3.212,
+        3.247
+      ],
+      "y_lo": [
+        -0.771,
+        -0.817,
+        -0.62,
+        -0.015,
+        0.705
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0094,
+      "slope_z": 5.35
+    },
+    {
+      "feature": "feat03968",
+      "idx": 3968,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.91,
+      "slope_hi": 0.011,
+      "slope_lo": 0.0076,
+      "y_hi": [
+        0.821,
+        2.057,
+        2.753,
+        3.004,
+        3.102
+      ],
+      "y_lo": [
+        -1.11,
+        -1.103,
+        -0.883,
+        -0.351,
+        0.424
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 4,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0093,
+      "slope_z": 5.29
+    },
+    {
+      "feature": "feat00950",
+      "idx": 950,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.91,
+      "slope_hi": 0.012,
+      "slope_lo": 0.0064,
+      "y_hi": [
+        0.883,
+        2.268,
+        3.053,
+        3.289,
+        3.365
+      ],
+      "y_lo": [
+        -0.943,
+        -1.103,
+        -1.039,
+        -0.557,
+        0.386
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0092,
+      "slope_z": 5.24
+    },
+    {
+      "feature": "feat04665",
+      "idx": 4665,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -2.0,
+      "slope_hi": 0.0064,
+      "slope_lo": 0.0063,
+      "y_hi": [
+        0.596,
+        1.31,
+        1.683,
+        1.837,
+        1.935
+      ],
+      "y_lo": [
+        -0.995,
+        -0.973,
+        -0.757,
+        -0.31,
+        0.245
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 4,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0063,
+      "slope_z": 3.6
+    },
+    {
+      "feature": "feat01699",
+      "idx": 1699,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": 0.0082,
+      "slope_lo": 0.0037,
+      "y_hi": [
+        1.236,
+        2.257,
+        2.768,
+        2.924,
+        2.948
+      ],
+      "y_lo": [
+        -0.881,
+        -0.973,
+        -0.846,
+        -0.541,
+        -0.167
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.006,
+      "slope_z": 3.43
+    },
+    {
+      "feature": "feat03672",
+      "idx": 3672,
+      "dom_tau": "speed",
+      "C_hi": "Burying [something] in [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 4.28,
+      "speed_lo": -1.91,
+      "slope_hi": 0.0019,
+      "slope_lo": 0.0099,
+      "y_hi": [
+        1.319,
+        1.689,
+        1.803,
+        1.79,
+        1.756
+      ],
+      "y_lo": [
+        -1.131,
+        -1.103,
+        -0.776,
+        -0.023,
+        0.799
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 4,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0059,
+      "slope_z": 3.38
+    },
+    {
+      "feature": "feat00214",
+      "idx": 214,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Dropping [something] into [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -1.81,
+      "slope_hi": 0.0063,
+      "slope_lo": 0.0046,
+      "y_hi": [
+        0.952,
+        1.511,
+        1.928,
+        2.127,
+        2.214
+      ],
+      "y_lo": [
+        -0.844,
+        -0.948,
+        -0.885,
+        -0.548,
+        0.103
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0054,
+      "slope_z": 3.09
+    },
+    {
+      "feature": "feat03059",
+      "idx": 3059,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Putting [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.25,
+      "slope_hi": 0.0067,
+      "slope_lo": 0.0042,
+      "y_hi": [
+        1.37,
+        2.277,
+        2.729,
+        2.83,
+        2.776
+      ],
+      "y_lo": [
+        -0.549,
+        -0.535,
+        -0.392,
+        -0.074,
+        0.275
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 4,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0054,
+      "slope_z": 3.09
+    },
+    {
+      "feature": "feat05987",
+      "idx": 5987,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.5,
+      "slope_hi": 0.0018,
+      "slope_lo": 0.0049,
+      "y_hi": [
+        1.091,
+        1.551,
+        1.679,
+        1.631,
+        1.508
+      ],
+      "y_lo": [
+        -1.039,
+        -0.933,
+        -0.665,
+        -0.34,
+        -0.102
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0033,
+      "slope_z": 1.91
+    },
+    {
+      "feature": "feat03735",
+      "idx": 3735,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": 0.0043,
+      "slope_lo": 0.0019,
+      "y_hi": [
+        1.593,
+        2.275,
+        2.569,
+        2.598,
+        2.494
+      ],
+      "y_lo": [
+        -0.88,
+        -0.974,
+        -0.902,
+        -0.727,
+        -0.529
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0031,
+      "slope_z": 1.8
+    },
+    {
+      "feature": "feat04280",
+      "idx": 4280,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Poking [something] so that it falls over",
+      "speed_hi": 2.6,
+      "speed_lo": -1.51,
+      "slope_hi": 0.0032,
+      "slope_lo": 0.0026,
+      "y_hi": [
+        1.044,
+        1.551,
+        1.736,
+        1.766,
+        1.73
+      ],
+      "y_lo": [
+        -0.573,
+        -0.581,
+        -0.498,
+        -0.305,
+        -0.056
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0029,
+      "slope_z": 1.68
+    },
+    {
+      "feature": "feat02818",
+      "idx": 2818,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": 0.004,
+      "slope_lo": 0.0013,
+      "y_hi": [
+        0.923,
+        1.542,
+        1.789,
+        1.823,
+        1.776
+      ],
+      "y_lo": [
+        -0.903,
+        -1.103,
+        -1.106,
+        -0.938,
+        -0.669
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0027,
+      "slope_z": 1.57
+    },
+    {
+      "feature": "feat03058",
+      "idx": 3058,
+      "dom_tau": "vel_x",
+      "C_hi": "Pretending to take [something] from [somewhere]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 0.86,
+      "speed_lo": -1.91,
+      "slope_hi": 0.0005,
+      "slope_lo": 0.0038,
+      "y_hi": [
+        -0.093,
+        -0.087,
+        -0.061,
+        -0.029,
+        -0.004
+      ],
+      "y_lo": [
+        -1.137,
+        -1.105,
+        -0.916,
+        -0.653,
+        -0.42
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 4,
+      "both_slopes_pos": true,
+      "mean_slope": 0.0022,
+      "slope_z": 1.29
+    },
+    {
+      "feature": "feat05866",
+      "idx": 5866,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": 0.0004,
+      "slope_lo": 0.0036,
+      "y_hi": [
+        1.221,
+        1.547,
+        1.598,
+        1.503,
+        1.35
+      ],
+      "y_lo": [
+        -1.121,
+        -1.103,
+        -0.93,
+        -0.672,
+        -0.426
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true,
+      "mean_slope": 0.002,
+      "slope_z": 1.18
+    },
+    {
+      "feature": "feat00978",
+      "idx": 978,
+      "dom_tau": "vel_x",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0003,
+      "slope_lo": 0.0042,
+      "y_hi": [
+        0.669,
+        0.779,
+        0.772,
+        0.705,
+        0.622
+      ],
+      "y_lo": [
+        -1.062,
+        -0.974,
+        -0.738,
+        -0.47,
+        -0.266
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0019,
+      "slope_z": 1.12
+    },
+    {
+      "feature": "feat02952",
+      "idx": 2952,
+      "dom_tau": "speed",
+      "C_hi": "Throwing [something] in the air and letting it fall",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.71,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0,
+      "slope_lo": 0.0035,
+      "y_hi": [
+        0.175,
+        0.19,
+        0.184,
+        0.175,
+        0.181
+      ],
+      "y_lo": [
+        -0.991,
+        -0.974,
+        -0.803,
+        -0.548,
+        -0.322
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0018,
+      "slope_z": 1.06
+    },
+    {
+      "feature": "feat04562",
+      "idx": 4562,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0037,
+      "slope_lo": 0.0069,
+      "y_hi": [
+        1.636,
+        1.551,
+        1.302,
+        1.069,
+        0.961
+      ],
+      "y_lo": [
+        -1.193,
+        -1.106,
+        -0.811,
+        -0.353,
+        0.154
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0016,
+      "slope_z": 0.95
+    },
+    {
+      "feature": "feat04416",
+      "idx": 4416,
+      "dom_tau": "vel_y",
+      "C_hi": "Showing that [something] is empty",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 0.68,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0004,
+      "slope_lo": 0.0034,
+      "y_hi": [
+        0.355,
+        0.394,
+        0.355,
+        0.311,
+        0.307
+      ],
+      "y_lo": [
+        -1.055,
+        -1.103,
+        -0.972,
+        -0.702,
+        -0.399
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0015,
+      "slope_z": 0.89
+    },
+    {
+      "feature": "feat05216",
+      "idx": 5216,
+      "dom_tau": "direction",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0002,
+      "slope_lo": 0.0032,
+      "y_hi": [
+        0.64,
+        0.779,
+        0.791,
+        0.718,
+        0.619
+      ],
+      "y_lo": [
+        -0.936,
+        -0.933,
+        -0.79,
+        -0.554,
+        -0.314
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0015,
+      "slope_z": 0.89
+    },
+    {
+      "feature": "feat00250",
+      "idx": 250,
+      "dom_tau": "vel_x",
+      "C_hi": "Putting [something] on a surface",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 1.21,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0012,
+      "slope_lo": 0.0039,
+      "y_hi": [
+        0.366,
+        0.359,
+        0.284,
+        0.198,
+        0.156
+      ],
+      "y_lo": [
+        -1.103,
+        -1.103,
+        -0.94,
+        -0.651,
+        -0.346
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0014,
+      "slope_z": 0.84
+    },
+    {
+      "feature": "feat02820",
+      "idx": 2820,
+      "dom_tau": "vel_x",
+      "C_hi": "Plugging [something] into [something] but pulling it right out as you remove your hand",
+      "C_lo": "Holding [something] over [something]",
+      "speed_hi": 1.18,
+      "speed_lo": -1.75,
+      "slope_hi": -0.0004,
+      "slope_lo": 0.0028,
+      "y_hi": [
+        0.556,
+        0.633,
+        0.627,
+        0.566,
+        0.492
+      ],
+      "y_lo": [
+        -0.824,
+        -0.857,
+        -0.734,
+        -0.512,
+        -0.293
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0012,
+      "slope_z": 0.72
+    },
+    {
+      "feature": "feat01544",
+      "idx": 1544,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0006,
+      "slope_lo": 0.0025,
+      "y_hi": [
+        1.238,
+        1.551,
+        1.583,
+        1.415,
+        1.151
+      ],
+      "y_lo": [
+        -1.0,
+        -1.103,
+        -1.025,
+        -0.798,
+        -0.533
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.001,
+      "slope_z": 0.61
+    },
+    {
+      "feature": "feat01576",
+      "idx": 1576,
+      "dom_tau": "vel_x",
+      "C_hi": "Plugging [something] into [something] but pulling it right out as you remove your hand",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 1.18,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0011,
+      "slope_lo": 0.003,
+      "y_hi": [
+        0.592,
+        0.633,
+        0.592,
+        0.497,
+        0.39
+      ],
+      "y_lo": [
+        -0.953,
+        -0.933,
+        -0.786,
+        -0.573,
+        -0.379
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0009,
+      "slope_z": 0.55
+    },
+    {
+      "feature": "feat03280",
+      "idx": 3280,
+      "dom_tau": "accel_mag",
+      "C_hi": "Pretending to be tearing [something that is not tearable]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.02,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0016,
+      "slope_lo": 0.0034,
+      "y_hi": [
+        0.354,
+        0.318,
+        0.227,
+        0.125,
+        0.047
+      ],
+      "y_lo": [
+        -1.04,
+        -0.975,
+        -0.779,
+        -0.562,
+        -0.398
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0009,
+      "slope_z": 0.55
+    },
+    {
+      "feature": "feat01345",
+      "idx": 1345,
+      "dom_tau": "vel_x",
+      "C_hi": "Pretending to take [something] from [somewhere]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 0.86,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0002,
+      "slope_lo": 0.0018,
+      "y_hi": [
+        -0.057,
+        -0.087,
+        -0.103,
+        -0.105,
+        -0.098
+      ],
+      "y_lo": [
+        -0.92,
+        -0.974,
+        -0.887,
+        -0.737,
+        -0.587
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0008,
+      "slope_z": 0.5
+    },
+    {
+      "feature": "feat00394",
+      "idx": 394,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0035,
+      "slope_lo": 0.0049,
+      "y_hi": [
+        1.703,
+        1.643,
+        1.464,
+        1.245,
+        1.039
+      ],
+      "y_lo": [
+        -1.088,
+        -0.973,
+        -0.707,
+        -0.402,
+        -0.16
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0007,
+      "slope_z": 0.44
+    },
+    {
+      "feature": "feat04188",
+      "idx": 4188,
+      "dom_tau": "vel_y",
+      "C_hi": "Unfolding [something]",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 1.29,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0023,
+      "slope_lo": 0.0035,
+      "y_hi": [
+        0.688,
+        0.641,
+        0.498,
+        0.354,
+        0.255
+      ],
+      "y_lo": [
+        -1.066,
+        -1.015,
+        -0.824,
+        -0.589,
+        -0.394
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0006,
+      "slope_z": 0.39
+    },
+    {
+      "feature": "feat05955",
+      "idx": 5955,
+      "dom_tau": "vel_x",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0031,
+      "slope_lo": 0.0043,
+      "y_hi": [
+        0.886,
+        0.779,
+        0.596,
+        0.419,
+        0.289
+      ],
+      "y_lo": [
+        -1.126,
+        -0.974,
+        -0.707,
+        -0.461,
+        -0.299
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0006,
+      "slope_z": 0.39
+    },
+    {
+      "feature": "feat03379",
+      "idx": 3379,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": -0.001,
+      "slope_lo": 0.002,
+      "y_hi": [
+        1.31,
+        1.551,
+        1.524,
+        1.356,
+        1.152
+      ],
+      "y_lo": [
+        -1.003,
+        -1.103,
+        -1.028,
+        -0.847,
+        -0.633
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0005,
+      "slope_z": 0.33
+    },
+    {
+      "feature": "feat00294",
+      "idx": 294,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Poking [something] so it slightly moves",
+      "speed_hi": 2.6,
+      "speed_lo": -1.31,
+      "slope_hi": -0.0037,
+      "slope_lo": 0.0046,
+      "y_hi": [
+        1.633,
+        1.552,
+        1.29,
+        1.044,
+        0.954
+      ],
+      "y_lo": [
+        -0.551,
+        -0.511,
+        -0.364,
+        -0.055,
+        0.362
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0004,
+      "slope_z": 0.27
+    },
+    {
+      "feature": "feat04904",
+      "idx": 4904,
+      "dom_tau": "vel_x",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0029,
+      "slope_lo": 0.0036,
+      "y_hi": [
+        0.824,
+        0.779,
+        0.626,
+        0.431,
+        0.279
+      ],
+      "y_lo": [
+        -0.966,
+        -0.974,
+        -0.801,
+        -0.521,
+        -0.287
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0004,
+      "slope_z": 0.27
+    },
+    {
+      "feature": "feat05179",
+      "idx": 5179,
+      "dom_tau": "vel_x",
+      "C_hi": "Throwing [something] in the air and letting it fall",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.71,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0021,
+      "slope_lo": 0.0028,
+      "y_hi": [
+        0.318,
+        0.19,
+        0.055,
+        -0.048,
+        -0.095
+      ],
+      "y_lo": [
+        -0.97,
+        -0.973,
+        -0.827,
+        -0.62,
+        -0.446
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0004,
+      "slope_z": 0.27
+    },
+    {
+      "feature": "feat05228",
+      "idx": 5228,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0038,
+      "slope_lo": 0.0042,
+      "y_hi": [
+        1.654,
+        1.642,
+        1.466,
+        1.195,
+        0.933
+      ],
+      "y_lo": [
+        -0.977,
+        -0.973,
+        -0.796,
+        -0.485,
+        -0.164
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0002,
+      "slope_z": 0.16
+    },
+    {
+      "feature": "feat00326",
+      "idx": 326,
+      "dom_tau": "accel_mag",
+      "C_hi": "Pouring [something] out of [something]",
+      "C_lo": "Poking [something] so it slightly moves",
+      "speed_hi": 0.98,
+      "speed_lo": -1.31,
+      "slope_hi": -0.0011,
+      "slope_lo": 0.0014,
+      "y_hi": [
+        0.206,
+        0.184,
+        0.118,
+        0.05,
+        0.004
+      ],
+      "y_lo": [
+        -0.514,
+        -0.512,
+        -0.44,
+        -0.337,
+        -0.245
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0001,
+      "slope_z": 0.1
+    },
+    {
+      "feature": "feat01919",
+      "idx": 1919,
+      "dom_tau": "vel_x",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0022,
+      "slope_lo": 0.0024,
+      "y_hi": [
+        0.825,
+        0.855,
+        0.75,
+        0.577,
+        0.413
+      ],
+      "y_lo": [
+        -0.969,
+        -0.974,
+        -0.849,
+        -0.675,
+        -0.52
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0001,
+      "slope_z": 0.1
+    },
+    {
+      "feature": "feat02125",
+      "idx": 2125,
+      "dom_tau": "vel_y",
+      "C_hi": "Taking [one of many similar things on the table]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.4,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0032,
+      "slope_lo": 0.0034,
+      "y_hi": [
+        0.797,
+        0.728,
+        0.548,
+        0.346,
+        0.199
+      ],
+      "y_lo": [
+        -1.039,
+        -0.974,
+        -0.778,
+        -0.563,
+        -0.401
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0001,
+      "slope_z": 0.1
+    },
+    {
+      "feature": "feat02825",
+      "idx": 2825,
+      "dom_tau": "direction",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0025,
+      "slope_lo": 0.0027,
+      "y_hi": [
+        0.85,
+        0.855,
+        0.732,
+        0.548,
+        0.379
+      ],
+      "y_lo": [
+        -1.001,
+        -0.974,
+        -0.82,
+        -0.637,
+        -0.488
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0001,
+      "slope_z": 0.1
+    },
+    {
+      "feature": "feat03150",
+      "idx": 3150,
+      "dom_tau": "speed",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0032,
+      "slope_lo": 0.0035,
+      "y_hi": [
+        0.758,
+        0.779,
+        0.646,
+        0.399,
+        0.149
+      ],
+      "y_lo": [
+        -0.998,
+        -1.014,
+        -0.835,
+        -0.547,
+        -0.345
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0001,
+      "slope_z": 0.1
+    },
+    {
+      "feature": "feat03908",
+      "idx": 3908,
+      "dom_tau": "accel_mag",
+      "C_hi": "Taking [one of many similar things on the table]",
+      "C_lo": "Putting [something that cannot actually stand upright] upright on the table, so it falls on its side",
+      "speed_hi": 1.4,
+      "speed_lo": -0.99,
+      "slope_hi": -0.0022,
+      "slope_lo": 0.0022,
+      "y_hi": [
+        0.723,
+        0.727,
+        0.615,
+        0.449,
+        0.301
+      ],
+      "y_lo": [
+        -0.615,
+        -0.587,
+        -0.463,
+        -0.318,
+        -0.207
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0,
+      "slope_z": 0.05
+    },
+    {
+      "feature": "feat04196",
+      "idx": 4196,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0064,
+      "slope_lo": 0.0065,
+      "y_hi": [
+        2.366,
+        2.278,
+        1.917,
+        1.481,
+        1.156
+      ],
+      "y_lo": [
+        -1.118,
+        -0.973,
+        -0.655,
+        -0.245,
+        0.136
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0,
+      "slope_z": 0.05
+    },
+    {
+      "feature": "feat04624",
+      "idx": 4624,
+      "dom_tau": "accel_mag",
+      "C_hi": "Taking [one of many similar things on the table]",
+      "C_lo": "Holding [something] in front of [something]",
+      "speed_hi": 1.4,
+      "speed_lo": -1.46,
+      "slope_hi": -0.0021,
+      "slope_lo": 0.0021,
+      "y_hi": [
+        0.712,
+        0.727,
+        0.63,
+        0.47,
+        0.319
+      ],
+      "y_lo": [
+        -0.789,
+        -0.817,
+        -0.719,
+        -0.556,
+        -0.404
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0,
+      "slope_z": 0.05
+    },
+    {
+      "feature": "feat04796",
+      "idx": 4796,
+      "dom_tau": "speed",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0033,
+      "slope_lo": 0.0033,
+      "y_hi": [
+        0.926,
+        0.856,
+        0.667,
+        0.46,
+        0.307
+      ],
+      "y_lo": [
+        -0.995,
+        -0.934,
+        -0.762,
+        -0.55,
+        -0.37
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": 0.0,
+      "slope_z": 0.05
+    },
+    {
+      "feature": "feat01778",
+      "idx": 1778,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0046,
+      "slope_lo": 0.0045,
+      "y_hi": [
+        1.497,
+        1.551,
+        1.362,
+        1.013,
+        0.621
+      ],
+      "y_lo": [
+        -1.202,
+        -1.103,
+        -0.839,
+        -0.529,
+        -0.354
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0001,
+      "slope_z": -0.01
+    },
+    {
+      "feature": "feat03309",
+      "idx": 3309,
+      "dom_tau": "vel_x",
+      "C_hi": "Pushing [something] from right to left",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 0.51,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0011,
+      "slope_lo": 0.001,
+      "y_hi": [
+        0.284,
+        0.301,
+        0.265,
+        0.176,
+        0.062
+      ],
+      "y_lo": [
+        -0.803,
+        -0.973,
+        -0.962,
+        -0.809,
+        -0.623
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0001,
+      "slope_z": -0.01
+    },
+    {
+      "feature": "feat05087",
+      "idx": 5087,
+      "dom_tau": "accel_mag",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Dropping [something] into [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.81,
+      "slope_hi": -0.0045,
+      "slope_lo": 0.0041,
+      "y_hi": [
+        1.209,
+        1.083,
+        0.81,
+        0.543,
+        0.358
+      ],
+      "y_lo": [
+        -1.088,
+        -0.951,
+        -0.713,
+        -0.474,
+        -0.3
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0002,
+      "slope_z": -0.07
+    },
+    {
+      "feature": "feat01903",
+      "idx": 1903,
+      "dom_tau": "speed",
+      "C_hi": "Unfolding [something]",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 1.29,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0019,
+      "slope_lo": 0.0014,
+      "y_hi": [
+        0.594,
+        0.639,
+        0.56,
+        0.398,
+        0.238
+      ],
+      "y_lo": [
+        -0.854,
+        -0.933,
+        -0.888,
+        -0.754,
+        -0.597
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0003,
+      "slope_z": -0.12
+    },
+    {
+      "feature": "feat02211",
+      "idx": 2211,
+      "dom_tau": "speed",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0034,
+      "slope_lo": 0.0029,
+      "y_hi": [
+        0.807,
+        0.779,
+        0.626,
+        0.387,
+        0.143
+      ],
+      "y_lo": [
+        -1.133,
+        -1.103,
+        -0.938,
+        -0.733,
+        -0.586
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0003,
+      "slope_z": -0.12
+    },
+    {
+      "feature": "feat02312",
+      "idx": 2312,
+      "dom_tau": "speed",
+      "C_hi": "Unfolding [something]",
+      "C_lo": "Showing [something] to the camera",
+      "speed_hi": 1.29,
+      "speed_lo": -1.07,
+      "slope_hi": -0.0019,
+      "slope_lo": 0.0014,
+      "y_hi": [
+        0.547,
+        0.639,
+        0.586,
+        0.392,
+        0.208
+      ],
+      "y_lo": [
+        -0.226,
+        -0.269,
+        -0.209,
+        -0.076,
+        0.018
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0003,
+      "slope_z": -0.12
+    },
+    {
+      "feature": "feat01365",
+      "idx": 1365,
+      "dom_tau": "vel_y",
+      "C_hi": "Piling [something] up",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 1.92,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0039,
+      "slope_lo": 0.003,
+      "y_hi": [
+        1.092,
+        1.022,
+        0.795,
+        0.535,
+        0.359
+      ],
+      "y_lo": [
+        -1.074,
+        -1.103,
+        -0.976,
+        -0.746,
+        -0.5
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0004,
+      "slope_z": -0.18
+    },
+    {
+      "feature": "feat02191",
+      "idx": 2191,
+      "dom_tau": "speed",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Touching (without moving) [part] of [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.48,
+      "slope_hi": -0.0032,
+      "slope_lo": 0.0024,
+      "y_hi": [
+        0.896,
+        0.78,
+        0.591,
+        0.411,
+        0.274
+      ],
+      "y_lo": [
+        -0.702,
+        -0.639,
+        -0.487,
+        -0.345,
+        -0.251
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0004,
+      "slope_z": -0.18
+    },
+    {
+      "feature": "feat03809",
+      "idx": 3809,
+      "dom_tau": "accel_mag",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0029,
+      "slope_lo": 0.002,
+      "y_hi": [
+        1.111,
+        1.109,
+        0.977,
+        0.771,
+        0.563
+      ],
+      "y_lo": [
+        -0.903,
+        -0.933,
+        -0.842,
+        -0.683,
+        -0.523
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0004,
+      "slope_z": -0.18
+    },
+    {
+      "feature": "feat00939",
+      "idx": 939,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0046,
+      "slope_lo": 0.0035,
+      "y_hi": [
+        2.231,
+        2.279,
+        2.066,
+        1.718,
+        1.358
+      ],
+      "y_lo": [
+        -1.146,
+        -1.103,
+        -0.918,
+        -0.683,
+        -0.485
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0005,
+      "slope_z": -0.24
+    },
+    {
+      "feature": "feat03714",
+      "idx": 3714,
+      "dom_tau": "vel_x",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0038,
+      "slope_lo": 0.0029,
+      "y_hi": [
+        0.9,
+        0.855,
+        0.665,
+        0.402,
+        0.174
+      ],
+      "y_lo": [
+        -1.008,
+        -1.014,
+        -0.869,
+        -0.653,
+        -0.467
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0005,
+      "slope_z": -0.24
+    },
+    {
+      "feature": "feat05321",
+      "idx": 5321,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0028,
+      "slope_lo": 0.0018,
+      "y_hi": [
+        1.38,
+        1.551,
+        1.489,
+        1.212,
+        0.857
+      ],
+      "y_lo": [
+        -0.858,
+        -0.973,
+        -0.939,
+        -0.754,
+        -0.529
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0005,
+      "slope_z": -0.24
+    },
+    {
+      "feature": "feat05472",
+      "idx": 5472,
+      "dom_tau": "vel_x",
+      "C_hi": "Burying [something] in [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 4.28,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0016,
+      "slope_lo": 0.0007,
+      "y_hi": [
+        1.372,
+        1.689,
+        1.703,
+        1.45,
+        1.097
+      ],
+      "y_lo": [
+        -0.926,
+        -1.102,
+        -1.119,
+        -0.997,
+        -0.799
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0005,
+      "slope_z": -0.24
+    },
+    {
+      "feature": "feat03927",
+      "idx": 3927,
+      "dom_tau": "speed",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Poking [something] so that it falls over",
+      "speed_hi": 1.61,
+      "speed_lo": -1.51,
+      "slope_hi": -0.0031,
+      "slope_lo": 0.0018,
+      "y_hi": [
+        0.824,
+        0.781,
+        0.625,
+        0.421,
+        0.237
+      ],
+      "y_lo": [
+        -0.614,
+        -0.581,
+        -0.484,
+        -0.367,
+        -0.282
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0006,
+      "slope_z": -0.29
+    },
+    {
+      "feature": "feat01230",
+      "idx": 1230,
+      "dom_tau": "speed",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0021,
+      "slope_lo": 0.0005,
+      "y_hi": [
+        0.717,
+        0.855,
+        0.814,
+        0.596,
+        0.329
+      ],
+      "y_lo": [
+        -0.828,
+        -0.973,
+        -0.952,
+        -0.858,
+        -0.759
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0008,
+      "slope_z": -0.4
+    },
+    {
+      "feature": "feat02736",
+      "idx": 2736,
+      "dom_tau": "vel_y",
+      "C_hi": "Putting [something similar to other things that are already on the table]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 1.69,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0027,
+      "slope_lo": 0.001,
+      "y_hi": [
+        0.815,
+        0.855,
+        0.746,
+        0.53,
+        0.306
+      ],
+      "y_lo": [
+        -0.967,
+        -1.103,
+        -1.077,
+        -0.951,
+        -0.797
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0009,
+      "slope_z": -0.46
+    },
+    {
+      "feature": "feat03883",
+      "idx": 3883,
+      "dom_tau": "vel_x",
+      "C_hi": "Throwing [something] in the air and letting it fall",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.71,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0025,
+      "slope_lo": 0.0007,
+      "y_hi": [
+        0.296,
+        0.19,
+        0.051,
+        -0.092,
+        -0.193
+      ],
+      "y_lo": [
+        -0.686,
+        -0.798,
+        -0.755,
+        -0.66,
+        -0.58
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0009,
+      "slope_z": -0.46
+    },
+    {
+      "feature": "feat05758",
+      "idx": 5758,
+      "dom_tau": "speed",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0026,
+      "slope_lo": 0.0007,
+      "y_hi": [
+        0.986,
+        1.081,
+        0.976,
+        0.745,
+        0.506
+      ],
+      "y_lo": [
+        -0.848,
+        -1.013,
+        -1.015,
+        -0.895,
+        -0.725
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0009,
+      "slope_z": -0.46
+    },
+    {
+      "feature": "feat05077",
+      "idx": 5077,
+      "dom_tau": "vel_x",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0048,
+      "slope_lo": 0.0025,
+      "y_hi": [
+        1.134,
+        1.081,
+        0.812,
+        0.477,
+        0.225
+      ],
+      "y_lo": [
+        -1.024,
+        -1.103,
+        -1.008,
+        -0.793,
+        -0.56
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0011,
+      "slope_z": -0.57
+    },
+    {
+      "feature": "feat03974",
+      "idx": 3974,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0042,
+      "slope_lo": 0.0017,
+      "y_hi": [
+        1.703,
+        1.642,
+        1.437,
+        1.163,
+        0.891
+      ],
+      "y_lo": [
+        -0.774,
+        -0.798,
+        -0.699,
+        -0.569,
+        -0.463
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0012,
+      "slope_z": -0.63
+    },
+    {
+      "feature": "feat04716",
+      "idx": 4716,
+      "dom_tau": "vel_x",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Holding [something] in front of [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.46,
+      "slope_hi": -0.0039,
+      "slope_lo": 0.0015,
+      "y_hi": [
+        0.977,
+        1.081,
+        0.947,
+        0.611,
+        0.247
+      ],
+      "y_lo": [
+        -0.783,
+        -0.817,
+        -0.736,
+        -0.617,
+        -0.518
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0012,
+      "slope_z": -0.63
+    },
+    {
+      "feature": "feat01262",
+      "idx": 1262,
+      "dom_tau": "vel_x",
+      "C_hi": "Moving away from [something] with your camera",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.31,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0029,
+      "slope_lo": 0.0002,
+      "y_hi": [
+        0.826,
+        0.826,
+        0.705,
+        0.496,
+        0.271
+      ],
+      "y_lo": [
+        -0.657,
+        -0.798,
+        -0.798,
+        -0.72,
+        -0.643
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0013,
+      "slope_z": -0.69
+    },
+    {
+      "feature": "feat03519",
+      "idx": 3519,
+      "dom_tau": "speed",
+      "C_hi": "Pretending to be tearing [something that is not tearable]",
+      "C_lo": "Holding [something] over [something]",
+      "speed_hi": 1.02,
+      "speed_lo": -1.75,
+      "slope_hi": -0.0032,
+      "slope_lo": 0.0006,
+      "y_hi": [
+        0.408,
+        0.318,
+        0.148,
+        -0.053,
+        -0.209
+      ],
+      "y_lo": [
+        -0.817,
+        -0.857,
+        -0.854,
+        -0.785,
+        -0.707
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0013,
+      "slope_z": -0.69
+    },
+    {
+      "feature": "feat03819",
+      "idx": 3819,
+      "dom_tau": "speed",
+      "C_hi": "Burying [something] in [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 4.28,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0059,
+      "slope_lo": 0.0032,
+      "y_hi": [
+        1.704,
+        1.69,
+        1.382,
+        0.951,
+        0.607
+      ],
+      "y_lo": [
+        -1.094,
+        -1.103,
+        -0.955,
+        -0.715,
+        -0.487
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0013,
+      "slope_z": -0.69
+    },
+    {
+      "feature": "feat04974",
+      "idx": 4974,
+      "dom_tau": "accel_mag",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0056,
+      "slope_lo": 0.0027,
+      "y_hi": [
+        1.655,
+        1.551,
+        1.241,
+        0.874,
+        0.583
+      ],
+      "y_lo": [
+        -1.011,
+        -1.014,
+        -0.882,
+        -0.689,
+        -0.507
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0014,
+      "slope_z": -0.74
+    },
+    {
+      "feature": "feat05622",
+      "idx": 5622,
+      "dom_tau": "speed",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Holding [something] over [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.75,
+      "slope_hi": -0.0046,
+      "slope_lo": 0.0017,
+      "y_hi": [
+        0.807,
+        0.786,
+        0.612,
+        0.288,
+        -0.098
+      ],
+      "y_lo": [
+        -0.933,
+        -0.857,
+        -0.696,
+        -0.602,
+        -0.626
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0014,
+      "slope_z": -0.74
+    },
+    {
+      "feature": "feat03636",
+      "idx": 3636,
+      "dom_tau": "speed",
+      "C_hi": "Burying [something] in [something]",
+      "C_lo": "Dropping [something] next to [something]",
+      "speed_hi": 4.28,
+      "speed_lo": -1.5,
+      "slope_hi": -0.0063,
+      "slope_lo": 0.0031,
+      "y_hi": [
+        1.537,
+        1.689,
+        1.477,
+        0.915,
+        0.342
+      ],
+      "y_lo": [
+        -0.929,
+        -0.933,
+        -0.794,
+        -0.548,
+        -0.352
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0016,
+      "slope_z": -0.86
+    },
+    {
+      "feature": "feat03685",
+      "idx": 3685,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0057,
+      "slope_lo": 0.0026,
+      "y_hi": [
+        1.615,
+        1.551,
+        1.251,
+        0.856,
+        0.531
+      ],
+      "y_lo": [
+        -0.967,
+        -0.974,
+        -0.841,
+        -0.645,
+        -0.478
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0016,
+      "slope_z": -0.86
+    },
+    {
+      "feature": "feat05303",
+      "idx": 5303,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Dropping [something] onto [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.44,
+      "slope_hi": -0.004,
+      "slope_lo": 0.0007,
+      "y_hi": [
+        1.502,
+        1.551,
+        1.365,
+        1.052,
+        0.744
+      ],
+      "y_lo": [
+        -0.36,
+        -0.344,
+        -0.333,
+        -0.28,
+        -0.216
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0016,
+      "slope_z": -0.86
+    },
+    {
+      "feature": "feat03471",
+      "idx": 3471,
+      "dom_tau": "vel_x",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Dropping [something] onto [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.44,
+      "slope_hi": -0.0051,
+      "slope_lo": 0.0009,
+      "y_hi": [
+        1.148,
+        1.081,
+        0.793,
+        0.44,
+        0.193
+      ],
+      "y_lo": [
+        -0.362,
+        -0.344,
+        -0.327,
+        -0.254,
+        -0.181
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0021,
+      "slope_z": -1.14
+    },
+    {
+      "feature": "feat00648",
+      "idx": 648,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -2.0,
+      "slope_hi": -0.006,
+      "slope_lo": 0.0011,
+      "y_hi": [
+        1.6,
+        1.552,
+        1.256,
+        0.839,
+        0.464
+      ],
+      "y_lo": [
+        -0.871,
+        -0.973,
+        -0.935,
+        -0.803,
+        -0.68
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0024,
+      "slope_z": -1.31
+    },
+    {
+      "feature": "feat04153",
+      "idx": 4153,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -2.0,
+      "slope_hi": -0.007,
+      "slope_lo": 0.0023,
+      "y_hi": [
+        1.577,
+        1.551,
+        1.239,
+        0.728,
+        0.245
+      ],
+      "y_lo": [
+        -0.952,
+        -0.973,
+        -0.834,
+        -0.645,
+        -0.53
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0024,
+      "slope_z": -1.31
+    },
+    {
+      "feature": "feat04870",
+      "idx": 4870,
+      "dom_tau": "vel_y",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Dropping [something] into [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.81,
+      "slope_hi": -0.0063,
+      "slope_lo": 0.0008,
+      "y_hi": [
+        1.562,
+        1.551,
+        1.269,
+        0.789,
+        0.36
+      ],
+      "y_lo": [
+        -0.803,
+        -0.948,
+        -0.958,
+        -0.838,
+        -0.656
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0027,
+      "slope_z": -1.48
+    },
+    {
+      "feature": "feat05785",
+      "idx": 5785,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] to the camera",
+      "speed_hi": 3.55,
+      "speed_lo": -1.07,
+      "slope_hi": -0.0029,
+      "slope_lo": -0.0027,
+      "y_hi": [
+        1.855,
+        2.277,
+        2.326,
+        1.971,
+        1.287
+      ],
+      "y_lo": [
+        -0.374,
+        -0.272,
+        -0.38,
+        -0.674,
+        -0.852
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": false,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0028,
+      "slope_z": -1.53
+    },
+    {
+      "feature": "feat00056",
+      "idx": 56,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": -0.008,
+      "slope_lo": 0.002,
+      "y_hi": [
+        2.474,
+        2.279,
+        1.84,
+        1.347,
+        0.944
+      ],
+      "y_lo": [
+        -0.969,
+        -0.973,
+        -0.853,
+        -0.705,
+        -0.592
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false,
+      "mean_slope": -0.003,
+      "slope_z": -1.65
+    },
+    {
+      "feature": "feat05711",
+      "idx": 5711,
+      "dom_tau": "vel_x",
+      "C_hi": "Turning the camera upwards while filming [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.57,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0035,
+      "slope_lo": -0.0028,
+      "y_hi": [
+        0.796,
+        0.792,
+        0.645,
+        0.402,
+        0.127
+      ],
+      "y_lo": [
+        -0.503,
+        -0.794,
+        -0.995,
+        -1.064,
+        -1.074
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0032,
+      "slope_z": -1.76
+    },
+    {
+      "feature": "feat06100",
+      "idx": 6100,
+      "dom_tau": "speed",
+      "C_hi": "Unfolding [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.29,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0048,
+      "slope_lo": -0.0023,
+      "y_hi": [
+        0.709,
+        0.639,
+        0.392,
+        0.061,
+        -0.212
+      ],
+      "y_lo": [
+        -0.513,
+        -0.798,
+        -0.947,
+        -0.988,
+        -0.988
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0035,
+      "slope_z": -1.93
+    },
+    {
+      "feature": "feat04254",
+      "idx": 4254,
+      "dom_tau": "speed",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Holding [something] over [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.75,
+      "slope_hi": -0.0065,
+      "slope_lo": -0.0024,
+      "y_hi": [
+        1.147,
+        1.081,
+        0.76,
+        0.302,
+        -0.091
+      ],
+      "y_lo": [
+        -0.608,
+        -0.857,
+        -1.047,
+        -1.105,
+        -1.084
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0044,
+      "slope_z": -2.44
+    },
+    {
+      "feature": "feat02491",
+      "idx": 2491,
+      "dom_tau": "speed",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0092,
+      "slope_lo": -0.0012,
+      "y_hi": [
+        1.851,
+        1.642,
+        1.166,
+        0.565,
+        0.081
+      ],
+      "y_lo": [
+        -0.541,
+        -0.798,
+        -0.891,
+        -0.863,
+        -0.799
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0052,
+      "slope_z": -2.89
+    },
+    {
+      "feature": "feat00735",
+      "idx": 735,
+      "dom_tau": "accel_mag",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0096,
+      "slope_lo": -0.0028,
+      "y_hi": [
+        2.36,
+        2.284,
+        1.868,
+        1.215,
+        0.496
+      ],
+      "y_lo": [
+        -0.796,
+        -0.97,
+        -1.051,
+        -1.189,
+        -1.39
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0062,
+      "slope_z": -3.45
+    },
+    {
+      "feature": "feat04066",
+      "idx": 4066,
+      "dom_tau": "vel_x",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0096,
+      "slope_lo": -0.0046,
+      "y_hi": [
+        1.195,
+        1.081,
+        0.677,
+        -0.011,
+        -0.669
+      ],
+      "y_lo": [
+        -0.543,
+        -0.967,
+        -1.179,
+        -1.343,
+        -1.5
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0071,
+      "slope_z": -3.96
+    },
+    {
+      "feature": "feat04541",
+      "idx": 4541,
+      "dom_tau": "vel_y",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0084,
+      "slope_lo": -0.0066,
+      "y_hi": [
+        0.889,
+        0.779,
+        0.44,
+        -0.156,
+        -0.755
+      ],
+      "y_lo": [
+        -0.452,
+        -0.788,
+        -1.207,
+        -1.526,
+        -1.727
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false,
+      "mean_slope": -0.0075,
+      "slope_z": -4.19
+    }
+  ],
+  "random": [
+    {
+      "feature": "feat02411",
+      "idx": 2411,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0039,
+      "slope_lo": 0.0013,
+      "y_hi": [
+        1.144,
+        1.109,
+        0.929,
+        0.647,
+        0.392
+      ],
+      "y_lo": [
+        -0.689,
+        -0.798,
+        -0.754,
+        -0.607,
+        -0.453
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04267",
+      "idx": 4267,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0017,
+      "slope_lo": 0.0033,
+      "y_hi": [
+        1.017,
+        1.109,
+        1.06,
+        0.896,
+        0.688
+      ],
+      "y_lo": [
+        -0.833,
+        -0.798,
+        -0.62,
+        -0.392,
+        -0.221
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04525",
+      "idx": 4525,
+      "dom_tau": "rand",
+      "C_hi": "Pouring [something] out of [something]",
+      "C_lo": "Dropping [something] into [something]",
+      "speed_hi": 0.98,
+      "speed_lo": -1.81,
+      "slope_hi": -0.0002,
+      "slope_lo": 0.0006,
+      "y_hi": [
+        0.134,
+        0.184,
+        0.18,
+        0.14,
+        0.095
+      ],
+      "y_lo": [
+        -0.813,
+        -0.947,
+        -0.95,
+        -0.854,
+        -0.711
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat02058",
+      "idx": 2058,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something] in front of [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -1.46,
+      "slope_hi": -0.0017,
+      "slope_lo": 0.0013,
+      "y_hi": [
+        0.979,
+        1.109,
+        1.081,
+        0.91,
+        0.659
+      ],
+      "y_lo": [
+        -0.721,
+        -0.817,
+        -0.772,
+        -0.63,
+        -0.478
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04691",
+      "idx": 4691,
+      "dom_tau": "rand",
+      "C_hi": "Burying [something] in [something]",
+      "C_lo": "Dropping [something] into [something]",
+      "speed_hi": 4.28,
+      "speed_lo": -1.81,
+      "slope_hi": -0.0025,
+      "slope_lo": 0.0008,
+      "y_hi": [
+        1.416,
+        1.689,
+        1.676,
+        1.373,
+        0.949
+      ],
+      "y_lo": [
+        -0.81,
+        -0.948,
+        -0.975,
+        -0.861,
+        -0.641
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat01638",
+      "idx": 1638,
+      "dom_tau": "rand",
+      "C_hi": "Turning the camera downwards while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.6,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0073,
+      "slope_lo": 0.0019,
+      "y_hi": [
+        1.733,
+        1.553,
+        1.133,
+        0.671,
+        0.341
+      ],
+      "y_lo": [
+        -1.045,
+        -1.103,
+        -1.016,
+        -0.854,
+        -0.685
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 1,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat03238",
+      "idx": 3238,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Tilting [something] with [something] on it slightly so it doesn't fall down",
+      "speed_hi": 1.75,
+      "speed_lo": -1.39,
+      "slope_hi": -0.0022,
+      "slope_lo": 0.0016,
+      "y_hi": [
+        1.044,
+        1.109,
+        1.035,
+        0.847,
+        0.622
+      ],
+      "y_lo": [
+        -0.545,
+        -0.557,
+        -0.488,
+        -0.363,
+        -0.238
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04466",
+      "idx": 4466,
+      "dom_tau": "rand",
+      "C_hi": "Piling [something] up",
+      "C_lo": "Poking [something] so that it falls over",
+      "speed_hi": 1.92,
+      "speed_lo": -1.51,
+      "slope_hi": -0.0023,
+      "slope_lo": 0.0011,
+      "y_hi": [
+        0.947,
+        1.022,
+        0.933,
+        0.732,
+        0.519
+      ],
+      "y_lo": [
+        -0.547,
+        -0.581,
+        -0.546,
+        -0.453,
+        -0.341
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00473",
+      "idx": 473,
+      "dom_tau": "rand",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -1.89,
+      "slope_hi": 0.0019,
+      "slope_lo": 0.0016,
+      "y_hi": [
+        0.449,
+        0.778,
+        0.941,
+        0.933,
+        0.858
+      ],
+      "y_lo": [
+        -0.696,
+        -1.014,
+        -1.052,
+        -0.805,
+        -0.399
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true
+    },
+    {
+      "feature": "feat00249",
+      "idx": 249,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0014,
+      "slope_lo": 0.0021,
+      "y_hi": [
+        1.012,
+        1.109,
+        1.077,
+        0.94,
+        0.758
+      ],
+      "y_lo": [
+        -0.745,
+        -0.798,
+        -0.7,
+        -0.521,
+        -0.355
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat02600",
+      "idx": 2600,
+      "dom_tau": "rand",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Showing [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -2.0,
+      "slope_hi": -0.0021,
+      "slope_lo": 0.0007,
+      "y_hi": [
+        0.96,
+        1.081,
+        1.016,
+        0.804,
+        0.564
+      ],
+      "y_lo": [
+        -0.812,
+        -0.973,
+        -0.989,
+        -0.873,
+        -0.694
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00435",
+      "idx": 435,
+      "dom_tau": "rand",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Putting [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.25,
+      "slope_hi": -0.0027,
+      "slope_lo": 0.003,
+      "y_hi": [
+        1.015,
+        1.081,
+        0.941,
+        0.699,
+        0.532
+      ],
+      "y_lo": [
+        -0.503,
+        -0.535,
+        -0.426,
+        -0.179,
+        0.057
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00321",
+      "idx": 321,
+      "dom_tau": "rand",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0045,
+      "slope_lo": 0.0058,
+      "y_hi": [
+        1.731,
+        1.642,
+        1.406,
+        1.121,
+        0.868
+      ],
+      "y_lo": [
+        -1.302,
+        -1.104,
+        -0.757,
+        -0.418,
+        -0.186
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat02122",
+      "idx": 2122,
+      "dom_tau": "rand",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0049,
+      "slope_lo": 0.0017,
+      "y_hi": [
+        2.155,
+        2.277,
+        2.103,
+        1.694,
+        1.222
+      ],
+      "y_lo": [
+        -0.705,
+        -0.798,
+        -0.741,
+        -0.573,
+        -0.398
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat05546",
+      "idx": 5546,
+      "dom_tau": "rand",
+      "C_hi": "Turning the camera left while filming [something]",
+      "C_lo": "Uncovering [something]",
+      "speed_hi": 2.58,
+      "speed_lo": -1.89,
+      "slope_hi": -0.0019,
+      "slope_lo": 0.0019,
+      "y_hi": [
+        1.456,
+        1.642,
+        1.633,
+        1.426,
+        1.08
+      ],
+      "y_lo": [
+        -0.832,
+        -1.014,
+        -0.996,
+        -0.783,
+        -0.471
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat01591",
+      "idx": 1591,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0016,
+      "slope_lo": 0.0025,
+      "y_hi": [
+        1.017,
+        1.109,
+        1.062,
+        0.905,
+        0.706
+      ],
+      "y_lo": [
+        -0.76,
+        -0.798,
+        -0.68,
+        -0.479,
+        -0.3
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04205",
+      "idx": 4205,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something] behind [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -1.16,
+      "slope_hi": 0.0012,
+      "slope_lo": 0.0003,
+      "y_hi": [
+        0.847,
+        1.109,
+        1.243,
+        1.231,
+        1.095
+      ],
+      "y_lo": [
+        -0.602,
+        -0.746,
+        -0.776,
+        -0.689,
+        -0.547
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": true
+    },
+    {
+      "feature": "feat04214",
+      "idx": 4214,
+      "dom_tau": "rand",
+      "C_hi": "Lifting [something] with [something] on it",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.61,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0073,
+      "slope_lo": -0.0054,
+      "y_hi": [
+        0.81,
+        0.78,
+        0.51,
+        -0.028,
+        -0.604
+      ],
+      "y_lo": [
+        -0.412,
+        -0.791,
+        -1.131,
+        -1.36,
+        -1.489
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": false,
+        "lo_up": false,
+        "lo_dn": false
+      },
+      "n_cells_pass": 0,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat02893",
+      "idx": 2893,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0008,
+      "slope_lo": 0.0027,
+      "y_hi": [
+        0.956,
+        1.109,
+        1.118,
+        1.0,
+        0.81
+      ],
+      "y_lo": [
+        -0.773,
+        -0.798,
+        -0.662,
+        -0.449,
+        -0.275
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat01166",
+      "idx": 1166,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0023,
+      "slope_lo": 0.0025,
+      "y_hi": [
+        1.055,
+        1.109,
+        1.022,
+        0.83,
+        0.608
+      ],
+      "y_lo": [
+        -0.793,
+        -0.798,
+        -0.662,
+        -0.472,
+        -0.325
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00260",
+      "idx": 260,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0016,
+      "slope_lo": 0.0019,
+      "y_hi": [
+        1.009,
+        1.109,
+        1.067,
+        0.907,
+        0.698
+      ],
+      "y_lo": [
+        -0.725,
+        -0.798,
+        -0.717,
+        -0.542,
+        -0.371
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat01614",
+      "idx": 1614,
+      "dom_tau": "rand",
+      "C_hi": "Moving away from [something] with your camera",
+      "C_lo": "Holding [something] in front of [something]",
+      "speed_hi": 1.31,
+      "speed_lo": -1.46,
+      "slope_hi": -0.0015,
+      "slope_lo": 0.0034,
+      "y_hi": [
+        0.762,
+        0.826,
+        0.774,
+        0.637,
+        0.479
+      ],
+      "y_lo": [
+        -0.871,
+        -0.817,
+        -0.632,
+        -0.402,
+        -0.225
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat01564",
+      "idx": 1564,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0014,
+      "slope_lo": 0.0025,
+      "y_hi": [
+        0.996,
+        1.109,
+        1.081,
+        0.932,
+        0.722
+      ],
+      "y_lo": [
+        -0.772,
+        -0.798,
+        -0.669,
+        -0.471,
+        -0.311
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat02452",
+      "idx": 2452,
+      "dom_tau": "rand",
+      "C_hi": "Turning the camera right while filming [something]",
+      "C_lo": "Putting [something] next to [something]",
+      "speed_hi": 3.55,
+      "speed_lo": -1.25,
+      "slope_hi": 0.0066,
+      "slope_lo": 0.0043,
+      "y_hi": [
+        1.352,
+        2.267,
+        2.643,
+        2.748,
+        2.758
+      ],
+      "y_lo": [
+        -0.528,
+        -0.535,
+        -0.39,
+        -0.062,
+        0.318
+      ],
+      "cells": {
+        "hi_up": true,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": true
+    },
+    {
+      "feature": "feat02100",
+      "idx": 2100,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0032,
+      "slope_lo": 0.0015,
+      "y_hi": [
+        1.087,
+        1.109,
+        0.984,
+        0.74,
+        0.481
+      ],
+      "y_lo": [
+        -0.708,
+        -0.798,
+        -0.732,
+        -0.58,
+        -0.431
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04807",
+      "idx": 4807,
+      "dom_tau": "rand",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Holding [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.91,
+      "slope_hi": -0.0014,
+      "slope_lo": 0.0022,
+      "y_hi": [
+        0.912,
+        1.081,
+        1.053,
+        0.876,
+        0.659
+      ],
+      "y_lo": [
+        -1.03,
+        -1.103,
+        -1.02,
+        -0.826,
+        -0.614
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04746",
+      "idx": 4746,
+      "dom_tau": "rand",
+      "C_hi": "Stuffing [something] into [something]",
+      "C_lo": "Putting [something] next to [something]",
+      "speed_hi": 2.11,
+      "speed_lo": -1.25,
+      "slope_hi": -0.0018,
+      "slope_lo": 0.0035,
+      "y_hi": [
+        0.954,
+        1.081,
+        1.008,
+        0.81,
+        0.631
+      ],
+      "y_lo": [
+        -0.598,
+        -0.535,
+        -0.364,
+        -0.125,
+        0.078
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat04873",
+      "idx": 4873,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0033,
+      "slope_lo": 0.0005,
+      "y_hi": [
+        1.09,
+        1.109,
+        0.985,
+        0.734,
+        0.462
+      ],
+      "y_lo": [
+        -0.63,
+        -0.798,
+        -0.811,
+        -0.702,
+        -0.563
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00393",
+      "idx": 393,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0027,
+      "slope_lo": 0.0034,
+      "y_hi": [
+        1.078,
+        1.109,
+        1.002,
+        0.788,
+        0.57
+      ],
+      "y_lo": [
+        -0.805,
+        -0.798,
+        -0.624,
+        -0.37,
+        -0.162
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": true
+      },
+      "n_cells_pass": 3,
+      "both_slopes_pos": false
+    },
+    {
+      "feature": "feat00315",
+      "idx": 315,
+      "dom_tau": "rand",
+      "C_hi": "Stacking [number of] [something]",
+      "C_lo": "Holding [something]",
+      "speed_hi": 1.75,
+      "speed_lo": -2.23,
+      "slope_hi": -0.0026,
+      "slope_lo": 0.0016,
+      "y_hi": [
+        1.067,
+        1.109,
+        1.008,
+        0.797,
+        0.561
+      ],
+      "y_lo": [
+        -0.719,
+        -0.798,
+        -0.727,
+        -0.573,
+        -0.423
+      ],
+      "cells": {
+        "hi_up": false,
+        "hi_dn": true,
+        "lo_up": true,
+        "lo_dn": false
+      },
+      "n_cells_pass": 2,
+      "both_slopes_pos": false
+    }
+  ]
+}

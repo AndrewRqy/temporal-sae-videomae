@@ -1,0 +1,183 @@
+{
+  "s_grid": [
+    -150,
+    -100,
+    -40,
+    0,
+    40,
+    100,
+    150
+  ],
+  "pairs": [
+    {
+      "axis": "vel_x",
+      "pos": "Pushing [something] from left to right",
+      "neg": "Pushing [something] from right to left",
+      "n_videos": [
+        24,
+        24
+      ],
+      "features": [
+        {
+          "idx": 4956,
+          "feature": "feat04956",
+          "nfp_t": 3.12,
+          "act_pref": -23.7916,
+          "lo_pos_side": [
+            9.956,
+            9.04,
+            6.56,
+            4.421,
+            2.441,
+            0.194,
+            -1.09
+          ],
+          "lo_neg_side": [
+            3.096,
+            0.722,
+            -2.152,
+            -3.906,
+            -4.406,
+            -5.206,
+            -5.581
+          ],
+          "shift": -9.862,
+          "flips": {
+            "neg->pos": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.0
+            },
+            "pos->neg": {
+              "s": 150,
+              "pair_flip": 0.833,
+              "pair_flip_base": 0.0,
+              "top1_flip": 0.833
+            }
+          }
+        },
+        {
+          "idx": 5672,
+          "feature": "feat05672",
+          "nfp_t": NaN,
+          "act_pref": -14.3971,
+          "lo_pos_side": [
+            10.49,
+            9.438,
+            6.824,
+            4.421,
+            2.037,
+            -0.795,
+            -2.425
+          ],
+          "lo_neg_side": [
+            4.345,
+            1.958,
+            -1.454,
+            -3.906,
+            -4.9,
+            -6.289,
+            -6.959
+          ],
+          "shift": -12.11,
+          "flips": {
+            "neg->pos": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.542
+            },
+            "pos->neg": {
+              "s": 150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.0,
+              "top1_flip": 1.0
+            }
+          }
+        },
+        {
+          "idx": 2867,
+          "feature": "feat02867",
+          "nfp_t": NaN,
+          "act_pref": -2.002,
+          "lo_pos_side": [
+            8.38,
+            7.759,
+            6.139,
+            4.421,
+            2.446,
+            -0.207,
+            -1.82
+          ],
+          "lo_neg_side": [
+            2.205,
+            0.41,
+            -2.201,
+            -3.906,
+            -5.14,
+            -6.358,
+            -6.907
+          ],
+          "shift": -9.656,
+          "flips": {
+            "neg->pos": {
+              "s": -150,
+              "pair_flip": 0.917,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.5
+            },
+            "pos->neg": {
+              "s": 150,
+              "pair_flip": 0.958,
+              "pair_flip_base": 0.0,
+              "top1_flip": 0.833
+            }
+          }
+        },
+        {
+          "idx": 4398,
+          "feature": "feat04398",
+          "nfp_t": NaN,
+          "act_pref": 7.5958,
+          "lo_pos_side": [
+            -2.639,
+            -0.521,
+            2.505,
+            4.421,
+            5.396,
+            6.396,
+            6.822
+          ],
+          "lo_neg_side": [
+            -8.583,
+            -7.736,
+            -5.753,
+            -3.906,
+            -1.999,
+            0.373,
+            1.792
+          ],
+          "shift": 9.918,
+          "flips": {
+            "neg->pos": {
+              "s": 150,
+              "pair_flip": 0.917,
+              "pair_flip_base": 0.042,
+              "top1_flip": 0.917
+            },
+            "pos->neg": {
+              "s": -150,
+              "pair_flip": 1.0,
+              "pair_flip_base": 0.0,
+              "top1_flip": 0.042
+            }
+          }
+        }
+      ],
+      "random": [],
+      "null_abs_shift_mean": 0.0,
+      "null_abs_shift_sd": 0.0
+    }
+  ]
+}

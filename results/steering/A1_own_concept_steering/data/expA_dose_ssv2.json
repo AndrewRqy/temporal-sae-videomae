@@ -1,0 +1,91 @@
+{
+  "input": "ssv2",
+  "s_list": [
+    0.0,
+    20.0,
+    40.0,
+    60.0,
+    100.0,
+    150.0
+  ],
+  "features": [
+    {
+      "feature": "feat02312",
+      "idx": 2312,
+      "concept": "Spinning [something] that quickly stops spinning",
+      "p_by_s": [
+        0.0071,
+        0.0135,
+        0.0252,
+        0.0472,
+        0.1289,
+        0.2511
+      ]
+    },
+    {
+      "feature": "feat04280",
+      "idx": 4280,
+      "concept": "Lifting [something] with [something] on it",
+      "p_by_s": [
+        0.0171,
+        0.0234,
+        0.0329,
+        0.0474,
+        0.0944,
+        0.1723
+      ]
+    },
+    {
+      "feature": "feat03714",
+      "idx": 3714,
+      "concept": "Pushing [something] so that it slightly moves",
+      "p_by_s": [
+        0.0109,
+        0.0179,
+        0.0313,
+        0.0529,
+        0.1227,
+        0.2373
+      ]
+    },
+    {
+      "feature": "feat00978",
+      "idx": 978,
+      "concept": "Lifting [something] with [something] on it",
+      "p_by_s": [
+        0.0171,
+        0.0185,
+        0.0199,
+        0.0216,
+        0.025,
+        0.029
+      ]
+    },
+    {
+      "feature": "feat02818",
+      "idx": 2818,
+      "concept": "Dropping [something] next to [something]",
+      "p_by_s": [
+        0.0084,
+        0.0096,
+        0.0112,
+        0.013,
+        0.0174,
+        0.0223
+      ]
+    },
+    {
+      "feature": "feat01230",
+      "idx": 1230,
+      "concept": "Showing [something] next to [something]",
+      "p_by_s": [
+        0.009,
+        0.0106,
+        0.0127,
+        0.0151,
+        0.02,
+        0.024
+      ]
+    }
+  ]
+}

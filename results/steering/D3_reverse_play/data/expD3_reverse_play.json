@@ -1,0 +1,153 @@
+{
+  "pairs": [
+    {
+      "key": "push_lr",
+      "sides": {
+        "pos": {
+          "fwd": 4.386,
+          "rev": -0.937,
+          "rev_flip_rate": 0.75,
+          "NFP-85": -0.921,
+          "random-85": -0.908,
+          "static-85": -0.913,
+          "ALL-6144": 3.804
+        },
+        "neg": {
+          "fwd": 4.499,
+          "rev": -0.525,
+          "rev_flip_rate": 0.75,
+          "NFP-85": -0.509,
+          "random-85": -0.402,
+          "static-85": -0.456,
+          "ALL-6144": 3.658
+        }
+      }
+    },
+    {
+      "key": "pull_lr",
+      "sides": {
+        "pos": {
+          "fwd": 5.652,
+          "rev": -1.821,
+          "rev_flip_rate": 0.833,
+          "NFP-85": -1.756,
+          "random-85": -1.799,
+          "static-85": -1.811,
+          "ALL-6144": 4.705
+        },
+        "neg": {
+          "fwd": 4.49,
+          "rev": -1.718,
+          "rev_flip_rate": 1.0,
+          "NFP-85": -1.704,
+          "random-85": -1.694,
+          "static-85": -1.698,
+          "ALL-6144": 4.034
+        }
+      }
+    },
+    {
+      "key": "cam_lr",
+      "sides": {
+        "pos": {
+          "fwd": 5.222,
+          "rev": -4.586,
+          "rev_flip_rate": 1.0,
+          "NFP-85": -0.835,
+          "random-85": -4.586,
+          "static-85": -4.537,
+          "ALL-6144": 4.255
+        },
+        "neg": {
+          "fwd": 5.293,
+          "rev": -4.688,
+          "rev_flip_rate": 1.0,
+          "NFP-85": -2.308,
+          "random-85": -4.674,
+          "static-85": -4.615,
+          "ALL-6144": 4.248
+        }
+      }
+    },
+    {
+      "key": "move_ud",
+      "sides": {
+        "pos": {
+          "fwd": 4.512,
+          "rev": -4.107,
+          "rev_flip_rate": 0.833,
+          "NFP-85": -4.096,
+          "random-85": -4.105,
+          "static-85": -4.099,
+          "ALL-6144": 3.192
+        },
+        "neg": {
+          "fwd": 3.435,
+          "rev": -4.133,
+          "rev_flip_rate": 0.917,
+          "NFP-85": -4.13,
+          "random-85": -4.124,
+          "static-85": -4.13,
+          "ALL-6144": 2.254
+        }
+      }
+    },
+    {
+      "key": "cam_ud",
+      "sides": {
+        "pos": {
+          "fwd": 5.368,
+          "rev": -4.925,
+          "rev_flip_rate": 1.0,
+          "NFP-85": -2.65,
+          "random-85": -4.904,
+          "static-85": -4.902,
+          "ALL-6144": 3.511
+        },
+        "neg": {
+          "fwd": 5.044,
+          "rev": -4.481,
+          "rev_flip_rate": 1.0,
+          "NFP-85": -2.807,
+          "random-85": -4.475,
+          "static-85": -4.429,
+          "ALL-6144": 3.357
+        }
+      }
+    }
+  ],
+  "sets": [
+    "NFP-85",
+    "random-85",
+    "static-85",
+    "ALL-6144"
+  ],
+  "summary": {
+    "fwd": 4.79,
+    "rev": -3.192,
+    "NFP-85": {
+      "LO": -2.172,
+      "recovery": 0.128
+    },
+    "random-85": {
+      "LO": -3.167,
+      "recovery": 0.003
+    },
+    "static-85": {
+      "LO": -3.159,
+      "recovery": 0.004
+    },
+    "ALL-6144": {
+      "LO": 3.702,
+      "recovery": 0.864
+    }
+  },
+  "tag_signature": {
+    "speed": 0.643,
+    "vel_x": 0.57,
+    "vel_y": 0.533,
+    "accel_mag": 0.052,
+    "direction": 1.731,
+    "static-85": 0.351
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "cbar_norms": {
+    "speed": 0.9837249517440796,
+    "vel_x": 1.6740974187850952,
+    "vel_y": 1.3206062316894531,
+    "accel_mag": 0.027514178305864334,
+    "direction": 1.1770989894866943
+  },
+  "pairs": {
+    "push_lr": {
+      "cbar[vel_x]": {
+        "shift": 0.373,
+        "flip": 0.0,
+        "top1": 0.0
+      },
+      "head-diff": {
+        "shift": 13.271,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": 0.429,
+        "flip": 0.0,
+        "top1": 0.0
+      },
+      "rand-22": {
+        "shift": 0.485,
+        "flip": 0.042,
+        "top1": 0.0
+      }
+    },
+    "cam_lr": {
+      "cbar[vel_x]": {
+        "shift": -3.801,
+        "flip": 0.292,
+        "top1": 0.125
+      },
+      "cbar[direction]": {
+        "shift": 1.237,
+        "flip": 0.0,
+        "top1": 0.0
+      },
+      "head-diff": {
+        "shift": 11.28,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": -0.395,
+        "flip": 0.0,
+        "top1": 0.0
+      },
+      "rand-22": {
+        "shift": -0.062,
+        "flip": 0.0,
+        "top1": 0.0
+      }
+    },
+    "move_ud": {
+      "cbar[vel_y]": {
+        "shift": -0.875,
+        "flip": 0.167,
+        "top1": 0.042
+      },
+      "head-diff": {
+        "shift": 12.573,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": 0.905,
+        "flip": 0.167,
+        "top1": 0.042
+      },
+      "rand-22": {
+        "shift": -0.567,
+        "flip": 0.125,
+        "top1": 0.042
+      }
+    },
+    "cam_ud": {
+      "cbar[vel_y]": {
+        "shift": 3.872,
+        "flip": 0.292,
+        "top1": 0.0
+      },
+      "head-diff": {
+        "shift": 12.248,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": -0.136,
+        "flip": 0.042,
+        "top1": 0.0
+      },
+      "rand-22": {
+        "shift": -0.356,
+        "flip": 0.042,
+        "top1": 0.0
+      }
+    },
+    "fall_speed": {
+      "cbar[speed]": {
+        "shift": -0.599,
+        "flip": 0.125,
+        "top1": 0.042
+      },
+      "head-diff": {
+        "shift": 11.283,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": -0.098,
+        "flip": 0.042,
+        "top1": 0.0
+      },
+      "rand-22": {
+        "shift": -0.402,
+        "flip": 0.042,
+        "top1": 0.042
+      }
+    },
+    "spin_stop": {
+      "cbar[accel_mag]": {
+        "shift": -0.406,
+        "flip": 0.292,
+        "top1": 0.083
+      },
+      "head-diff": {
+        "shift": 11.88,
+        "flip": 1.0,
+        "top1": 1.0
+      },
+      "rand-11": {
+        "shift": 0.279,
+        "flip": 0.292,
+        "top1": 0.125
+      },
+      "rand-22": {
+        "shift": -0.129,
+        "flip": 0.167,
+        "top1": 0.083
+      }
+    }
+  },
+  "espeed_curve_cbar_speed": {
+    "-150": -0.05,
+    "-50": -0.026,
+    "0": -0.019,
+    "50": -0.019,
+    "150": -0.012
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "pairs": [
+    {
+      "pos": "Pushing [something] from left to right",
+      "neg": "Pushing [something] from right to left",
+      "v_norm": 95.11814880371094,
+      "top10": [
+        {
+          "feature": "feat04956",
+          "idx": 4956,
+          "cos": -0.542,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat05672",
+          "idx": 5672,
+          "cos": -0.5293,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat02867",
+          "idx": 2867,
+          "cos": -0.4841,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat04398",
+          "idx": 4398,
+          "cos": 0.4645,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01382",
+          "idx": 1382,
+          "cos": -0.4564,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat03731",
+          "idx": 3731,
+          "cos": 0.4352,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01390",
+          "idx": 1390,
+          "cos": -0.4347,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat03786",
+          "idx": 3786,
+          "cos": -0.4309,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01808",
+          "idx": 1808,
+          "cos": -0.4301,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat06018",
+          "idx": 6018,
+          "cos": -0.4264,
+          "nfp_sig": false,
+          "dom_tau": null
+        }
+      ],
+      "r2_top_m": {
+        "1": 0.2938,
+        "5": 0.7346,
+        "20": 0.8904,
+        "100": 0.9478,
+        "500": 0.9882
+      },
+      "r2_nfp_span": 0.1819
+    },
+    {
+      "pos": "Pulling [something] from left to right",
+      "neg": "Pulling [something] from right to left",
+      "v_norm": 156.0284881591797,
+      "top10": [
+        {
+          "feature": "feat00255",
+          "idx": 255,
+          "cos": -0.7692,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat00831",
+          "idx": 831,
+          "cos": 0.7211,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01652",
+          "idx": 1652,
+          "cos": 0.6393,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat02731",
+          "idx": 2731,
+          "cos": -0.6206,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat04606",
+          "idx": 4606,
+          "cos": -0.581,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat00479",
+          "idx": 479,
+          "cos": -0.5772,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat03821",
+          "idx": 3821,
+          "cos": -0.5713,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat03950",
+          "idx": 3950,
+          "cos": -0.5682,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat05447",
+          "idx": 5447,
+          "cos": 0.5558,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat04127",
+          "idx": 4127,
+          "cos": 0.5372,
+          "nfp_sig": false,
+          "dom_tau": null
+        }
+      ],
+      "r2_top_m": {
+        "1": 0.5916,
+        "5": 0.9084,
+        "20": 0.9303,
+        "100": 0.9791,
+        "500": 0.9946
+      },
+      "r2_nfp_span": 0.3783
+    },
+    {
+      "pos": "Moving [something] up",
+      "neg": "Moving [something] down",
+      "v_norm": 109.06693267822266,
+      "top10": [
+        {
+          "feature": "feat01387",
+          "idx": 1387,
+          "cos": 0.623,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat00860",
+          "idx": 860,
+          "cos": 0.6087,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat05258",
+          "idx": 5258,
+          "cos": 0.5824,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01484",
+          "idx": 1484,
+          "cos": 0.5803,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat02084",
+          "idx": 2084,
+          "cos": 0.5457,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat05124",
+          "idx": 5124,
+          "cos": 0.537,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat05354",
+          "idx": 5354,
+          "cos": 0.5317,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat04963",
+          "idx": 4963,
+          "cos": 0.491,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat01523",
+          "idx": 1523,
+          "cos": 0.4883,
+          "nfp_sig": false,
+          "dom_tau": null
+        },
+        {
+          "feature": "feat02793",
+          "idx": 2793,
+          "cos": 0.4811,
+          "nfp_sig": false,
+          "dom_tau": null
+        }
+      ],
+      "r2_top_m": {
+        "1": 0.3882,
+        "5": 0.5456,
+        "20": 0.823,
+        "100": 0.9629,
+        "500": 0.9929
+      },
+      "r2_nfp_span": 0.226
+    }
+  ]
+}

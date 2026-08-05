@@ -1,0 +1,1062 @@
+{
+  "s_abs": 40.0,
+  "top_clips": 25,
+  "n_clips": 384,
+  "null_z_mean": 0.780874907745989,
+  "null_z_std": 3.1331741776815885,
+  "n_winners": 31,
+  "features": [
+    {
+      "feature": "feat04280",
+      "idx": 4280,
+      "dom_tau": "vel_y",
+      "alignment": 0.00473,
+      "z": 9.92,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Dropping [something] onto [something]",
+        "Turning the camera downwards while filming [something]"
+      ]
+    },
+    {
+      "feature": "feat03714",
+      "idx": 3714,
+      "dom_tau": "vel_x",
+      "alignment": 0.00473,
+      "z": 8.89,
+      "concept_top": [
+        "Pushing [something] so that it slightly moves",
+        "Moving [something] up",
+        "Poking [something] so it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat01699",
+      "idx": 1699,
+      "dom_tau": "vel_x",
+      "alignment": 0.00447,
+      "z": 8.14,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Showing [something] next to [something]",
+        "Showing [something] to the camera"
+      ]
+    },
+    {
+      "feature": "feat02491",
+      "idx": 2491,
+      "dom_tau": "speed",
+      "alignment": 0.00354,
+      "z": 7.82,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Showing [something] next to [something]",
+        "Holding [something] in front of [something]"
+      ]
+    },
+    {
+      "feature": "feat01778",
+      "idx": 1778,
+      "dom_tau": "vel_x",
+      "alignment": 0.00243,
+      "z": 7.31,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Pushing [something] so that it falls off the table",
+        "Tearing [something] just a little bit"
+      ]
+    },
+    {
+      "feature": "feat03150",
+      "idx": 3150,
+      "dom_tau": "speed",
+      "alignment": 0.00268,
+      "z": 7.11,
+      "concept_top": [
+        "Removing [something], revealing [something] behind",
+        "Letting [something] roll down a slanted surface",
+        "Rolling [something] on a flat surface"
+      ]
+    },
+    {
+      "feature": "feat02211",
+      "idx": 2211,
+      "dom_tau": "speed",
+      "alignment": 0.00314,
+      "z": 6.98,
+      "concept_top": [
+        "Poking [something] so it slightly moves",
+        "Pushing [something] so that it slightly moves",
+        "Poking [something] so lightly that it doesn't or almost doesn't move"
+      ]
+    },
+    {
+      "feature": "feat06100",
+      "idx": 6100,
+      "dom_tau": "speed",
+      "alignment": 0.00244,
+      "z": 6.57,
+      "concept_top": [
+        "Showing [something] next to [something]",
+        "Showing [something] behind [something]",
+        "Holding [something] in front of [something]"
+      ]
+    },
+    {
+      "feature": "feat05785",
+      "idx": 5785,
+      "dom_tau": "vel_x",
+      "alignment": 0.00308,
+      "z": 6.55,
+      "concept_top": [
+        "Turning the camera downwards while filming [something]",
+        "Showing [something] to the camera",
+        "Pushing [something] so that it falls off the table"
+      ]
+    },
+    {
+      "feature": "feat02312",
+      "idx": 2312,
+      "dom_tau": "speed",
+      "alignment": 0.00291,
+      "z": 6.54,
+      "concept_top": [
+        "Spinning [something] that quickly stops spinning",
+        "Opening [something]",
+        "Hitting [something] with [something]"
+      ]
+    },
+    {
+      "feature": "feat02820",
+      "idx": 2820,
+      "dom_tau": "vel_x",
+      "alignment": 0.00388,
+      "z": 6.54,
+      "concept_top": [
+        "Plugging [something] into [something]",
+        "Holding [something] in front of [something]",
+        "Plugging [something] into [something] but pulling it right out as you remove your hand"
+      ]
+    },
+    {
+      "feature": "feat00978",
+      "idx": 978,
+      "dom_tau": "vel_x",
+      "alignment": 0.00174,
+      "z": 5.87,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Moving [something] up",
+        "Moving away from [something] with your camera"
+      ]
+    },
+    {
+      "feature": "feat04870",
+      "idx": 4870,
+      "dom_tau": "vel_y",
+      "alignment": 0.00127,
+      "z": 5.86,
+      "concept_top": [
+        "Letting [something] roll along a flat surface",
+        "Pretending to be tearing [something that is not tearable]",
+        "Pushing [something] so that it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat00056",
+      "idx": 56,
+      "dom_tau": "speed",
+      "alignment": 0.00208,
+      "z": 5.82,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Showing [something] to the camera",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat02818",
+      "idx": 2818,
+      "dom_tau": "speed",
+      "alignment": 0.00161,
+      "z": 5.61,
+      "concept_top": [
+        "Dropping [something] next to [something]",
+        "Showing [something] behind [something]",
+        "Turning the camera downwards while filming [something]"
+      ]
+    },
+    {
+      "feature": "feat01544",
+      "idx": 1544,
+      "dom_tau": "vel_y",
+      "alignment": 0.00168,
+      "z": 5.46,
+      "concept_top": [
+        "Closing [something]",
+        "Moving [something] and [something] away from each other",
+        "Putting [something] on a flat surface without letting it roll"
+      ]
+    },
+    {
+      "feature": "feat05711",
+      "idx": 5711,
+      "dom_tau": "vel_x",
+      "alignment": 0.00219,
+      "z": 5.46,
+      "concept_top": [
+        "Holding [something] in front of [something]",
+        "Putting [something] upright on the table",
+        "Pushing [something] so that it falls off the table"
+      ]
+    },
+    {
+      "feature": "feat04066",
+      "idx": 4066,
+      "dom_tau": "vel_x",
+      "alignment": 0.00204,
+      "z": 5.28,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Lifting [something] with [something] on it",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat02509",
+      "idx": 2509,
+      "dom_tau": "accel_mag",
+      "alignment": 0.0018,
+      "z": 5.03,
+      "concept_top": [
+        "Showing [something] to the camera",
+        "Showing [something] behind [something]",
+        "Taking [something] out of [something]"
+      ]
+    },
+    {
+      "feature": "feat00735",
+      "idx": 735,
+      "dom_tau": "accel_mag",
+      "alignment": 0.00262,
+      "z": 4.72,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Holding [something] over [something]",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat04153",
+      "idx": 4153,
+      "dom_tau": "vel_x",
+      "alignment": 0.00164,
+      "z": 4.42,
+      "concept_top": [
+        "Letting [something] roll along a flat surface",
+        "Moving [something] up",
+        "Pushing [something] so that it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat05866",
+      "idx": 5866,
+      "dom_tau": "speed",
+      "alignment": 0.00087,
+      "z": 4.38,
+      "concept_top": [
+        "Turning the camera downwards while filming [something]",
+        "Lifting [something] with [something] on it",
+        "Putting [something] on a flat surface without letting it roll"
+      ]
+    },
+    {
+      "feature": "feat01919",
+      "idx": 1919,
+      "dom_tau": "vel_x",
+      "alignment": 0.00078,
+      "z": 4.01,
+      "concept_top": [
+        "Closing [something]",
+        "Letting [something] roll down a slanted surface",
+        "Holding [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat01230",
+      "idx": 1230,
+      "dom_tau": "speed",
+      "alignment": 0.00146,
+      "z": 3.99,
+      "concept_top": [
+        "Rolling [something] on a flat surface",
+        "Letting [something] roll down a slanted surface",
+        "Showing [something] behind [something]"
+      ]
+    },
+    {
+      "feature": "feat04416",
+      "idx": 4416,
+      "dom_tau": "vel_y",
+      "alignment": 0.0011,
+      "z": 3.73,
+      "concept_top": [
+        "Pushing [something] so that it slightly moves",
+        "Moving [something] and [something] away from each other",
+        "Pulling [something] from left to right"
+      ]
+    },
+    {
+      "feature": "feat01321",
+      "idx": 1321,
+      "dom_tau": "vel_y",
+      "alignment": 0.00129,
+      "z": 3.63,
+      "concept_top": [
+        "Folding [something]",
+        "Showing [something] behind [something]",
+        "Turning the camera right while filming [something]"
+      ]
+    },
+    {
+      "feature": "feat03058",
+      "idx": 3058,
+      "dom_tau": "vel_x",
+      "alignment": 0.00135,
+      "z": 3.57,
+      "concept_top": [
+        "Showing that [something] is empty",
+        "Pouring [something] into [something]",
+        "Squeezing [something]"
+      ]
+    },
+    {
+      "feature": "feat03672",
+      "idx": 3672,
+      "dom_tau": "speed",
+      "alignment": 0.00109,
+      "z": 3.35,
+      "concept_top": [
+        "Turning the camera left while filming [something]",
+        "Closing [something]",
+        "Dropping [something] onto [something]"
+      ]
+    },
+    {
+      "feature": "feat05216",
+      "idx": 5216,
+      "dom_tau": "direction",
+      "alignment": 0.00074,
+      "z": 3.19,
+      "concept_top": [
+        "Wiping [something] off of [something]",
+        "Lifting [something] with [something] on it",
+        "Putting [something] on a surface"
+      ]
+    },
+    {
+      "feature": "feat00648",
+      "idx": 648,
+      "dom_tau": "speed",
+      "alignment": 0.0006,
+      "z": 3.03,
+      "concept_top": [
+        "Holding [something] in front of [something]",
+        "Pretending to pick [something] up",
+        "Holding [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat04904",
+      "idx": 4904,
+      "dom_tau": "vel_x",
+      "alignment": 0.00079,
+      "z": 3.01,
+      "concept_top": [
+        "Letting [something] roll along a flat surface",
+        "Holding [something] in front of [something]",
+        "Moving [something] away from [something]"
+      ]
+    },
+    {
+      "feature": "feat03309",
+      "idx": 3309,
+      "dom_tau": "vel_x",
+      "alignment": 0.00112,
+      "z": 2.91,
+      "concept_top": [
+        "Wiping [something] off of [something]",
+        "Spinning [something] that quickly stops spinning",
+        "Closing [something]"
+      ]
+    },
+    {
+      "feature": "feat00394",
+      "idx": 394,
+      "dom_tau": "vel_x",
+      "alignment": 0.00057,
+      "z": 2.72,
+      "concept_top": [
+        "Uncovering [something]",
+        "Moving away from [something] with your camera",
+        "Showing that [something] is empty"
+      ]
+    },
+    {
+      "feature": "feat05228",
+      "idx": 5228,
+      "dom_tau": "vel_y",
+      "alignment": 0.00054,
+      "z": 2.64,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Holding [something] in front of [something]",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat05077",
+      "idx": 5077,
+      "dom_tau": "vel_x",
+      "alignment": 0.00103,
+      "z": 2.58,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Closing [something]",
+        "Holding [something] over [something]"
+      ]
+    },
+    {
+      "feature": "feat04665",
+      "idx": 4665,
+      "dom_tau": "vel_y",
+      "alignment": 0.00071,
+      "z": 2.57,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Turning the camera downwards while filming [something]",
+        "Holding [something] over [something]"
+      ]
+    },
+    {
+      "feature": "feat03059",
+      "idx": 3059,
+      "dom_tau": "vel_x",
+      "alignment": 0.00066,
+      "z": 2.52,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Moving [something] up",
+        "Pushing [something] with [something]"
+      ]
+    },
+    {
+      "feature": "feat00214",
+      "idx": 214,
+      "dom_tau": "vel_x",
+      "alignment": 0.00056,
+      "z": 2.49,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Plugging [something] into [something]",
+        "Pretending to pick [something] up"
+      ]
+    },
+    {
+      "feature": "feat03471",
+      "idx": 3471,
+      "dom_tau": "vel_x",
+      "alignment": 0.00101,
+      "z": 2.44,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Pouring [something] into [something]",
+        "[Something] falling like a rock"
+      ]
+    },
+    {
+      "feature": "feat03735",
+      "idx": 3735,
+      "dom_tau": "vel_x",
+      "alignment": 0.00047,
+      "z": 2.43,
+      "concept_top": [
+        "Moving [something] down",
+        "Showing [something] to the camera",
+        "Poking [something] so lightly that it doesn't or almost doesn't move"
+      ]
+    },
+    {
+      "feature": "feat05472",
+      "idx": 5472,
+      "dom_tau": "vel_x",
+      "alignment": 0.00039,
+      "z": 2.4,
+      "concept_top": [
+        "Poking [something] so lightly that it doesn't or almost doesn't move",
+        "Turning the camera left while filming [something]",
+        "Holding [something] over [something]"
+      ]
+    },
+    {
+      "feature": "feat03379",
+      "idx": 3379,
+      "dom_tau": "vel_y",
+      "alignment": 0.00068,
+      "z": 2.37,
+      "concept_top": [
+        "Putting [something] on a flat surface without letting it roll",
+        "Showing [something] to the camera",
+        "[Something] falling like a feather or paper"
+      ]
+    },
+    {
+      "feature": "feat00250",
+      "idx": 250,
+      "dom_tau": "vel_x",
+      "alignment": 0.00075,
+      "z": 2.26,
+      "concept_top": [
+        "Putting [something] on a surface",
+        "Letting [something] roll up a slanted surface, so it rolls back down",
+        "Showing [something] behind [something]"
+      ]
+    },
+    {
+      "feature": "feat00950",
+      "idx": 950,
+      "dom_tau": "vel_x",
+      "alignment": 0.00053,
+      "z": 2.13,
+      "concept_top": [
+        "Pushing [something] so that it falls off the table",
+        "Pretending to open [something] without actually opening it",
+        "Showing [something] to the camera"
+      ]
+    },
+    {
+      "feature": "feat04188",
+      "idx": 4188,
+      "dom_tau": "vel_y",
+      "alignment": 0.00048,
+      "z": 2.03,
+      "concept_top": [
+        "Uncovering [something]",
+        "Picking [something] up",
+        "Removing [something], revealing [something] behind"
+      ]
+    },
+    {
+      "feature": "feat04541",
+      "idx": 4541,
+      "dom_tau": "vel_y",
+      "alignment": 0.00091,
+      "z": 1.93,
+      "concept_top": [
+        "Tearing [something] into two pieces",
+        "Dropping [something] onto [something]",
+        "Lifting [something] up completely without letting it drop down"
+      ]
+    },
+    {
+      "feature": "feat02952",
+      "idx": 2952,
+      "dom_tau": "speed",
+      "alignment": 0.00036,
+      "z": 1.84,
+      "concept_top": [
+        "Showing [something] to the camera",
+        "Holding [something] next to [something]",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat04254",
+      "idx": 4254,
+      "dom_tau": "speed",
+      "alignment": 0.00083,
+      "z": 1.79,
+      "concept_top": [
+        "Folding [something]",
+        "Bending [something] until it breaks",
+        "Twisting [something]"
+      ]
+    },
+    {
+      "feature": "feat03968",
+      "idx": 3968,
+      "dom_tau": "vel_x",
+      "alignment": 0.00042,
+      "z": 1.76,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Turning the camera right while filming [something]",
+        "Spinning [something] that quickly stops spinning"
+      ]
+    },
+    {
+      "feature": "feat00294",
+      "idx": 294,
+      "dom_tau": "vel_x",
+      "alignment": 0.00047,
+      "z": 1.74,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Moving away from [something] with your camera",
+        "Showing [something] behind [something]"
+      ]
+    },
+    {
+      "feature": "feat02125",
+      "idx": 2125,
+      "dom_tau": "vel_y",
+      "alignment": 0.00038,
+      "z": 1.62,
+      "concept_top": [
+        "Pushing [something] so that it falls off the table",
+        "Showing that [something] is empty",
+        "Moving [something] and [something] away from each other"
+      ]
+    },
+    {
+      "feature": "feat03883",
+      "idx": 3883,
+      "dom_tau": "vel_x",
+      "alignment": 0.00042,
+      "z": 1.56,
+      "concept_top": [
+        "Closing [something]",
+        "Dropping [something] into [something]",
+        "Lifting [something] with [something] on it"
+      ]
+    },
+    {
+      "feature": "feat04562",
+      "idx": 4562,
+      "dom_tau": "speed",
+      "alignment": 0.00047,
+      "z": 1.5,
+      "concept_top": [
+        "Dropping [something] next to [something]",
+        "Moving away from [something] with your camera",
+        "Uncovering [something]"
+      ]
+    },
+    {
+      "feature": "feat05987",
+      "idx": 5987,
+      "dom_tau": "vel_x",
+      "alignment": 0.00041,
+      "z": 1.46,
+      "concept_top": [
+        "Letting [something] roll down a slanted surface",
+        "Putting [something] next to [something]",
+        "Pushing [something] so that it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat01576",
+      "idx": 1576,
+      "dom_tau": "vel_x",
+      "alignment": 0.00037,
+      "z": 1.32,
+      "concept_top": [
+        "Plugging [something] into [something]",
+        "Moving [something] up",
+        "Closing [something]"
+      ]
+    },
+    {
+      "feature": "feat05321",
+      "idx": 5321,
+      "dom_tau": "speed",
+      "alignment": 0.00018,
+      "z": 1.3,
+      "concept_top": [
+        "Letting [something] roll along a flat surface",
+        "Showing [something] to the camera",
+        "Holding [something] behind [something]"
+      ]
+    },
+    {
+      "feature": "feat05303",
+      "idx": 5303,
+      "dom_tau": "speed",
+      "alignment": 0.0002,
+      "z": 1.14,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Opening [something]",
+        "Moving [something] down"
+      ]
+    },
+    {
+      "feature": "feat02736",
+      "idx": 2736,
+      "dom_tau": "vel_y",
+      "alignment": 0.00022,
+      "z": 1.12,
+      "concept_top": [
+        "Pouring [something] into [something]",
+        "Closing [something]",
+        "Holding [something] in front of [something]"
+      ]
+    },
+    {
+      "feature": "feat01262",
+      "idx": 1262,
+      "dom_tau": "vel_x",
+      "alignment": 0.00028,
+      "z": 0.97,
+      "concept_top": [
+        "Closing [something]",
+        "Opening [something]",
+        "[Something] falling like a rock"
+      ]
+    },
+    {
+      "feature": "feat03280",
+      "idx": 3280,
+      "dom_tau": "accel_mag",
+      "alignment": 0.00015,
+      "z": 0.86,
+      "concept_top": [
+        "Folding [something]",
+        "Holding [something] over [something]",
+        "Moving [something] up"
+      ]
+    },
+    {
+      "feature": "feat05622",
+      "idx": 5622,
+      "dom_tau": "speed",
+      "alignment": 0.00026,
+      "z": 0.85,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Pushing [something] so that it slightly moves",
+        "Putting [something] on a surface"
+      ]
+    },
+    {
+      "feature": "feat05179",
+      "idx": 5179,
+      "dom_tau": "vel_x",
+      "alignment": 0.00011,
+      "z": 0.68,
+      "concept_top": [
+        "Plugging [something] into [something]",
+        "Moving [something] up",
+        "Letting [something] roll along a flat surface"
+      ]
+    },
+    {
+      "feature": "feat03685",
+      "idx": 3685,
+      "dom_tau": "speed",
+      "alignment": 0.0001,
+      "z": 0.52,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Holding [something] next to [something]",
+        "Moving [something] up"
+      ]
+    },
+    {
+      "feature": "feat04196",
+      "idx": 4196,
+      "dom_tau": "vel_y",
+      "alignment": 0.0001,
+      "z": 0.43,
+      "concept_top": [
+        "Holding [something] next to [something]",
+        "Moving away from [something] with your camera",
+        "Turning the camera downwards while filming [something]"
+      ]
+    },
+    {
+      "feature": "feat00326",
+      "idx": 326,
+      "dom_tau": "accel_mag",
+      "alignment": 5e-05,
+      "z": 0.32,
+      "concept_top": [
+        "Pushing [something] so that it falls off the table",
+        "Letting [something] roll down a slanted surface",
+        "Putting [something] on a flat surface without letting it roll"
+      ]
+    },
+    {
+      "feature": "feat02825",
+      "idx": 2825,
+      "dom_tau": "direction",
+      "alignment": 3e-05,
+      "z": 0.16,
+      "concept_top": [
+        "Holding [something] next to [something]",
+        "Showing [something] next to [something]",
+        "Pushing [something] so that it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat00939",
+      "idx": 939,
+      "dom_tau": "vel_x",
+      "alignment": 1e-05,
+      "z": 0.07,
+      "concept_top": [
+        "Opening [something]",
+        "Putting [something similar to other things that are already on the table]",
+        "Putting [something] on a flat surface without letting it roll"
+      ]
+    },
+    {
+      "feature": "feat03519",
+      "idx": 3519,
+      "dom_tau": "speed",
+      "alignment": 4e-05,
+      "z": 0.01,
+      "concept_top": [
+        "Closing [something]",
+        "Holding [something] over [something]",
+        "Pretending to be tearing [something that is not tearable]"
+      ]
+    },
+    {
+      "feature": "feat02191",
+      "idx": 2191,
+      "dom_tau": "speed",
+      "alignment": -3e-05,
+      "z": -0.08,
+      "concept_top": [
+        "Picking [something] up",
+        "Showing that [something] is empty",
+        "Tearing [something] into two pieces"
+      ]
+    },
+    {
+      "feature": "feat01345",
+      "idx": 1345,
+      "dom_tau": "vel_x",
+      "alignment": -0.00011,
+      "z": -0.37,
+      "concept_top": [
+        "Folding [something]",
+        "Wiping [something] off of [something]",
+        "Holding [something] in front of [something]"
+      ]
+    },
+    {
+      "feature": "feat05758",
+      "idx": 5758,
+      "dom_tau": "speed",
+      "alignment": -5e-05,
+      "z": -0.39,
+      "concept_top": [
+        "Letting [something] roll down a slanted surface",
+        "Moving [something] and [something] away from each other",
+        "Putting [something] on a flat surface without letting it roll"
+      ]
+    },
+    {
+      "feature": "feat01903",
+      "idx": 1903,
+      "dom_tau": "speed",
+      "alignment": -7e-05,
+      "z": -0.72,
+      "concept_top": [
+        "Removing [something], revealing [something] behind",
+        "Showing that [something] is empty",
+        "Unfolding [something]"
+      ]
+    },
+    {
+      "feature": "feat03819",
+      "idx": 3819,
+      "dom_tau": "speed",
+      "alignment": -0.00015,
+      "z": -0.87,
+      "concept_top": [
+        "Pouring [something] into [something] until it overflows",
+        "Pushing [something] so that it falls off the table",
+        "Holding [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat03636",
+      "idx": 3636,
+      "dom_tau": "speed",
+      "alignment": -0.00029,
+      "z": -0.95,
+      "concept_top": [
+        "Plugging [something] into [something]",
+        "Plugging [something] into [something] but pulling it right out as you remove your hand",
+        "Pushing [something] so that it falls off the table"
+      ]
+    },
+    {
+      "feature": "feat03908",
+      "idx": 3908,
+      "dom_tau": "accel_mag",
+      "alignment": -0.00025,
+      "z": -1.12,
+      "concept_top": [
+        "Tearing [something] just a little bit",
+        "Plugging [something] into [something]",
+        "Spinning [something] that quickly stops spinning"
+      ]
+    },
+    {
+      "feature": "feat04716",
+      "idx": 4716,
+      "dom_tau": "vel_x",
+      "alignment": -0.0003,
+      "z": -1.23,
+      "concept_top": [
+        "Stuffing [something] into [something]",
+        "Bending [something] until it breaks",
+        "Hitting [something] with [something]"
+      ]
+    },
+    {
+      "feature": "feat03974",
+      "idx": 3974,
+      "dom_tau": "speed",
+      "alignment": -0.00022,
+      "z": -1.42,
+      "concept_top": [
+        "Tearing [something] into two pieces",
+        "Folding [something]",
+        "Showing that [something] is empty"
+      ]
+    },
+    {
+      "feature": "feat03927",
+      "idx": 3927,
+      "dom_tau": "speed",
+      "alignment": -0.00045,
+      "z": -1.8,
+      "concept_top": [
+        "Tearing [something] into two pieces",
+        "Lifting [something] with [something] on it",
+        "Opening [something]"
+      ]
+    },
+    {
+      "feature": "feat04796",
+      "idx": 4796,
+      "dom_tau": "speed",
+      "alignment": -0.00027,
+      "z": -1.89,
+      "concept_top": [
+        "Plugging [something] into [something]",
+        "Plugging [something] into [something] but pulling it right out as you remove your hand",
+        "Wiping [something] off of [something]"
+      ]
+    },
+    {
+      "feature": "feat04624",
+      "idx": 4624,
+      "dom_tau": "accel_mag",
+      "alignment": -0.00032,
+      "z": -2.28,
+      "concept_top": [
+        "Closing [something]",
+        "Pouring [something] into [something]",
+        "Poking [something] so it slightly moves"
+      ]
+    },
+    {
+      "feature": "feat05087",
+      "idx": 5087,
+      "dom_tau": "accel_mag",
+      "alignment": -0.00044,
+      "z": -2.31,
+      "concept_top": [
+        "Wiping [something] off of [something]",
+        "Plugging [something] into [something]",
+        "Putting [something] upright on the table"
+      ]
+    },
+    {
+      "feature": "feat03809",
+      "idx": 3809,
+      "dom_tau": "accel_mag",
+      "alignment": -0.00057,
+      "z": -3.07,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Dropping [something] next to [something]",
+        "Moving [something] up"
+      ]
+    },
+    {
+      "feature": "feat05955",
+      "idx": 5955,
+      "dom_tau": "vel_x",
+      "alignment": -0.00054,
+      "z": -3.12,
+      "concept_top": [
+        "Showing [something] behind [something]",
+        "Lifting [something] with [something] on it",
+        "Showing [something] next to [something]"
+      ]
+    },
+    {
+      "feature": "feat04974",
+      "idx": 4974,
+      "dom_tau": "accel_mag",
+      "alignment": -0.00039,
+      "z": -3.16,
+      "concept_top": [
+        "Letting [something] roll down a slanted surface",
+        "Holding [something] in front of [something]",
+        "Moving [something] up"
+      ]
+    },
+    {
+      "feature": "feat01365",
+      "idx": 1365,
+      "dom_tau": "vel_y",
+      "alignment": -0.0008,
+      "z": -3.86,
+      "concept_top": [
+        "Lifting [something] with [something] on it",
+        "Picking [something] up",
+        "Pushing [something] so that it falls off the table"
+      ]
+    }
+  ],
+  "random_null_z": [
+    -0.13395563102595176,
+    -1.1127580079801607,
+    0.9602666679098839,
+    6.047857129540362,
+    -0.24196856893590263,
+    -1.9173977911075255,
+    -2.1074970189628526,
+    -0.6650139127514159,
+    6.580878410291903,
+    -2.150565176878824,
+    2.259100314870467,
+    4.754374697603075,
+    -0.2064720023593345,
+    -0.14537774906643608,
+    7.983063280291404,
+    0.43980683556449374,
+    3.408160351188293,
+    8.680346147088878,
+    -3.3328867931900046,
+    -0.7781990009087255,
+    -2.5273253942773035,
+    1.8746484814821909,
+    -1.2493815760543774,
+    -0.30073349727252363,
+    -1.2084574350523953,
+    2.5490280088136887,
+    -1.6031483540900393,
+    -2.239648367518732,
+    -0.057613054541896774,
+    -0.13288376029056792
+  ]
+}

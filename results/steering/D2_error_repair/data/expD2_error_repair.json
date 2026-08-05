@@ -1,0 +1,38 @@
+{
+  "family_classes": [
+    "Turning the camera right while filming [something]",
+    "Turning the camera upwards while filming [something]",
+    "Lifting up one end of [something] without letting it drop down",
+    "Tilting [something] with [something] on it until it falls off",
+    "Turning the camera left while filming [something]",
+    "Lifting a surface with [something] on it but not enough for it to slide down",
+    "Poking [something] so lightly that it doesn't or almost doesn't move",
+    "[Something] colliding with [something] and both are being deflected",
+    "Pushing [something] so that it slightly moves",
+    "Spinning [something] so it continues spinning",
+    "Turning the camera downwards while filming [something]"
+  ],
+  "n_wrong": 59,
+  "n_right": 200,
+  "conditions": {
+    "NFP-85@a1.5": 0.102,
+    "NFP-85@a2.0": 0.136,
+    "NFP-85@a3.0": 0.169,
+    "flippers-12@a1.5": 0.017,
+    "flippers-12@a2.0": 0.034,
+    "flippers-12@a3.0": 0.051,
+    "random-85@a1.5": 0.034,
+    "random-85@a2.0": 0.034,
+    "random-85@a3.0": 0.051,
+    "static-85@a1.5": 0.068,
+    "static-85@a2.0": 0.068,
+    "static-85@a3.0": 0.085
+  },
+  "best": {
+    "cond": "NFP-85@a3.0",
+    "repair": 0.169,
+    "family_keep": 0.99,
+    "other_acc_base": 0.645,
+    "other_acc_amp": 0.65
+  }
+}

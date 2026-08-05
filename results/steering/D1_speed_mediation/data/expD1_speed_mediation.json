@@ -1,0 +1,40 @@
+{
+  "n": 300,
+  "TE_mean": 0.0232,
+  "TE_se": 0.0138,
+  "sets": {
+    "NFP-85": {
+      "NIE_mean": -0.0011,
+      "NIE_se": 0.0009,
+      "frac_mediated": -0.045
+    },
+    "flippers-12": {
+      "NIE_mean": -0.0005,
+      "NIE_se": 0.0004,
+      "frac_mediated": -0.023
+    },
+    "random-85": {
+      "NIE_mean": -0.0003,
+      "NIE_se": 0.0008,
+      "frac_mediated": -0.013
+    },
+    "static-85": {
+      "NIE_mean": 0.0012,
+      "NIE_se": 0.0008,
+      "frac_mediated": 0.05
+    },
+    "ALL-6144": {
+      "NIE_mean": 0.0159,
+      "NIE_se": 0.0131,
+      "frac_mediated": 0.688
+    }
+  },
+  "act_change": {
+    "speed": 0.0024,
+    "vel_x": -0.0053,
+    "vel_y": 0.0005,
+    "accel_mag": 0.0173,
+    "direction": -0.0032,
+    "static_pool": -0.0012
+  }
+}

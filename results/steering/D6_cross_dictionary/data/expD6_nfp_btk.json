@@ -1,0 +1,21 @@
+{
+  "dict": "local_runs/sae_btk/train_acts_batch_top_k_32_x8/trainer_0/ae.pt",
+  "n_flagged": 45,
+  "pct": 0.732,
+  "per_tau": {
+    "speed": 7,
+    "vel_x": 18,
+    "vel_y": 11,
+    "accel_mag": 6,
+    "direction": 3
+  },
+  "new_match_main": {
+    "median": 0.306,
+    "ge05": 5,
+    "ge07": 0
+  },
+  "main_match_new": {
+    "ge05": 5,
+    "ge07": 0
+  }
+}

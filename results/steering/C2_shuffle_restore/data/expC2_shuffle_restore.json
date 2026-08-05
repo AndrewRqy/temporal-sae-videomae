@@ -1,0 +1,196 @@
+{
+  "pairs": [
+    {
+      "key": "push_lr",
+      "sides": {
+        "pos": {
+          "clean": 4.386,
+          "shuffled": 2.973,
+          "NFP temporal x85": 2.964,
+          "flippers x12": 2.972,
+          "random x85": 2.985,
+          "static x85": 2.942,
+          "ALL 6144 (ceiling)": 4.841
+        },
+        "neg": {
+          "clean": 4.499,
+          "shuffled": 2.431,
+          "NFP temporal x85": 2.412,
+          "flippers x12": 2.43,
+          "random x85": 2.538,
+          "static x85": 2.448,
+          "ALL 6144 (ceiling)": 4.663
+        }
+      }
+    },
+    {
+      "key": "pull_lr",
+      "sides": {
+        "pos": {
+          "clean": 5.652,
+          "shuffled": 3.072,
+          "NFP temporal x85": 3.109,
+          "flippers x12": 3.072,
+          "random x85": 3.075,
+          "static x85": 3.065,
+          "ALL 6144 (ceiling)": 5.658
+        },
+        "neg": {
+          "clean": 4.49,
+          "shuffled": 3.209,
+          "NFP temporal x85": 3.205,
+          "flippers x12": 3.209,
+          "random x85": 3.209,
+          "static x85": 3.212,
+          "ALL 6144 (ceiling)": 4.992
+        }
+      }
+    },
+    {
+      "key": "cam_lr",
+      "sides": {
+        "pos": {
+          "clean": 5.222,
+          "shuffled": 3.482,
+          "NFP temporal x85": 5.092,
+          "flippers x12": 5.04,
+          "random x85": 3.48,
+          "static x85": 3.48,
+          "ALL 6144 (ceiling)": 5.257
+        },
+        "neg": {
+          "clean": 5.293,
+          "shuffled": 3.272,
+          "NFP temporal x85": 4.031,
+          "flippers x12": 4.007,
+          "random x85": 3.274,
+          "static x85": 3.343,
+          "ALL 6144 (ceiling)": 5.587
+        }
+      }
+    },
+    {
+      "key": "move_ud",
+      "sides": {
+        "pos": {
+          "clean": 4.512,
+          "shuffled": 1.476,
+          "NFP temporal x85": 1.49,
+          "flippers x12": 1.476,
+          "random x85": 1.479,
+          "static x85": 1.477,
+          "ALL 6144 (ceiling)": 4.134
+        },
+        "neg": {
+          "clean": 3.435,
+          "shuffled": 1.159,
+          "NFP temporal x85": 1.143,
+          "flippers x12": 1.16,
+          "random x85": 1.158,
+          "static x85": 1.161,
+          "ALL 6144 (ceiling)": 3.076
+        }
+      }
+    },
+    {
+      "key": "cam_ud",
+      "sides": {
+        "pos": {
+          "clean": 5.368,
+          "shuffled": 3.774,
+          "NFP temporal x85": 4.543,
+          "flippers x12": 4.254,
+          "random x85": 3.79,
+          "static x85": 3.752,
+          "ALL 6144 (ceiling)": 5.599
+        },
+        "neg": {
+          "clean": 5.044,
+          "shuffled": 2.12,
+          "NFP temporal x85": 2.994,
+          "flippers x12": 2.982,
+          "random x85": 2.134,
+          "static x85": 2.126,
+          "ALL 6144 (ceiling)": 4.709
+        }
+      }
+    },
+    {
+      "key": "fall_speed",
+      "sides": {
+        "pos": {
+          "clean": 2.397,
+          "shuffled": 1.441,
+          "NFP temporal x85": 1.429,
+          "flippers x12": 1.44,
+          "random x85": 2.274,
+          "static x85": 1.546,
+          "ALL 6144 (ceiling)": 2.731
+        },
+        "neg": {
+          "clean": 3.659,
+          "shuffled": 3.173,
+          "NFP temporal x85": 3.182,
+          "flippers x12": 3.199,
+          "random x85": 3.167,
+          "static x85": 3.153,
+          "ALL 6144 (ceiling)": 3.455
+        }
+      }
+    },
+    {
+      "key": "spin_stop",
+      "sides": {
+        "pos": {
+          "clean": 1.449,
+          "shuffled": 1.015,
+          "NFP temporal x85": 1.324,
+          "flippers x12": 1.272,
+          "random x85": 1.032,
+          "static x85": 1.237,
+          "ALL 6144 (ceiling)": 1.256
+        },
+        "neg": {
+          "clean": 2.72,
+          "shuffled": 0.649,
+          "NFP temporal x85": 0.637,
+          "flippers x12": 0.644,
+          "random x85": 0.632,
+          "static x85": 0.685,
+          "ALL 6144 (ceiling)": 2.231
+        }
+      }
+    }
+  ],
+  "sets": [
+    "NFP temporal x85",
+    "flippers x12",
+    "random x85",
+    "static x85",
+    "ALL 6144 (ceiling)"
+  ],
+  "summary": {
+    "clean": 4.152,
+    "shuffled": 2.375,
+    "NFP temporal x85": {
+      "LO": 2.682,
+      "recovery": 0.173
+    },
+    "flippers x12": {
+      "LO": 2.654,
+      "recovery": 0.157
+    },
+    "random x85": {
+      "LO": 2.445,
+      "recovery": 0.039
+    },
+    "static x85": {
+      "LO": 2.402,
+      "recovery": 0.015
+    },
+    "ALL 6144 (ceiling)": {
+      "LO": 4.156,
+      "recovery": 1.003
+    }
+  }
+}

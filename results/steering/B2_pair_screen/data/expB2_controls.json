@@ -1,0 +1,1932 @@
+{
+  "s_abs": 150.0,
+  "static_feats": [
+    3111,
+    4718,
+    610,
+    418,
+    3832,
+    3553,
+    5578,
+    2648,
+    1807,
+    141,
+    2860,
+    2650,
+    3207,
+    851,
+    2217,
+    2256,
+    5281,
+    5072,
+    3198,
+    2425,
+    4844,
+    3938,
+    5157,
+    5465,
+    3670,
+    4326,
+    1025,
+    4150,
+    3398,
+    4500
+  ],
+  "static_rows": [
+    {
+      "feature": "feat03111",
+      "idx": 3111,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.047,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.336,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.186,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.243,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.015,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.466,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": -0.547,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.178,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.058,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.056,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.213,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat04718",
+      "idx": 4718,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.004,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.165,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.182,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.373,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.241,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.201,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": -2.471,
+          "best_flip": 0.25
+        },
+        "cam_appr": {
+          "delta": 0.248,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.01,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.063,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.396,
+      "max_flip": 0.25,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat00610",
+      "idx": 610,
+      "pairs": {
+        "push_lr": {
+          "delta": 1.385,
+          "best_flip": 0.125
+        },
+        "pull_lr": {
+          "delta": 1.207,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.305,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.242,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.405,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.786,
+          "best_flip": 0.125
+        },
+        "obj_obj": {
+          "delta": -0.959,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.292,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.622,
+          "best_flip": 0.125
+        },
+        "spin_stop": {
+          "delta": -0.458,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.666,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat00418",
+      "idx": 418,
+      "pairs": {
+        "push_lr": {
+          "delta": 2.924,
+          "best_flip": 0.333
+        },
+        "pull_lr": {
+          "delta": 0.664,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.66,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.522,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": 0.028,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.311,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": 0.261,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.231,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.09,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.144,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.583,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03832",
+      "idx": 3832,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.289,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.686,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.067,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.153,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.281,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.335,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": -0.18,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": 0.42,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.35,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.311,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.307,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03553",
+      "idx": 3553,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.162,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.154,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.387,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.124,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.063,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.403,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": 1.86,
+          "best_flip": 0.167
+        },
+        "cam_appr": {
+          "delta": 0.022,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.002,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.082,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.326,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat05578",
+      "idx": 5578,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.126,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.326,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.349,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.089,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.076,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.05,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.592,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": -0.044,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.172,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.471,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.229,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02648",
+      "idx": 2648,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.139,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.091,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.362,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.57,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": 0.06,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.178,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": -0.08,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.209,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.042,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.153,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.188,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat01807",
+      "idx": 1807,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.008,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.117,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.219,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.188,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.387,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.185,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": -0.159,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.16,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.06,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.245,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.173,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat00141",
+      "idx": 141,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.664,
+          "best_flip": 0.042
+        },
+        "pull_lr": {
+          "delta": 0.55,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -1.049,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.296,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.345,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.352,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": 1.093,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": -0.151,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.318,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.456,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.527,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02860",
+      "idx": 2860,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.213,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.444,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.032,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.119,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.01,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.031,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.407,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.05,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.386,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.738,
+          "best_flip": 0.375
+        }
+      },
+      "mean_abs_delta": 0.243,
+      "max_flip": 0.375,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02650",
+      "idx": 2650,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.222,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.058,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.499,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.61,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.486,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.574,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": -0.207,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.215,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -1.028,
+          "best_flip": 0.167
+        },
+        "spin_stop": {
+          "delta": -0.12,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.402,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03207",
+      "idx": 3207,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.193,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.277,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.128,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.361,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.051,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.27,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": -0.205,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.338,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.166,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.262,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.225,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat00851",
+      "idx": 851,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.281,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.803,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.832,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.311,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.171,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.256,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": 0.197,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.018,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.677,
+          "best_flip": 0.125
+        },
+        "spin_stop": {
+          "delta": -0.042,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.359,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02217",
+      "idx": 2217,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.3,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.092,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.221,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.023,
+          "best_flip": 0.0
+        },
+        "cam_ud": {
+          "delta": -0.857,
+          "best_flip": 0.083
+        },
+        "obj_cam": {
+          "delta": -0.17,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.723,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": -0.128,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.365,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.371,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.325,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02256",
+      "idx": 2256,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.3,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.319,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.04,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.197,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.069,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.114,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.14,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.308,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.141,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.114,
+          "best_flip": 0.208
+        }
+      },
+      "mean_abs_delta": 0.174,
+      "max_flip": 0.208,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat05281",
+      "idx": 5281,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.01,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.562,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.035,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.485,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": 0.122,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.377,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": 0.127,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.104,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.279,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -1.171,
+          "best_flip": 0.458
+        }
+      },
+      "mean_abs_delta": 0.327,
+      "max_flip": 0.458,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat05072",
+      "idx": 5072,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.195,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.225,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.147,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.068,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -1.559,
+          "best_flip": 0.125
+        },
+        "obj_cam": {
+          "delta": 0.514,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": -0.203,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.09,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.325,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.335,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.366,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03198",
+      "idx": 3198,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.222,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.097,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.051,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.686,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": 1.841,
+          "best_flip": 0.125
+        },
+        "obj_cam": {
+          "delta": 0.35,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": 0.525,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.08,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.214,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.134,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.42,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat02425",
+      "idx": 2425,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.152,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.486,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.333,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.4,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": 0.155,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.206,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": -0.146,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.114,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.466,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.479,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.294,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat04844",
+      "idx": 4844,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.207,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.073,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.359,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.16,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.174,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.395,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": 0.326,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.098,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.215,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.329,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.234,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03938",
+      "idx": 3938,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.33,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.829,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.271,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.463,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.288,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.244,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.456,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.205,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.137,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.142,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.337,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat05157",
+      "idx": 5157,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.266,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.202,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.162,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.551,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.046,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.037,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": -0.279,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.014,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.123,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.582,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.226,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat05465",
+      "idx": 5465,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.135,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.128,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.001,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 1.186,
+          "best_flip": 0.208
+        },
+        "cam_ud": {
+          "delta": -0.097,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": 0.147,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.144,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": 0.473,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.109,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.732,
+          "best_flip": 0.333
+        }
+      },
+      "mean_abs_delta": 0.315,
+      "max_flip": 0.333,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03670",
+      "idx": 3670,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.38,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.456,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.42,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.357,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.504,
+          "best_flip": 0.083
+        },
+        "obj_cam": {
+          "delta": -1.485,
+          "best_flip": 0.125
+        },
+        "obj_obj": {
+          "delta": -0.161,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.268,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.484,
+          "best_flip": 0.083
+        },
+        "spin_stop": {
+          "delta": -0.281,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.48,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat04326",
+      "idx": 4326,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.629,
+          "best_flip": 0.042
+        },
+        "pull_lr": {
+          "delta": 0.496,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": -0.304,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.344,
+          "best_flip": 0.125
+        },
+        "cam_ud": {
+          "delta": -0.745,
+          "best_flip": 0.083
+        },
+        "obj_cam": {
+          "delta": 0.444,
+          "best_flip": 0.083
+        },
+        "obj_obj": {
+          "delta": 0.28,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.381,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.393,
+          "best_flip": 0.083
+        },
+        "spin_stop": {
+          "delta": 0.28,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.43,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat01025",
+      "idx": 1025,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.181,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.083,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.154,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.167,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.41,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.355,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": -0.703,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": -0.223,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.233,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.136,
+          "best_flip": 0.25
+        }
+      },
+      "mean_abs_delta": 0.265,
+      "max_flip": 0.25,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat04150",
+      "idx": 4150,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.33,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": -0.311,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.112,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.183,
+          "best_flip": 0.042
+        },
+        "cam_ud": {
+          "delta": 0.498,
+          "best_flip": 0.083
+        },
+        "obj_cam": {
+          "delta": -0.094,
+          "best_flip": 0.0
+        },
+        "obj_obj": {
+          "delta": 0.34,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": -0.029,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.147,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": 0.36,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.24,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat03398",
+      "idx": 3398,
+      "pairs": {
+        "push_lr": {
+          "delta": -0.776,
+          "best_flip": 0.042
+        },
+        "pull_lr": {
+          "delta": -0.716,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.187,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": 0.282,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": -0.515,
+          "best_flip": 0.083
+        },
+        "obj_cam": {
+          "delta": -0.267,
+          "best_flip": 0.042
+        },
+        "obj_obj": {
+          "delta": -0.516,
+          "best_flip": 0.083
+        },
+        "cam_appr": {
+          "delta": 0.128,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": 0.879,
+          "best_flip": 0.167
+        },
+        "spin_stop": {
+          "delta": 0.353,
+          "best_flip": 0.292
+        }
+      },
+      "mean_abs_delta": 0.462,
+      "max_flip": 0.292,
+      "n_pairs_flip50": 0
+    },
+    {
+      "feature": "feat04500",
+      "idx": 4500,
+      "pairs": {
+        "push_lr": {
+          "delta": 0.165,
+          "best_flip": 0.0
+        },
+        "pull_lr": {
+          "delta": 0.731,
+          "best_flip": 0.042
+        },
+        "cam_lr": {
+          "delta": 0.161,
+          "best_flip": 0.0
+        },
+        "move_ud": {
+          "delta": -0.195,
+          "best_flip": 0.083
+        },
+        "cam_ud": {
+          "delta": 0.174,
+          "best_flip": 0.042
+        },
+        "obj_cam": {
+          "delta": -0.951,
+          "best_flip": 0.125
+        },
+        "obj_obj": {
+          "delta": 0.113,
+          "best_flip": 0.042
+        },
+        "cam_appr": {
+          "delta": -0.257,
+          "best_flip": 0.0
+        },
+        "fall_speed": {
+          "delta": -0.263,
+          "best_flip": 0.042
+        },
+        "spin_stop": {
+          "delta": -0.178,
+          "best_flip": 0.167
+        }
+      },
+      "mean_abs_delta": 0.319,
+      "max_flip": 0.167,
+      "n_pairs_flip50": 0
+    }
+  ],
+  "population": {
+    "temporal_mean_delta": 0.4469176470588234,
+    "static_mean_delta": 0.33503333333333335,
+    "mw_p_delta": 0.0039158641772499584,
+    "temporal_mean_maxflip": 0.32360000000000005,
+    "static_mean_maxflip": 0.27229999999999993,
+    "mw_p_maxflip": 0.1500875228748048,
+    "temporal_f50": 12,
+    "static_f50": 0
+  },
+  "ablation": [
+    {
+      "set": "none (baseline)",
+      "n": 0,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.442,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.097,
+          "top1": 0.875
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.258,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.973,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.361,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.013,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.993,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.423,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.21,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.511,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.528,
+      "mean_top1": 0.825
+    },
+    {
+      "set": "all 85 temporal",
+      "n": 85,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.479,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.107,
+          "top1": 0.875
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.28,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.994,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.89,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.044,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.015,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.404,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.225,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.467,
+          "top1": 0.625
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.391,
+      "mean_top1": 0.829
+    },
+    {
+      "set": "heroes (12)",
+      "n": 12,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.443,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.097,
+          "top1": 0.875
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.288,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.974,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.977,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.015,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.993,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.429,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.203,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.408,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.383,
+      "mean_top1": 0.825
+    },
+    {
+      "set": "random static x85 (seed0)",
+      "n": 85,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.438,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.018,
+          "top1": 0.833
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.261,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.975,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.367,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.014,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.987,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.428,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.179,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.505,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.517,
+      "mean_top1": 0.821
+    },
+    {
+      "set": "random static x12 (seed0)",
+      "n": 12,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.445,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.089,
+          "top1": 0.875
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.26,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.975,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.359,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.015,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.993,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.426,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.18,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.512,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.525,
+      "mean_top1": 0.825
+    },
+    {
+      "set": "random static x85 (seed1)",
+      "n": 85,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.443,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.087,
+          "top1": 0.917
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.244,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.99,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.367,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.257,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.99,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.434,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.216,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.518,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.455,
+      "mean_top1": 0.829
+    },
+    {
+      "set": "random static x12 (seed1)",
+      "n": 12,
+      "per_pair": {
+        "push_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 4.442,
+          "top1": 0.833
+        },
+        "pull_lr": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.097,
+          "top1": 0.875
+        },
+        "cam_lr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.257,
+          "top1": 0.958
+        },
+        "move_ud": {
+          "pair_acc": 1.0,
+          "abs_lo": 3.973,
+          "top1": 0.75
+        },
+        "cam_ud": {
+          "pair_acc": 0.958,
+          "abs_lo": 5.36,
+          "top1": 0.833
+        },
+        "obj_cam": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.013,
+          "top1": 0.792
+        },
+        "obj_obj": {
+          "pair_acc": 0.958,
+          "abs_lo": 4.993,
+          "top1": 0.833
+        },
+        "cam_appr": {
+          "pair_acc": 1.0,
+          "abs_lo": 5.424,
+          "top1": 0.917
+        },
+        "fall_speed": {
+          "pair_acc": 0.958,
+          "abs_lo": 3.211,
+          "top1": 0.875
+        },
+        "spin_stop": {
+          "pair_acc": 0.833,
+          "abs_lo": 2.513,
+          "top1": 0.583
+        }
+      },
+      "mean_pair_acc": 0.967,
+      "mean_abs_lo": 4.528,
+      "mean_top1": 0.825
+    }
+  ]
+}

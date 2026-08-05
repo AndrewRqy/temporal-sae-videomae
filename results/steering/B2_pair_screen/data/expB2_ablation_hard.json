@@ -1,0 +1,97 @@
+{
+  "keep": 12,
+  "scan_per_class": 48,
+  "conditions": [
+    {
+      "set": "baseline",
+      "n": 0,
+      "pair_acc": 0.912,
+      "mean_lo": 2.465
+    },
+    {
+      "set": "temporal x85",
+      "n": 85,
+      "pair_acc": 0.912,
+      "mean_lo": 2.361,
+      "d_lo": -0.104,
+      "c2w": 0,
+      "w2c": 0
+    },
+    {
+      "set": "heroes x12",
+      "n": 12,
+      "pair_acc": 0.908,
+      "mean_lo": 2.357,
+      "d_lo": -0.108,
+      "c2w": 1,
+      "w2c": 0
+    },
+    {
+      "set": "axis x30",
+      "n": 30,
+      "pair_acc": 0.908,
+      "mean_lo": 2.321,
+      "d_lo": -0.144,
+      "c2w": 1,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x85 (s0)",
+      "n": 85,
+      "pair_acc": 0.912,
+      "mean_lo": 2.464,
+      "d_lo": -0.001,
+      "c2w": 0,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x12 (s0)",
+      "n": 12,
+      "pair_acc": 0.912,
+      "mean_lo": 2.463,
+      "d_lo": -0.002,
+      "c2w": 0,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x30 (s0)",
+      "n": 30,
+      "pair_acc": 0.912,
+      "mean_lo": 2.467,
+      "d_lo": 0.002,
+      "c2w": 0,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x85 (s1)",
+      "n": 85,
+      "pair_acc": 0.908,
+      "mean_lo": 2.46,
+      "d_lo": -0.005,
+      "c2w": 1,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x12 (s1)",
+      "n": 12,
+      "pair_acc": 0.912,
+      "mean_lo": 2.467,
+      "d_lo": 0.002,
+      "c2w": 0,
+      "w2c": 0
+    },
+    {
+      "set": "rnd-static x30 (s1)",
+      "n": 30,
+      "pair_acc": 0.908,
+      "mean_lo": 2.466,
+      "d_lo": 0.001,
+      "c2w": 1,
+      "w2c": 0
+    }
+  ],
+  "wilcoxon_t85_vs_r85_s0": 0.2262079268693924,
+  "wilcoxon_t85_vs_r85_s1": 0.05086401477456093,
+  "wilcoxon_axis_vs_rnd_s0": 0.016255062073469162,
+  "wilcoxon_axis_vs_rnd_s1": 0.0070299613289535046
+}

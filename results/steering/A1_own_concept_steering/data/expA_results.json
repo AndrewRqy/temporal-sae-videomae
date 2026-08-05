@@ -1,0 +1,1216 @@
+{
+  "fast_classes": [
+    "Bending [something] until it breaks",
+    "Dropping [something] behind [something]",
+    "Dropping [something] in front of [something]",
+    "Dropping [something] into [something]",
+    "Dropping [something] next to [something]",
+    "Dropping [something] onto [something]",
+    "Hitting [something] with [something]",
+    "Moving [something] across a surface until it falls down",
+    "Poking [something] so that it falls over",
+    "Pushing [something] so that it almost falls off but doesn't",
+    "Pushing [something] so that it falls off the table",
+    "Putting [something] on the edge of [something] so it is not supported and falls down",
+    "Putting [something] onto [something else that cannot support it] so it falls down",
+    "Spinning [something] that quickly stops spinning",
+    "Tearing [something] into two pieces",
+    "Throwing [something]",
+    "Throwing [something] against [something]",
+    "Throwing [something] in the air and catching it",
+    "Throwing [something] in the air and letting it fall",
+    "Throwing [something] onto a surface",
+    "Tilting [something] with [something] on it until it falls off",
+    "Tipping [something] over",
+    "Tipping [something] with [something in it] over, so [something in it] falls out"
+  ],
+  "slow_classes": [
+    "Lifting [something] up completely without letting it drop down",
+    "Lifting up one end of [something] without letting it drop down",
+    "Poking [something] so it slightly moves",
+    "Poking [something] so lightly that it doesn't or almost doesn't move",
+    "Pretending or failing to wipe [something] off of [something]",
+    "Pretending or trying and failing to twist [something]",
+    "Pretending to be tearing [something that is not tearable]",
+    "Pretending to close [something] without actually closing it",
+    "Pretending to open [something] without actually opening it",
+    "Pretending to pick [something] up",
+    "Pretending to poke [something]",
+    "Pretending to pour [something] out of [something], but [something] is empty",
+    "Pretending to put [something] behind [something]",
+    "Pretending to put [something] into [something]",
+    "Pretending to put [something] next to [something]",
+    "Pretending to put [something] on a surface",
+    "Pretending to put [something] onto [something]",
+    "Pretending to put [something] underneath [something]",
+    "Pretending to scoop [something] up with [something]",
+    "Pretending to spread air onto [something]",
+    "Pretending to sprinkle air onto [something]",
+    "Pretending to squeeze [something]",
+    "Pretending to take [something] from [somewhere]",
+    "Pretending to take [something] out of [something]",
+    "Pretending to throw [something]",
+    "Pretending to turn [something] upside down",
+    "Pushing [something] so that it slightly moves",
+    "Putting [something] on a flat surface without letting it roll",
+    "Spinning [something] so it continues spinning",
+    "Tearing [something] just a little bit"
+  ],
+  "n_videos": 128,
+  "scale": {
+    "5087": 13.281118392944336,
+    "2818": 9.007640838623047
+  },
+  "conditions": [
+    {
+      "label": "feat5087_s1x",
+      "feature": 5087,
+      "s": 13.281,
+      "force_shift": -0.0003,
+      "top_up": [
+        [
+          "Putting [something] on a surface",
+          0.0008
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0008
+        ],
+        [
+          "Throwing [something]",
+          0.0007
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0006
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0005
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0031
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0017
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0008
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0007
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          -0.0006
+        ]
+      ]
+    },
+    {
+      "label": "feat5087_s3x",
+      "feature": 5087,
+      "s": 39.843,
+      "force_shift": -0.0011,
+      "top_up": [
+        [
+          "Pushing [something] from right to left",
+          0.0026
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0025
+        ],
+        [
+          "Throwing [something]",
+          0.002
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0018
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0016
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0091
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0046
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0026
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0021
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          -0.0018
+        ]
+      ]
+    },
+    {
+      "label": "feat5087_s10x",
+      "feature": 5087,
+      "s": 132.811,
+      "force_shift": -0.00417,
+      "top_up": [
+        [
+          "Pushing [something] from right to left",
+          0.0079
+        ],
+        [
+          "Putting [something] on a surface",
+          0.0066
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0053
+        ],
+        [
+          "Throwing [something]",
+          0.0048
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0041
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0218
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0101
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0073
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0063
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0045
+        ]
+      ]
+    },
+    {
+      "label": "feat5087_signflip0",
+      "feature": 5087,
+      "s": 0.0,
+      "force_shift": 7e-05,
+      "top_up": [
+        [
+          "Holding [something]",
+          0.0004
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0001
+        ],
+        [
+          "Holding [something] in front of [something]",
+          0.0001
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0001
+        ],
+        [
+          "Squeezing [something]",
+          0.0001
+        ]
+      ],
+      "top_down": [
+        [
+          "Pushing [something] from right to left",
+          -0.0001
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0001
+        ],
+        [
+          "Throwing [something]",
+          -0.0001
+        ],
+        [
+          "Pushing [something] from left to right",
+          -0.0001
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          -0.0001
+        ]
+      ]
+    },
+    {
+      "label": "feat2818_s1x",
+      "feature": 2818,
+      "s": 9.008,
+      "force_shift": 0.00572,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0035
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0019
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0013
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.001
+        ],
+        [
+          "Holding [something]",
+          0.0009
+        ]
+      ],
+      "top_down": [
+        [
+          "Moving [something] down",
+          -0.0015
+        ],
+        [
+          "Moving [something] up",
+          -0.0013
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0009
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0009
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0007
+        ]
+      ]
+    },
+    {
+      "label": "feat2818_s3x",
+      "feature": 2818,
+      "s": 27.023,
+      "force_shift": 0.01862,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0123
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0073
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.0045
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0033
+        ],
+        [
+          "Showing [something] behind [something]",
+          0.0032
+        ]
+      ],
+      "top_down": [
+        [
+          "Moving [something] down",
+          -0.0041
+        ],
+        [
+          "Moving [something] up",
+          -0.0039
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0029
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0029
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0021
+        ]
+      ]
+    },
+    {
+      "label": "feat2818_s10x",
+      "feature": 2818,
+      "s": 90.076,
+      "force_shift": 0.06336,
+      "top_up": [
+        [
+          "[Something] falling like a rock",
+          0.0515
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0339
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          0.017
+        ],
+        [
+          "Dropping [something] in front of [something]",
+          0.0144
+        ],
+        [
+          "Dropping [something] next to [something]",
+          0.0105
+        ]
+      ],
+      "top_down": [
+        [
+          "Moving [something] up",
+          -0.0098
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0095
+        ],
+        [
+          "Moving [something] down",
+          -0.0095
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.009
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0066
+        ]
+      ]
+    },
+    {
+      "label": "feat2818_signflip0",
+      "feature": 2818,
+      "s": 0.0,
+      "force_shift": -0.00039,
+      "top_up": [
+        [
+          "Moving [something] up",
+          0.0001
+        ],
+        [
+          "Moving [something] down",
+          0.0001
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0001
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0001
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          0.0001
+        ]
+      ],
+      "top_down": [
+        [
+          "Turning the camera downwards while filming [something]",
+          -0.0003
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0003
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          -0.0002
+        ],
+        [
+          "Showing [something] behind [something]",
+          -0.0001
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0001
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat5753",
+      "feature": 5753,
+      "s": 39.843,
+      "force_shift": 0.00147,
+      "top_up": [
+        [
+          "Holding [something] in front of [something]",
+          0.0551
+        ],
+        [
+          "Holding [something] next to [something]",
+          0.0244
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0077
+        ],
+        [
+          "Holding [something]",
+          0.0068
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0037
+        ]
+      ],
+      "top_down": [
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0037
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0036
+        ],
+        [
+          "Showing that [something] is empty",
+          -0.0032
+        ],
+        [
+          "Hitting [something] with [something]",
+          -0.0029
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0028
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat2985",
+      "feature": 2985,
+      "s": 39.843,
+      "force_shift": 0.00525,
+      "top_up": [
+        [
+          "Moving [something] down",
+          0.0307
+        ],
+        [
+          "Moving [something] up",
+          0.0061
+        ],
+        [
+          "Taking [one of many similar things on the table]",
+          0.0021
+        ],
+        [
+          "Throwing [something] onto a surface",
+          0.0015
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.0015
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.008
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0049
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0037
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0033
+        ],
+        [
+          "Showing [something] next to [something]",
+          -0.0027
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat1540",
+      "feature": 1540,
+      "s": 39.843,
+      "force_shift": 0.00966,
+      "top_up": [
+        [
+          "Holding [something]",
+          0.0445
+        ],
+        [
+          "Showing [something] to the camera",
+          0.0279
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          0.0074
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.005
+        ],
+        [
+          "Turning [something] upside down",
+          0.0033
+        ]
+      ],
+      "top_down": [
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0065
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          -0.0046
+        ],
+        [
+          "Putting [something] on a surface",
+          -0.0043
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          -0.0042
+        ],
+        [
+          "Pretending to open [something] without actually opening it",
+          -0.0032
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat5586",
+      "feature": 5586,
+      "s": 39.843,
+      "force_shift": 0.00071,
+      "top_up": [
+        [
+          "Lifting a surface with [something] on it but not enough for it to slide down",
+          0.0065
+        ],
+        [
+          "Lifting up one end of [something] without letting it drop down",
+          0.005
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0038
+        ],
+        [
+          "Lifting a surface with [something] on it until it starts sliding down",
+          0.0031
+        ],
+        [
+          "Tilting [something] with [something] on it until it falls off",
+          0.0025
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.008
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0034
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0028
+        ],
+        [
+          "Squeezing [something]",
+          -0.0025
+        ],
+        [
+          "Touching (without moving) [part] of [something]",
+          -0.0022
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat1593",
+      "feature": 1593,
+      "s": 39.843,
+      "force_shift": 0.00532,
+      "top_up": [
+        [
+          "Holding [something]",
+          0.0031
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          0.0016
+        ],
+        [
+          "Spinning [something] so it continues spinning",
+          0.0016
+        ],
+        [
+          "Letting [something] roll along a flat surface",
+          0.0014
+        ],
+        [
+          "[Something] colliding with [something] and both come to a halt",
+          0.0013
+        ]
+      ],
+      "top_down": [
+        [
+          "Putting [something] on a surface",
+          -0.0027
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0027
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          -0.002
+        ],
+        [
+          "Pushing [something] from right to left",
+          -0.0018
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          -0.0014
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat878",
+      "feature": 878,
+      "s": 39.843,
+      "force_shift": -0.00704,
+      "top_up": [
+        [
+          "Touching (without moving) [part] of [something]",
+          0.0087
+        ],
+        [
+          "Pretending to put [something] onto [something]",
+          0.0057
+        ],
+        [
+          "Moving [part] of [something]",
+          0.0043
+        ],
+        [
+          "Holding [something] over [something]",
+          0.0041
+        ],
+        [
+          "Squeezing [something]",
+          0.0036
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0041
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0039
+        ],
+        [
+          "Pretending to open [something] without actually opening it",
+          -0.0034
+        ],
+        [
+          "Hitting [something] with [something]",
+          -0.0034
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0031
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat2066",
+      "feature": 2066,
+      "s": 39.843,
+      "force_shift": 0.01082,
+      "top_up": [
+        [
+          "Holding [something]",
+          0.0078
+        ],
+        [
+          "[Something] falling like a rock",
+          0.0027
+        ],
+        [
+          "Moving [something] and [something] away from each other",
+          0.0019
+        ],
+        [
+          "Squeezing [something]",
+          0.0015
+        ],
+        [
+          "Throwing [something] onto a surface",
+          0.0014
+        ]
+      ],
+      "top_down": [
+        [
+          "Showing [something] to the camera",
+          -0.0031
+        ],
+        [
+          "Pretending to open [something] without actually opening it",
+          -0.0019
+        ],
+        [
+          "[Something] being deflected from [something]",
+          -0.0018
+        ],
+        [
+          "Turning the camera right while filming [something]",
+          -0.0016
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0016
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat2378",
+      "feature": 2378,
+      "s": 39.843,
+      "force_shift": -0.00415,
+      "top_up": [
+        [
+          "Pushing [something] with [something]",
+          0.0027
+        ],
+        [
+          "Squeezing [something]",
+          0.0025
+        ],
+        [
+          "Pushing [something] from right to left",
+          0.0022
+        ],
+        [
+          "Tilting [something] with [something] on it slightly so it doesn't fall down",
+          0.0021
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.0021
+        ]
+      ],
+      "top_down": [
+        [
+          "[Something] falling like a rock",
+          -0.0029
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0025
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0022
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          -0.0021
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          -0.002
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat4437",
+      "feature": 4437,
+      "s": 39.843,
+      "force_shift": -0.00048,
+      "top_up": [
+        [
+          "Plugging [something] into [something]",
+          0.0028
+        ],
+        [
+          "Moving [something] away from the camera",
+          0.0025
+        ],
+        [
+          "Spinning [something] so it continues spinning",
+          0.0024
+        ],
+        [
+          "Pushing [something] so that it falls off the table",
+          0.002
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0018
+        ]
+      ],
+      "top_down": [
+        [
+          "Showing [something] to the camera",
+          -0.0029
+        ],
+        [
+          "Turning the camera upwards while filming [something]",
+          -0.0025
+        ],
+        [
+          "Moving [something] up",
+          -0.0024
+        ],
+        [
+          "Taking [one of many similar things on the table]",
+          -0.0019
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          -0.0014
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat2944",
+      "feature": 2944,
+      "s": 39.843,
+      "force_shift": 0.00799,
+      "top_up": [
+        [
+          "Holding [something] in front of [something]",
+          0.0391
+        ],
+        [
+          "Rolling [something] on a flat surface",
+          0.0013
+        ],
+        [
+          "Turning the camera left while filming [something]",
+          0.0012
+        ],
+        [
+          "Showing that [something] is empty",
+          0.0012
+        ],
+        [
+          "Approaching [something] with your camera",
+          0.0009
+        ]
+      ],
+      "top_down": [
+        [
+          "Showing [something] to the camera",
+          -0.0053
+        ],
+        [
+          "Pushing [something] so that it slightly moves",
+          -0.0044
+        ],
+        [
+          "Holding [something]",
+          -0.0031
+        ],
+        [
+          "Showing [something] on top of [something]",
+          -0.0026
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0025
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat1934",
+      "feature": 1934,
+      "s": 39.843,
+      "force_shift": 0.00899,
+      "top_up": [
+        [
+          "Showing [something] behind [something]",
+          0.0065
+        ],
+        [
+          "Throwing [something]",
+          0.0027
+        ],
+        [
+          "Showing that [something] is empty",
+          0.0025
+        ],
+        [
+          "Holding [something]",
+          0.002
+        ],
+        [
+          "Moving [something] down",
+          0.002
+        ]
+      ],
+      "top_down": [
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.002
+        ],
+        [
+          "Hitting [something] with [something]",
+          -0.0018
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          -0.0016
+        ],
+        [
+          "Spinning [something] that quickly stops spinning",
+          -0.0015
+        ],
+        [
+          "Holding [something] next to [something]",
+          -0.0014
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat1156",
+      "feature": 1156,
+      "s": 39.843,
+      "force_shift": -0.01038,
+      "top_up": [
+        [
+          "Showing [something] to the camera",
+          0.0043
+        ],
+        [
+          "Showing [something] next to [something]",
+          0.0037
+        ],
+        [
+          "Throwing [something] against [something]",
+          0.0021
+        ],
+        [
+          "Pretending to open [something] without actually opening it",
+          0.002
+        ],
+        [
+          "Pushing [something] from left to right",
+          0.0019
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0059
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          -0.0025
+        ],
+        [
+          "Dropping [something] onto [something]",
+          -0.002
+        ],
+        [
+          "Moving [something] down",
+          -0.002
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0019
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat4062",
+      "feature": 4062,
+      "s": 39.843,
+      "force_shift": -0.00466,
+      "top_up": [
+        [
+          "Turning the camera downwards while filming [something]",
+          0.0022
+        ],
+        [
+          "Poking [something] so lightly that it doesn't or almost doesn't move",
+          0.002
+        ],
+        [
+          "Approaching [something] with your camera",
+          0.0016
+        ],
+        [
+          "Spinning [something] that quickly stops spinning",
+          0.0016
+        ],
+        [
+          "Taking [something] out of [something]",
+          0.0015
+        ]
+      ],
+      "top_down": [
+        [
+          "Showing [something] to the camera",
+          -0.0029
+        ],
+        [
+          "[Something] falling like a rock",
+          -0.0025
+        ],
+        [
+          "Throwing [something]",
+          -0.002
+        ],
+        [
+          "Moving [something] up",
+          -0.0018
+        ],
+        [
+          "Holding [something] next to [something]",
+          -0.0016
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat3007",
+      "feature": 3007,
+      "s": 39.843,
+      "force_shift": 0.00652,
+      "top_up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0125
+        ],
+        [
+          "Tipping [something] over",
+          0.0122
+        ],
+        [
+          "Poking [something] so that it falls over",
+          0.0036
+        ],
+        [
+          "Spinning [something] that quickly stops spinning",
+          0.0026
+        ],
+        [
+          "Moving [something] up",
+          0.0022
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0036
+        ],
+        [
+          "Showing [something] to the camera",
+          -0.0033
+        ],
+        [
+          "Turning the camera downwards while filming [something]",
+          -0.0022
+        ],
+        [
+          "Pushing [something] with [something]",
+          -0.0019
+        ],
+        [
+          "Letting [something] roll down a slanted surface",
+          -0.0019
+        ]
+      ]
+    },
+    {
+      "label": "rand_feat3813",
+      "feature": 3813,
+      "s": 39.843,
+      "force_shift": -0.05577,
+      "top_up": [
+        [
+          "Pushing [something] so that it slightly moves",
+          0.0429
+        ],
+        [
+          "Pretending to pick [something] up",
+          0.0059
+        ],
+        [
+          "Moving [something] up",
+          0.0039
+        ],
+        [
+          "Spinning [something] that quickly stops spinning",
+          0.0031
+        ],
+        [
+          "Pushing [something] so that it almost falls off but doesn't",
+          0.0028
+        ]
+      ],
+      "top_down": [
+        [
+          "Holding [something]",
+          -0.0062
+        ],
+        [
+          "Holding [something] in front of [something]",
+          -0.0043
+        ],
+        [
+          "Putting [something similar to other things that are already on the table]",
+          -0.0036
+        ],
+        [
+          "[Something] falling like a feather or paper",
+          -0.0031
+        ],
+        [
+          "Holding [something] next to [something]",
+          -0.0029
+        ]
+      ]
+    }
+  ]
+}

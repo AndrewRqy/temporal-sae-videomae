@@ -1,0 +1,93 @@
+{
+  "n_videos": 1740,
+  "acc": {
+    "clean": 0.6293103448275862,
+    "shuffled": 0.32988505747126434,
+    "NFP-85": 0.33793103448275863,
+    "flippers-12": 0.332183908045977,
+    "random-85": 0.3385057471264368,
+    "static-85": 0.3350574712643678,
+    "ALL-6144": 0.6114942528735632
+  },
+  "recovery": {
+    "NFP-85": 0.027,
+    "flippers-12": 0.008,
+    "random-85": 0.029,
+    "static-85": 0.017,
+    "ALL-6144": 0.94
+  },
+  "terciles": {
+    "temporal (largest drop)": {
+      "clean": 0.795,
+      "shuffled": 0.207,
+      "NFP-85": {
+        "acc": 0.214,
+        "recovery": 0.012
+      },
+      "flippers-12": {
+        "acc": 0.207,
+        "recovery": 0.0
+      },
+      "random-85": {
+        "acc": 0.224,
+        "recovery": 0.029
+      },
+      "static-85": {
+        "acc": 0.214,
+        "recovery": 0.012
+      },
+      "ALL-6144": {
+        "acc": 0.743,
+        "recovery": 0.912
+      }
+    },
+    "middle": {
+      "clean": 0.614,
+      "shuffled": 0.319,
+      "NFP-85": {
+        "acc": 0.334,
+        "recovery": 0.053
+      },
+      "flippers-12": {
+        "acc": 0.326,
+        "recovery": 0.023
+      },
+      "random-85": {
+        "acc": 0.328,
+        "recovery": 0.029
+      },
+      "static-85": {
+        "acc": 0.328,
+        "recovery": 0.029
+      },
+      "ALL-6144": {
+        "acc": 0.6,
+        "recovery": 0.953
+      }
+    },
+    "shuffle-robust (smallest)": {
+      "clean": 0.479,
+      "shuffled": 0.464,
+      "NFP-85": {
+        "acc": 0.466,
+        "recovery": 0.111
+      },
+      "flippers-12": {
+        "acc": 0.464,
+        "recovery": 0.0
+      },
+      "random-85": {
+        "acc": 0.464,
+        "recovery": 0.0
+      },
+      "static-85": {
+        "acc": 0.464,
+        "recovery": 0.0
+      },
+      "ALL-6144": {
+        "acc": 0.491,
+        "recovery": 1.778
+      }
+    }
+  }
+}

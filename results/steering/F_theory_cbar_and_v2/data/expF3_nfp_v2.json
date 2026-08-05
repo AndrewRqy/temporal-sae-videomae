@@ -1,0 +1,48 @@
+{
+  "v1": {
+    "n_flagged": 85,
+    "per_tau_dominant": {
+      "speed": 27,
+      "vel_x": 33,
+      "vel_y": 14,
+      "accel_mag": 9,
+      "direction": 2
+    },
+    "diag_dominant": {
+      "speed": true,
+      "vel_x": true,
+      "vel_y": true,
+      "accel_mag": false,
+      "direction": false
+    },
+    "cbar_cos_dir_vely": 0.965
+  },
+  "v2": {
+    "n_flagged": 109,
+    "per_tau_dominant": {
+      "speed": 54,
+      "vel_x": 28,
+      "vel_y": 14,
+      "accel_mag": 10,
+      "direction": 3
+    },
+    "diag_dominant": {
+      "speed": true,
+      "vel_x": true,
+      "vel_y": false,
+      "accel_mag": false,
+      "direction": false
+    },
+    "cbar_cos_dir_vely": -0.172
+  },
+  "overlap": {
+    "v1": 85,
+    "v2": 109,
+    "both": 70
+  },
+  "v2_direction_features": [
+    115,
+    1217,
+    3747
+  ]
+}
