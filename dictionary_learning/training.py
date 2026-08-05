@@ -13,7 +13,10 @@ from itertools import cycle
 import torch as t
 from tqdm import tqdm
 
-import wandb
+try:
+    import wandb
+except ImportError:      # wandb only needed when use_wandb=True
+    wandb = None
 
 from .dictionary import AutoEncoder
 from .evaluation import evaluate

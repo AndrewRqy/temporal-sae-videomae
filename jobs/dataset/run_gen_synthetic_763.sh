@@ -14,13 +14,16 @@ mkdir -p /home/renqy/logs /net/scratch2/renqy/synthetic_acts_763
 
 cd ~/sae-for-vlm
 
-# 768 - 5 = 763 static directions: temporal + static span the full R^768
+# Full-span variant: 5 temporal + 713 constant-static + 50 position-dependent
+# static directions = 768 (was 5 + 763 before the position block existed; the
+# pos block takes 50 of the static budget so the three blocks still span R^768).
 # Prerequisite: NFP ball videos at /net/scratch2/renqy/nfp
 python analysis/gen_synthetic_activations.py \
     --nfp_dir     /net/scratch2/renqy/nfp \
     --output_dir  /net/scratch2/renqy/synthetic_acts_763 \
     --dim         768 \
-    --n_static    763 \
+    --n_static    713 \
+    --n_pos       50 \
     --noise_scale 0.05 \
     --seed        42 \
     --val_frac    0.2

@@ -149,9 +149,10 @@ def within_video_covariance_all(feats: torch.Tensor,
 
 def print_report(t_stat: np.ndarray, p_val: np.ndarray,
                  C_mean: np.ndarray, alpha: float = 0.05,
-                 label: str = "VideoMAE SAE"):
+                 label: str = "VideoMAE SAE", tau_sigma: np.ndarray = None):
     """
     t_stat, p_val, C_mean : [D, K]
+    tau_sigma : [K] global per-tau std, for the scale-normalized selectivity matrix.
     """
     D, K = t_stat.shape
     bonf = alpha / D
@@ -180,9 +181,16 @@ def print_report(t_stat: np.ndarray, p_val: np.ndarray,
     print(f"\nClaim (2) — non-significant features:")
     print(f"  Mean |C_mean| across all taus : {np.abs(non_sig_C).mean():.6f}")
 
-    # Claim (3): selectivity matrix — for features significant in tau A,
-    # what is their mean |t-stat| for tau B?
-    print(f"\nClaim (3) — selectivity (mean |t| for sig-in-row across columns):")
+    # Claim (3): selectivity matrix — for features significant in tau A, how strongly
+    # do they respond to tau B? Reported as mean |C_mean| with tau Z-SCORED globally
+    # (equivalently: raw-mean-covariance column divided by the global sigma of that tau),
+    # so columns are effect sizes on one common scale. NOT mean |t|: the t-stat measures
+    # consistency-across-videos, not response strength, and would let a tiny-but-reliable
+    # covariance dominate the matrix. Flagging (rows) stays t-based — that is the NFP
+    # guarantee; the matrix itself is a post-hoc effect-size diagnostic.
+    C_sel = C_mean / tau_sigma[None, :] if tau_sigma is not None else C_mean
+    unit = "z-scored tau" if tau_sigma is not None else "RAW tau — pass tau_sigma!"
+    print(f"\nClaim (3) — selectivity (mean |C_mean| on {unit}, sig-in-row across columns):")
     header = f"{'':12}" + "".join(f"{n:>11}" for n in TAU_KEYS)
     print(header)
     for k_row, name_row in enumerate(TAU_KEYS):
@@ -192,9 +200,8 @@ def print_report(t_stat: np.ndarray, p_val: np.ndarray,
         else:
             row = f"{name_row:<12}"
             for k_col, name_col in enumerate(TAU_KEYS):
-                mt = np.abs(t_stat[sig_mask, k_col]).mean()
-                marker = " <--" if k_col == k_row else ""
-                row += f"{mt:>10.2f}{marker if k_col==k_row else ' '}"
+                mc = np.abs(C_sel[sig_mask, k_col]).mean()
+                row += f"{mc:>10.4f}{' <--' if k_col == k_row else '    '}"
         print(row)
 
     # Top features per tau
@@ -318,7 +325,11 @@ def main():
         t_stat[:, k], p_val[:, k] = stats.ttest_1samp(C_np[:, :, k], 0.0)
 
     C_mean = C_np.mean(axis=0)   # [D, 5]
-    print_report(t_stat, p_val, C_mean, alpha=args.alpha, label=args.label)
+    # global per-tau std over all videos x steps: converts raw-covariance columns to
+    # z-scored-tau units for the selectivity matrix (Cov(psi, tau/sigma) = Cov/sigma)
+    tau_sigma = tau_all.reshape(-1, len(TAU_KEYS)).numpy().std(axis=0)
+    print_report(t_stat, p_val, C_mean, alpha=args.alpha, label=args.label,
+                 tau_sigma=tau_sigma)
 
     out_path = Path(args.output_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)

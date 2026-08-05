@@ -3,7 +3,8 @@ NFP test on the synthetic positive/negative control.
 
 Uses pre-generated synthetic representations h(V,t) where we know:
   - W_tau  directions carry TEMPORAL structure (tau changes within each video)
-  - W_static directions carry STATIC structure  (constant within each video)
+  - W_static directions carry STATIC/content structure: they may fluctuate frame-to-frame
+    (static_jitter > 0) but are exactly decorrelated from tau within every video
 
 The SAE was trained on these representations independently — it learned sparse
 codes without knowing which directions are temporal.  We then ask:
@@ -62,9 +63,10 @@ def within_video_covariance_all(feats: torch.Tensor,
     return torch.einsum("btd,btk->bdk", psi_c, tau_c) / feats.shape[1]
 
 
-def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
+def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf, W_pos=None):
     """
-    Report max-cosine and projection-fraction alignment with W_tau / W_static.
+    Report max-cosine and projection-fraction alignment with W_tau / W_static
+    (and W_pos, the position-dependent static block, when present).
     """
     enc_W = feature_input_directions(sae)                   # [F, 768] tensor
     enc_W_np = enc_W.numpy()
@@ -86,10 +88,14 @@ def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
 
     pf_tau    = proj_frac(W_tau)      # [F]
     pf_static = proj_frac(W_static)   # [F]
+    pf_pos    = proj_frac(W_pos) if W_pos is not None else None
 
     print(f"\n--- Ground truth subspace alignment ---")
-    print(f"{'Group':<22} {'MaxCos W_tau':>13} {'MaxCos W_static':>16} "
-          f"{'ProjFrac W_tau':>15} {'ProjFrac W_static':>18}")
+    header = (f"{'Group':<22} {'MaxCos W_tau':>13} {'MaxCos W_static':>16} "
+              f"{'ProjFrac W_tau':>15} {'ProjFrac W_static':>18}")
+    if pf_pos is not None:
+        header += f" {'ProjFrac W_pos':>15}"
+    print(header)
 
     for label, idx in [("Significant", sig_idx), ("Non-significant", nonsig_idx)]:
         if len(idx) == 0:
@@ -99,11 +105,22 @@ def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
         mc_static = max_subspace_cos(idx, W_static).mean()
         pft = pf_tau[idx].mean()
         pfs = pf_static[idx].mean()
-        print(f"  {label:<22} {mc_tau:>13.4f} {mc_static:>16.4f} {pft:>15.4f} {pfs:>18.4f}")
+        row = f"  {label:<22} {mc_tau:>13.4f} {mc_static:>16.4f} {pft:>15.4f} {pfs:>18.4f}"
+        if pf_pos is not None:
+            row += f" {pf_pos[idx].mean():>15.4f}"
+        print(row)
 
     if len(sig_idx) > 0 and len(nonsig_idx) > 0:
         ratio = pf_tau[sig_idx].mean() / (pf_tau[nonsig_idx].mean() + 1e-8)
         print(f"\n  Proj-frac W_tau ratio (sig / non-sig): {ratio:.1f}x")
+
+    # Position-block accounting: flagged features should NOT live in W_pos.
+    # (A W_pos-heavy flagged feature would mean NFP mistook motion-generated
+    #  position content for kinematic encoding.)
+    if pf_pos is not None and len(sig_idx) > 0:
+        pos_heavy = (pf_pos[sig_idx] > pf_tau[sig_idx])
+        print(f"  Significant features more W_pos- than W_tau-aligned: "
+              f"{int(pos_heavy.sum())}/{len(sig_idx)}")
 
     # Per-tau breakdown
     print(f"\n--- Per-tau proj-frac W_tau (features sig for that tau) ---")
@@ -115,7 +132,8 @@ def ground_truth_alignment(sae, W_tau, W_static, sig_mask, p_val, bonf):
         print(f"  {name:<12} {n_k:>6} {pft_k:>15.4f}")
 
 
-def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=None):
+def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=None,
+                 W_pos=None, tau_sigma=None):
     D, K = t_stat.shape
     if bonf is None:
         bonf = alpha / D
@@ -123,7 +141,8 @@ def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=N
     print(f"\n{'='*68}")
     print(f"NFP Test — Synthetic SAE (positive/negative control)")
     print(f"  Temporal directions : W_tau   {list(W_tau.shape)} — should trigger NFP")
-    print(f"  Static directions   : W_static {list(W_static.shape)} — should NOT trigger NFP")
+    print(f"  Static directions   : W_static {list(W_static.shape)} — fluctuate but are "
+          f"tau-decorrelated; should NOT trigger NFP")
     print(f"  Bonferroni threshold: p < {bonf:.2e}")
     print(f"{'='*68}")
     print(f"{'Tau':<12} {'Sig+':>6} {'Sig-':>6} {'Total%':>8} {'Mean|t|':>9}")
@@ -148,8 +167,13 @@ def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=N
     print(f"\nClaim (2) — non-significant features:")
     print(f"  Mean |C_mean| across all taus : {np.abs(non_sig_C).mean():.6f}")
 
-    # Selectivity matrix
-    print(f"\nClaim (3) — selectivity (mean |t| for sig-in-row across columns):")
+    # Selectivity matrix — mean |C_mean| with tau z-scored globally (columns are
+    # effect sizes on one common scale; raw column / global sigma_k is identical).
+    # NOT mean |t|: t measures consistency, not response strength. Flagging (rows)
+    # stays t-based; the matrix is a post-hoc effect-size diagnostic.
+    C_sel = C_mean / tau_sigma[None, :] if tau_sigma is not None else C_mean
+    unit = "z-scored tau" if tau_sigma is not None else "RAW tau — pass tau_sigma!"
+    print(f"\nClaim (3) — selectivity (mean |C_mean| on {unit}, sig-in-row across columns):")
     header = f"{'':12}" + "".join(f"{n:>11}" for n in TAU_KEYS)
     print(header)
     for k_row, name_row in enumerate(TAU_KEYS):
@@ -159,13 +183,13 @@ def print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=0.05, bonf=N
         else:
             row = f"{name_row:<12}"
             for k_col, _ in enumerate(TAU_KEYS):
-                mt     = np.abs(t_stat[sig_mask_k, k_col]).mean()
+                mc     = np.abs(C_sel[sig_mask_k, k_col]).mean()
                 marker = " <--" if k_col == k_row else "    "
-                row   += f"{mt:>10.2f}{marker}"
+                row   += f"{mc:>10.4f}{marker}"
         print(row)
 
     # Ground truth alignment
-    ground_truth_alignment(sae, W_tau, W_static, sig_any, p_val, bonf)
+    ground_truth_alignment(sae, W_tau, W_static, sig_any, p_val, bonf, W_pos=W_pos)
 
 
 def parse_args():
@@ -200,8 +224,9 @@ def main():
 
     print(f"Loading ground truth matrices: {args.matrices_path}")
     mat      = torch.load(args.matrices_path, map_location="cpu")
-    W_tau    = mat["W_tau"]     # [5, D]
-    W_static = mat["W_static"]  # [5, D]
+    W_tau    = mat["W_tau"]           # [5, D]
+    W_static = mat["W_static"]        # [N_STATIC, D]
+    W_pos    = mat.get("W_pos")       # [N_POS, D] or None (older data)
 
     print(f"Loading dictionary ({args.sae_model}): {args.sae_path}")
     if args.sae_model == "standard":
@@ -240,8 +265,10 @@ def main():
         t_stat[:, k], p_val[:, k] = stats.ttest_1samp(C_np[:, :, k], 0.0)
 
     C_mean = C_np.mean(axis=0)   # [F, 5]
+    # global per-tau std: converts selectivity columns to z-scored-tau units
+    tau_sigma = tau.reshape(-1, len(TAU_KEYS)).numpy().std(axis=0)
     print_report(t_stat, p_val, C_mean, W_tau, W_static, sae, alpha=args.alpha,
-                 bonf=args.alpha / sae.dict_size)
+                 bonf=args.alpha / sae.dict_size, W_pos=W_pos, tau_sigma=tau_sigma)
 
     out_path = Path(args.output_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -253,6 +280,7 @@ def main():
         "C_mean":    torch.from_numpy(C_mean),
         "W_tau":     W_tau,
         "W_static":  W_static,
+        "W_pos":     W_pos,
         "tau_keys":  TAU_KEYS,
     }, out_path)
     print(f"\nSaved -> {out_path}")

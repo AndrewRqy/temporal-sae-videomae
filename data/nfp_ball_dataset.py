@@ -22,6 +22,7 @@ Usage (inside kubric Docker container):
 """
 
 import argparse
+import json
 import math
 import pathlib
 import shutil
@@ -543,15 +544,42 @@ def _run_sanity_checks():
 # 8.  VIDEO GENERATOR  (one video per call)
 # ===========================================================================
 
+def profile_from_spec(entry: Dict) -> Dict:
+    """
+    Rebuild a full velocity profile (vx, vy arrays) from a saved parameter entry
+    {family, profile_type, speed_mps, direction_deg[, delta_deg]} — the format
+    emitted by analysis/design_decorrelated_stimulus.py (v2 decorrelated design).
+    Deterministic: no RNG draws, so start position (drawn separately) remains
+    independent of the profile (S1/S3 preserved).
+    """
+    s     = float(entry["speed_mps"])
+    theta = math.radians(float(entry["direction_deg"]))
+    if entry["family"] == "A":
+        speeds     = _family_a_speeds(entry["profile_type"], s)
+        directions = np.full(T, theta)
+    else:
+        delta = math.pi if entry["profile_type"] == "back_and_forth" \
+            else math.radians(float(entry["delta_deg"]))
+        speeds     = np.full(T, s)
+        directions = _family_b_directions(entry["profile_type"], theta, delta)
+    prof = dict(entry)
+    prof["vx"] = speeds * np.cos(directions)
+    prof["vy"] = speeds * np.sin(directions)
+    return prof
+
+
 def generate_video(
     video_idx: int,
     output_dir: pathlib.Path,
     rng: np.random.Generator,
+    fixed_profile: Dict = None,
 ) -> bool:
     """
     Generate one video and write to output_dir / f"v{video_idx:05d}/".
     Returns True on success, False if the video was already generated.
     Skips generation if metadata.json already exists (resume support).
+    fixed_profile: if given (v2 decorrelated design), use this profile instead of
+    sampling one; the start position is still drawn from rng (S1/S3 preserved).
     """
     import kubric as kb
     from kubric.renderer import Blender
@@ -567,7 +595,8 @@ def generate_video(
     try:
         # --- S1 and S3: sample start position independently of profile ---
         x0_m, y0_m = sample_start_position(rng)
-        profile     = sample_velocity_profile(rng)
+        profile     = fixed_profile if fixed_profile is not None \
+            else sample_velocity_profile(rng)
         states      = compute_trajectory(x0_m, y0_m, profile)
 
         # --- Kubric scene ---
@@ -663,6 +692,9 @@ def parse_args():
     p.add_argument("--seed",        type=int, default=0,
                    help="Global RNG seed. Each video advances the shared RNG "
                         "so shards must use the same seed and non-overlapping ranges.")
+    p.add_argument("--profile_spec", type=str, default=None,
+                   help="JSON with {'videos': [profile entries]} (v2 decorrelated "
+                        "design). Video idx uses videos[idx]; positions stay random.")
     return p.parse_args()
 
 
@@ -689,10 +721,18 @@ if __name__ == "__main__":
     # Simple approach: seed = global_seed + start_idx (independent per video).
     logger.info("Generating videos %d–%d → %s", args.start_idx, end_idx, output_dir)
 
+    spec_videos = None
+    if args.profile_spec:
+        with open(args.profile_spec) as f:
+            spec_videos = json.load(f)["videos"]
+        logger.info("Using profile spec with %d entries (v2 decorrelated design)",
+                    len(spec_videos))
+
     for idx in indices:
         # Give each video its own sub-RNG derived from global seed + index
         # so shards are reproducible and order-independent.
         video_rng = np.random.default_rng([args.seed, idx])
-        generate_video(idx, output_dir, video_rng)
+        fixed = profile_from_spec(spec_videos[idx]) if spec_videos else None
+        generate_video(idx, output_dir, video_rng, fixed_profile=fixed)
 
     logger.info("Done. Generated %d videos in %s", len(indices), output_dir)

@@ -1,5 +1,8 @@
 import torch as t
-from nnsight import LanguageModel
+try:
+    from nnsight import LanguageModel
+except ImportError:      # nnsight only needed for the LM activation buffers
+    LanguageModel = None
 import gc
 from tqdm import tqdm
 

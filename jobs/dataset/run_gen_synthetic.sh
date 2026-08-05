@@ -16,11 +16,14 @@ cd ~/sae-for-vlm
 
 # Prerequisite: NFP ball videos at /net/scratch2/renqy/nfp
 # (generate locally with data/run_nfp_dataset.ps1, then SCP to cluster)
+# Three signal blocks: 5 temporal + 100 constant-static + 50 position-dependent
+# static directions (position channels are per-video decorrelated from tau).
 python analysis/gen_synthetic_activations.py \
     --nfp_dir     /net/scratch2/renqy/nfp \
     --output_dir  /net/scratch2/renqy/synthetic_acts \
     --dim         768 \
     --n_static    100 \
+    --n_pos       50 \
     --noise_scale 0.05 \
     --seed        42 \
     --val_frac    0.2

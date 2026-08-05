@@ -67,7 +67,10 @@ def nfp_stats(encode, ball, tau, mask, device, alpha=0.05, fixed_denom=768):
         sig_fixed : [F] bool, significant at the D-independent bar alpha/fixed_denom
         t, p      : [F, 5]
         M         : F
-        diag_dom  : bool (diagonal is row-max of mean|t| for sig-in-row, adaptive bar)
+        diag_dom  : bool (diagonal is row-max of the selectivity matrix for sig-in-row
+                    features, adaptive bar). Selectivity = mean |C_mean| with tau
+                    z-scored globally (effect size on a common scale), NOT mean |t| —
+                    t measures consistency across videos, not response strength.
     """
     V, T, _ = ball.shape
     flat = ball.reshape(V * T, -1).to(device).float()
@@ -82,12 +85,15 @@ def nfp_stats(encode, ball, tau, mask, device, alpha=0.05, fixed_denom=768):
         t[:, k], p[:, k] = stats.ttest_1samp(C[:, :, k], 0.0)
     sig = (p < bonf).any(axis=1)
     sig_fixed = (p < bonf_fixed).any(axis=1)
+    # z-scored-tau effect size: Cov(psi, tau_k/sigma_k) = Cov(psi, tau_k)/sigma_k
+    tau_sigma = tau.reshape(-1, 5).numpy().std(axis=0) + 1e-12
+    C_sel = C.mean(axis=0) / tau_sigma[None, :]                # [F, 5]
     diag_dom = True
     for kr in range(5):
         m = p[:, kr] < bonf
         if m.sum() == 0:
             continue
-        row = [np.abs(t[m, kc]).mean() for kc in range(5)]
+        row = [np.abs(C_sel[m, kc]).mean() for kc in range(5)]
         if int(np.argmax(row)) != kr:
             diag_dom = False
     return {"sig": sig, "sig_fixed": sig_fixed, "t": t, "p": p,

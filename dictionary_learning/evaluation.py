@@ -6,7 +6,10 @@ import torch as t
 from collections import defaultdict
 
 from .buffer import ActivationBuffer, NNsightActivationBuffer
-from nnsight import LanguageModel
+try:
+    from nnsight import LanguageModel
+except ImportError:      # nnsight only needed for LM evaluation paths
+    LanguageModel = None
 from .config import DEBUG
 
 
